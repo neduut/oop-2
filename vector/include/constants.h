@@ -29,7 +29,7 @@ constexpr char MENU_TEXT[] =
     "3 - konteinerio testas\n" 
     "4 - pirma strategija\n"
     "5 - antra strategija\n"
-    "6 - trecia strategija\n" 
+    "6 - trecia strategija (sparčiausia)\n" 
     "0 - Užbaigti programa\n";
 
 constexpr char PROGRAM_MENU_TEXT[] = 

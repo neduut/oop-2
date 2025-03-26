@@ -15,25 +15,31 @@ Yra 3 skirtingos programos versijos: vector, deque ir list, jas galima rasti ati
 
 **Reikalavimai**
 
-- Windows 10 x64bit ar naujesnė versija
-- Įdiegtas CMake (rekomenduojama naudoti CMake versiją 3.25 ar naujesnę)
-- Kompiliatorius: g++ (g++ turi būti įdiegtas jūsų sistemoje, kad veiktų komanda make)
+- Operacinė sistema: Windows 10 x64-bit arba naujesnė versija
+- Įdiegta CMake (3.25 arba naujesnė versija)
+- Kompiliatorius: g++ (su C++11 arba naujesne versija)
 
-# Spartos tyrimai
 
-Buvo atlikti du programos spartos tyrimai su su trimis skirtingais konteineriais: `vector`, `deque` ir `list`.
+
+# Spartos tyrimai 
+
+1. Konteinerių tyrimas (v1.0)
+2. Strategijų tyrimas (v1.0)
+3. Struct ir class tyrimas (v1.1)
 
 Testavimo sistemos parametrai:
 - CPU - AMD Ryzen AI 9 HX 370 (12 fizinių ir 24 loginiai branduoliai)
 - GPU - AMD Radeon 890M (16 GB)
 - RAM - 32.0 GB LPDDR5x 
 - SSD - 2 TB
-- Kompiliatorius: GCC
-- IDE: Visual Studio Code
+- Kompiliatorius - GCC
+- IDE - Visual Studio Code
 
 Visiems testams buvo naudojami tie patys failai, užtikrinant tyrimų patikimumą.
   
-# 1. Konteinerių tyrimas
+
+
+# 1. Konteinerių tyrimas (v1.0)
 
 Buvo tiriamos šios operacijos:
 1. Duomenų nuskaitymas iš failų 
@@ -56,7 +62,8 @@ Sukiekvienu failu buvo atlikta po 5 testus. Visų testų rezultatus galima rasti
 Tyrimas parodė, kad naudojant didesnius failus, `vector` buvo efektyviausias, o `deque` buvo mažiausiai efektyvus.
 
 
-# 2. Strategijų tyrimas
+
+# 2. Strategijų tyrimas (v1.0)
 
 Buvo tiriama studentų rūšiavimo į grupes operacija pagal tris skirtingas strategijas.
 
@@ -69,7 +76,8 @@ Kiekvienas konteineris (`vector`, `deque` ir `list`) buvo testuojamas su penkiai
 
 Sukiekvienu failu buvo atlikta po 5 testus. Visų testų rezultatus galima rasti `assets` -> `strategies` kataloge.
 
-## 1 strategija
+
+## Pirma strategija
 
 Šioje strategijoje bendras studentų konteineris (`vector`, `deque` ir `list`) yra suskirstomas į du naujus konteinerius pagal studento pažymį. Vienas konteineris talpina "vargšiukus", kitas — "kietiakus". Kiekvienas studentas egzistuoja tiek bendrame konteineryje, tiek viename iš suskirstytų konteinerių. 
 
@@ -90,7 +98,8 @@ Sukiekvienu failu buvo atlikta po 5 testus. Visų testų rezultatus galima rasti
 
 Tyrimas parodė, kad naudojant didesnius failus, `vector` buvo efektyviausias, o `deque` buvo mažiausiai efektyvus, nes naudojo daugiausiai atminties, `list` naudojo žymiai mažiau atminties nei `deque`, bet `vector` vistiek išliko efektyviausias atminties požiūriu.
 
-## 2 strategija
+
+## Antra strategija
 
 Šioje strategijoje studentų konteineris yra skaidomas į "vargšiukų" konteinerį, tačiau tik vienas naujas konteineris yra sukuriamas. Jei studentas atitinka "vargšiuko" kriterijus, jis perkeliamas į šį naują konteinerį, o iš bendro studentų konteinerio ištrinamas. Po to bendrame konteineryje lieka tik "kietiakai".
 
@@ -111,7 +120,8 @@ Tyrimas parodė, kad naudojant didesnius failus, `vector` buvo efektyviausias, o
 
 Tyrimas parodė, kad antrojoje strategijoje `vector` išliko efektyviausias, kaip ir pirmoje strategijoje, `deque` buvo mažiau efektyvus ir naudoja daugiau atminties lyginant su pirma strategija, o `list` vis tiek buvo mažiausiai efektyvus tiek laiko, tiek atminties atžvilgiu, kaip ir pirmoje strategijoje.
 
-## 3 strategija
+
+## Trečia strategija
 
 Šioje strategijoje naudojamas bendro studentų konteinerio skaidymas (rūšiavimas) panaudojant greičiausiai veikianti iš pirmos arba antros strategijos, įtraukiant "efektyvius" darbo su konteineriais metodus. 
 Buvo optimizuotas `vector` tipo konteineris su pirma strategija.
@@ -124,7 +134,17 @@ Buvo optimizuotas `vector` tipo konteineris su pirma strategija.
 
 ![vector3](https://github.com/user-attachments/assets/8a2cd813-2709-46ad-86c0-c9ed2632f1f4)
 
-Tyrimas parodė, kad optimizuotas `deque` yra tiek efektyvesnis, tiek naudoja mažiau atminties nei pirmoje strategijoje.Tyrimas parodė, kad pritaikius tam `std::partition` metodą, failo su 10 000 000 įrašų atžvilgiu, `vector` tapo efektyvesnis ~0.5 sek. Taip pat sumažėjo ir atminties sąnaudos lyginant su pirma strategija.
+Tyrimas parodė, kad optimizuotas `deque` yra tiek efektyvesnis, tiek naudoja mažiau atminties nei pirmoje strategijoje. Pritaikius `std::partition` metodą, failo su 10 000 000 įrašų atžvilgiu, `vector` tapo efektyvesnis ~0.5 sek. 
+
+
+
+# 3. Struct ir class tyrimas (v1.1)
+
+su 100 000 ir 1 000 000 failais
+exe failu dydziai (struct ir class) su opt flagais
+greitis (struct ir class) su opt flagais
+vector versija, 3 strategija
+
 
 # Programos versijos
 
@@ -149,3 +169,5 @@ Pridėta nauja laiko testavimo funkcija ir versija su 3 skirtingais konteineriai
 ## v1.0
 Pridėti testavimai su trimis skirtingomis strategijomis studentų rūšiavimo į grupes funkcijai. Optimizuotas geriausias rūšiavimas (`vector` konteinerio su pirma strategija). Atliktas spartos bei atminties naudojimo tyrimas, o rezultatai pateikti faile `README`. Pridėtas programos diegimo bei paleidimo  `CMake` failas bei `README` aprašyta įdiegimo instrukcija.
 
+## v1.1
+dirbta tik su vector versija

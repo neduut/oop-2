@@ -10,7 +10,7 @@ int main() {
 
     vector<Student> students;
 
-    // ar testavimas ar programa
+    // test or program
     int choice = getMenuChoice();
 
     if (choice == 1) {

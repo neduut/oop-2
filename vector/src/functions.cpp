@@ -53,7 +53,7 @@ void handleTestMenu() {
         int testMenuChoice = getTestMenuChoice();
 
         if (testMenuChoice == 0) {
-    
+            system("cls");
             break;
         }
         else if (testMenuChoice == 1) {
@@ -201,23 +201,18 @@ void readFromFile(vector<Student>& students, int fileSize) {
 }
 
 double averageFinalMark(const vector<int>& marks, int examMark){
-    double sum = 0;
-    for (int mark : marks) {
-        sum += mark;
-    }
-    double average = sum / marks.size();
+    double average = std::accumulate(marks.begin(), marks.end(), 0.0) / marks.size();
     return 0.4 * average + 0.6 * examMark;
 }
 
 double medianFinalMark(const vector<int>& marks, int examMark){
     vector<int> sortedMarks = marks;
     sort(sortedMarks.begin(), sortedMarks.end());
-    double median;
-    if (sortedMarks.size() % 2 == 0) {
-        median = (sortedMarks[sortedMarks.size() / 2 - 1] + sortedMarks[sortedMarks.size() / 2]) / 2.0;
-    } else {
-        median = sortedMarks[sortedMarks.size() / 2];
-    }
+
+    double median = (sortedMarks.size() % 2 == 0) ? 
+         (sortedMarks[sortedMarks.size() / 2 - 1] + sortedMarks[sortedMarks.size() / 2]) / 2.0 : 
+         sortedMarks[sortedMarks.size() / 2];
+
     return 0.4 * median + 0.6 * examMark;
 }
 
