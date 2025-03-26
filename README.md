@@ -53,7 +53,7 @@ Kiekvienas konteineris (`vector`, `deque` ir `list`) buvo testuojamas su penkiai
 - 1 000 000
 - 10 000 000
 
-Sukiekvienu failu buvo atlikta po 5 testus. Visų testų rezultatus galima rasti `assets` -> `containerTests` kataloge.
+Sukiekvienu failu buvo atlikta po 5 testus. Visų testų rezultatus galima rasti `analysis` -> `struct` -> `containerTests` kataloge.
 
 Žemiau pateikiami atliktų testų rezultatų vidurkiai (sekundėmis):
 
@@ -74,7 +74,7 @@ Kiekvienas konteineris (`vector`, `deque` ir `list`) buvo testuojamas su penkiai
 - 1 000 000
 - 10 000 000
 
-Sukiekvienu failu buvo atlikta po 5 testus. Visų testų rezultatus galima rasti `assets` -> `strategies` kataloge.
+Sukiekvienu failu buvo atlikta po 5 testus. Visų testų rezultatus galima rasti `analysis` -> `struct` -> `strategies` kataloge.
 
 
 ## Pirma strategija

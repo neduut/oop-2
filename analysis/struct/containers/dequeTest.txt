@@ -126,3 +126,8 @@ Failas: studentai10000000.txt
 ---> Studentų rikiavimas didėjimo tvarka užtruko: 56.067 s
 ---> Studentų rūšiavimas į dvi grupes užtruko: 23.6367 s
 
+Failas: studentai10000000.txt
+---> Duomenų nuskaitymas iš failo užtruko: 41.523 s
+---> Studentų rikiavimas didėjimo tvarka užtruko: 55.124 s
+---> Studentų rūšiavimas į dvi grupes užtruko: 22.587 s
+

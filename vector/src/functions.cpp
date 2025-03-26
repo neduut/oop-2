@@ -84,7 +84,7 @@ void handleTestMenu() {
 void generateFile(int size) {
     try {
         string fileName = "studentai" + to_string(size) + ".txt";
-        ofstream file("../assets/files/" + fileName);
+        ofstream file("../files/" + fileName);
         if (!file) {
             throw std::runtime_error(FILE_OPEN_ERROR);
         }
@@ -160,7 +160,7 @@ void readFromFile(vector<Student>& students, int fileSize) {
     try {
         students.reserve(fileSize); 
         
-        ifstream file("../assets/files/studentai" + to_string(fileSize) + ".txt");
+        ifstream file("../files/studentai" + to_string(fileSize) + ".txt");
         if (!file) {
             throw std::runtime_error(FILE_OPEN_ERROR);
         }
@@ -321,7 +321,7 @@ void printToConsole(vector<Student>& kietiakai, vector<Student>& vargsiukai) {
 
 void printToFile(vector<Student>& students, const string& fileName) {
     try {
-        ofstream file("../assets/" + fileName);
+        ofstream file("../files/" + fileName);
         if (!file) {
             throw std::runtime_error(FILE_OPEN_ERROR);
         }
@@ -360,7 +360,7 @@ void printToFile(vector<Student>& students, const string& fileName) {
 }
 
 void fileGenTest(int size, const std::string& fileName) {
-    std::ofstream runTimeResults("../assets/" + fileName, std::ios::app); // open file in append mode
+    std::ofstream runTimeResults("../analysis/" + fileName, std::ios::app); // open file in append mode
 
     if (runTimeResults.is_open()) {
         runTimeResults << "Konteineris: vector\n";
@@ -382,7 +382,7 @@ void fileGenTest(int size, const std::string& fileName) {
 }
 
 void programTest(int size, const std::string& fileName) {
-    std::ofstream runTimeResults("../assets/" + fileName, std::ios::app); // open file in append mode
+    std::ofstream runTimeResults("../analysis/" + fileName, std::ios::app); // open file in append mode
 
     if (runTimeResults.is_open()) {
         runTimeResults << "Konteineris: vector\n";
@@ -427,7 +427,7 @@ void programTest(int size, const std::string& fileName) {
 }
 
 void vectorTest(int size, const std::string& fileName) {
-    std::ofstream runTimeResults("../assets/containerTests/" + fileName, std::ios::app); // open file in append mode
+    std::ofstream runTimeResults("../analysis/struct/containers/" + fileName, std::ios::app); // open file in append mode
 
     if (runTimeResults.is_open()) {
         runTimeResults << "Failas: studentai" << size << ".txt\n";
@@ -471,7 +471,7 @@ void vectorTest(int size, const std::string& fileName) {
 }
 
 void strategies(int size, const std::string& fileName, int strategy) {
-    std::ofstream runTimeResults("../assets/strategies/" + fileName, std::ios::app); 
+    std::ofstream runTimeResults("../analysis/struct/strategies/" + fileName, std::ios::app); 
 
     //int groupType = getGroupType(); 
     if (runTimeResults.is_open()) {

@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.25)
-project(Deque)
+project(Vector)
 include_directories(include)
 file(GLOB SOURCES "src/*.cpp")
-add_executable(Deque ${SOURCES})
+add_executable(Vector ${SOURCES})
