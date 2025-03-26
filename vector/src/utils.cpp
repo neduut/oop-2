@@ -97,7 +97,7 @@ int getProgramMenuChoice() {
     return choice;
 }
 
-string getFirstName(char menuChoice) {
+string GetFirstName(char menuChoice) {
     string firstName;
     if (menuChoice == '1' || menuChoice == '2') {
         while (true) {
@@ -115,7 +115,7 @@ string getFirstName(char menuChoice) {
     return firstName;
 }
 
-string getLastName(char menuChoice) {
+string GetLastName(char menuChoice) {
     string lastName;
     
     if (menuChoice == '1' || menuChoice == '2') {
@@ -134,7 +134,7 @@ string getLastName(char menuChoice) {
     return lastName;
 }
 
-int getExamMark(char menuChoice) {
+int GetExamMark(char menuChoice) {
     string tempMark;
     int examMark;
     if (menuChoice == '1') {
@@ -157,7 +157,7 @@ int getExamMark(char menuChoice) {
     return examMark;
 }
 
-vector<int> getHomeworkMarks(char menuChoice) {
+vector<int> GetHomeworkMarks(char menuChoice) {
     vector<int> marks;
     if (menuChoice == '1') {
         string tempMark;

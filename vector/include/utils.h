@@ -11,11 +11,11 @@ int getPrintType();
 int getMenuChoice();
 int getProgramMenuChoice();
 int getTestMenuChoice();
-string getFirstName(char menuChoice);
-string getLastName(char menuChoice);
-int getExamMark(char menuChoice);
-vector<int> getHomeworkMarks(char menuChoice);
 int getFileSize();
+string GetFirstName(char menuChoice);
+string GetLastName(char menuChoice);
+int GetExamMark(char menuChoice);
+vector<int> GetHomeworkMarks(char menuChoice);
 
 // validations
 bool isNameValid(string name);

@@ -1,6 +1,7 @@
 #include "mylib.h"
 #include "utils.h"
 #include "functions.h"
+#include "student.h"
 #include <windows.h>
 
 int main() {
