@@ -58,25 +58,19 @@ void handleTestMenu() {
         }
         else if (testMenuChoice == 1) {
             int fileSize = getFileSize();
-            fileGenTest(fileSize, "genTest.txt");
+            fileGenTest(fileSize);
         }
         else if (testMenuChoice == 2) {
             int fileSize = getFileSize();
-            programTest(fileSize, "progTest.txt");
+            programTest(fileSize); 
         }
         else if (testMenuChoice == 3) {
             int fileSize = getFileSize();
-            vectorTest(fileSize, "vectorTest.txt");
+            vectorTest(fileSize);
         }
         else if (testMenuChoice == 4 || testMenuChoice == 5 || testMenuChoice == 6) {
             int fileSize = getFileSize();
-
-            int num;
-            if(testMenuChoice == 4) num = 1;
-            else if(testMenuChoice == 5) num = 2;
-            else num = 3;
-        
-            strategies(fileSize, "strategy" + to_string(num) + "Vector.txt", testMenuChoice);
+            strategies(fileSize, testMenuChoice);
         }
     }
 }
@@ -359,8 +353,8 @@ void printToFile(vector<Student>& students, const string& fileName) {
     }
 }
 
-void fileGenTest(int size, const std::string& fileName) {
-    std::ofstream runTimeResults("../analysis/" + fileName, std::ios::app); // open file in append mode
+void fileGenTest(int size) {
+    std::ofstream runTimeResults("../analysis/struct/genTest.txt", std::ios::app); // open file in append mode
 
     if (runTimeResults.is_open()) {
         runTimeResults << "Konteineris: vector\n";
@@ -375,14 +369,14 @@ void fileGenTest(int size, const std::string& fileName) {
         runTimeResults.close();  
         runTimeResults << "\n";
 
-        cout << TEST_SECCESS << fileName << "\n";
+        cout << TEST_SECCESS << "genTest.txt" << "\n";
     } else {
         std::cerr << FILE_OPEN_ERROR << std::endl;
     }
 }
 
-void programTest(int size, const std::string& fileName) {
-    std::ofstream runTimeResults("../analysis/" + fileName, std::ios::app); // open file in append mode
+void programTest(int size) {
+    std::ofstream runTimeResults("../analysis/struct/flags/O3.txt", std::ios::app); // open file in append mode
 
     if (runTimeResults.is_open()) {
         runTimeResults << "Konteineris: vector\n";
@@ -402,7 +396,7 @@ void programTest(int size, const std::string& fileName) {
 
         TimeMeasurement groupingTime("Studentų rūšiavimas į dvi grupes");
         groupingTime.start();
-        groupStudents1(students, kietiakai, vargsiukai, 1);
+        groupStudents3(students, kietiakai, vargsiukai, 1);
         groupingTime.stop(runTimeResults); 
 
         students.clear(); 
@@ -420,14 +414,14 @@ void programTest(int size, const std::string& fileName) {
 
         runTimeResults.close(); 
 
-        cout << TEST_SECCESS << fileName << "\n";
+        cout << TEST_SECCESS << "O3.txt" << "\n";
     } else {
         std::cerr << FILE_OPEN_ERROR << std::endl;
     }
 }
 
-void vectorTest(int size, const std::string& fileName) {
-    std::ofstream runTimeResults("../analysis/struct/containers/" + fileName, std::ios::app); // open file in append mode
+void vectorTest(int size) {
+    std::ofstream runTimeResults("../analysis/struct/containers/vectorTest.txt", std::ios::app); // open file in append mode
 
     if (runTimeResults.is_open()) {
         runTimeResults << "Failas: studentai" << size << ".txt\n";
@@ -464,14 +458,18 @@ void vectorTest(int size, const std::string& fileName) {
         runTimeResults << "\n";
         runTimeResults.close(); 
 
-        cout << TEST_SECCESS << fileName << "\n";
+        cout << TEST_SECCESS << "vectorTest.txt" << "\n";
     } else {
         std::cerr << FILE_OPEN_ERROR << std::endl;
     }
 }
 
-void strategies(int size, const std::string& fileName, int strategy) {
-    std::ofstream runTimeResults("../analysis/struct/strategies/" + fileName, std::ios::app); 
+void strategies(int size, int strategy) {
+    int num;
+    if(strategy == 4) num = 1;
+    else if(strategy == 5) num = 2;
+    else num = 3;
+    std::ofstream runTimeResults("../analysis/struct/strategies/strategy" + to_string(num) + "Vector.txt", std::ios::app); 
 
     //int groupType = getGroupType(); 
     if (runTimeResults.is_open()) {
@@ -507,7 +505,7 @@ void strategies(int size, const std::string& fileName, int strategy) {
         runTimeResults << "\n";
         runTimeResults.close(); 
 
-        cout << TEST_SECCESS << fileName << "\n";
+        cout << TEST_SECCESS << "strategy" + to_string(num) + "Vector.txt" << "\n";
     } else {
         std::cerr << FILE_OPEN_ERROR << std::endl;
     }
