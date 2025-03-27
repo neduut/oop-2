@@ -1,72 +1,72 @@
 Konteineris: vector
 Failas: studentai100000.txt
----> Duomenų nuskaitymas iš failo užtruko: 0.0819791 s
----> Studentų rūšiavimas į dvi grupes užtruko: 0.0127654 s
----> Išvedimas į du naujus failus užtruko: 1.74311e+09 s
----> Programos vykdymo laikas užtruko: 0.290386 s
+---> Duomenų nuskaitymas iš failo užtruko: 0.183342 s
+---> Studentų rūšiavimas į dvi grupes užtruko: 0.034223 s
+---> Išvedimas į du naujus failus užtruko: 0.465525 s
+---> Programos vykdymo laikas užtruko: 0.706659 s
 
 Konteineris: vector
 Failas: studentai100000.txt
----> Duomenų nuskaitymas iš failo užtruko: 0.083329 s
----> Studentų rūšiavimas į dvi grupes užtruko: 0.0169397 s
----> Išvedimas į du naujus failus užtruko: 1.74311e+09 s
----> Programos vykdymo laikas užtruko: 0.297586 s
+---> Duomenų nuskaitymas iš failo užtruko: 0.189985 s
+---> Studentų rūšiavimas į dvi grupes užtruko: 0.0228254 s
+---> Išvedimas į du naujus failus užtruko: 0.27597 s
+---> Programos vykdymo laikas užtruko: 0.508422 s
 
 Konteineris: vector
 Failas: studentai100000.txt
----> Duomenų nuskaitymas iš failo užtruko: 0.0820506 s
----> Studentų rūšiavimas į dvi grupes užtruko: 0.0119068 s
----> Išvedimas į du naujus failus užtruko: 1.74311e+09 s
----> Programos vykdymo laikas užtruko: 0.278726 s
+---> Duomenų nuskaitymas iš failo užtruko: 0.119268 s
+---> Studentų rūšiavimas į dvi grupes užtruko: 0.0246552 s
+---> Išvedimas į du naujus failus užtruko: 0.271601 s
+---> Programos vykdymo laikas užtruko: 0.432149 s
 
 Konteineris: vector
 Failas: studentai100000.txt
----> Duomenų nuskaitymas iš failo užtruko: 0.0804328 s
----> Studentų rūšiavimas į dvi grupes užtruko: 0.0139247 s
----> Išvedimas į du naujus failus užtruko: 1.74311e+09 s
----> Programos vykdymo laikas užtruko: 0.287828 s
+---> Duomenų nuskaitymas iš failo užtruko: 0.0967174 s
+---> Studentų rūšiavimas į dvi grupes užtruko: 0.0154796 s
+---> Išvedimas į du naujus failus užtruko: 0.184737 s
+---> Programos vykdymo laikas užtruko: 0.309373 s
 
 Konteineris: vector
 Failas: studentai100000.txt
----> Duomenų nuskaitymas iš failo užtruko: 0.0803095 s
----> Studentų rūšiavimas į dvi grupes užtruko: 0.0128812 s
----> Išvedimas į du naujus failus užtruko: 1.74311e+09 s
----> Programos vykdymo laikas užtruko: 0.284936 s
+---> Duomenų nuskaitymas iš failo užtruko: 0.094413 s
+---> Studentų rūšiavimas į dvi grupes užtruko: 0.0161632 s
+---> Išvedimas į du naujus failus užtruko: 0.198971 s
+---> Programos vykdymo laikas užtruko: 0.323272 s
 
 --------------------------------------------------------------------------
 
 Konteineris: vector
 Failas: studentai1000000.txt
----> Duomenų nuskaitymas iš failo užtruko: 0.786558 s
----> Studentų rūšiavimas į dvi grupes užtruko: 0.162524 s
----> Išvedimas į du naujus failus užtruko: 1.74311e+09 s
----> Programos vykdymo laikas užtruko: 2.79332 s
+---> Duomenų nuskaitymas iš failo užtruko: 1.24335 s
+---> Studentų rūšiavimas į dvi grupes užtruko: 0.149218 s
+---> Išvedimas į du naujus failus užtruko: 1.85121 s
+---> Programos vykdymo laikas užtruko: 3.34613 s
 
 Konteineris: vector
 Failas: studentai1000000.txt
----> Duomenų nuskaitymas iš failo užtruko: 0.810884 s
----> Studentų rūšiavimas į dvi grupes užtruko: 0.137144 s
----> Išvedimas į du naujus failus užtruko: 1.74311e+09 s
----> Programos vykdymo laikas užtruko: 2.88287 s
+---> Duomenų nuskaitymas iš failo užtruko: 0.880915 s
+---> Studentų rūšiavimas į dvi grupes užtruko: 0.162874 s
+---> Išvedimas į du naujus failus užtruko: 2.04692 s
+---> Programos vykdymo laikas užtruko: 3.20241 s
 
 Konteineris: vector
 Failas: studentai1000000.txt
----> Duomenų nuskaitymas iš failo užtruko: 0.856917 s
----> Studentų rūšiavimas į dvi grupes užtruko: 0.13582 s
----> Išvedimas į du naujus failus užtruko: 1.74311e+09 s
----> Programos vykdymo laikas užtruko: 2.94451 s
+---> Duomenų nuskaitymas iš failo užtruko: 0.979361 s
+---> Studentų rūšiavimas į dvi grupes užtruko: 0.174094 s
+---> Išvedimas į du naujus failus užtruko: 2.07847 s
+---> Programos vykdymo laikas užtruko: 3.33109 s
 
 Konteineris: vector
 Failas: studentai1000000.txt
----> Duomenų nuskaitymas iš failo užtruko: 0.929913 s
----> Studentų rūšiavimas į dvi grupes užtruko: 0.137862 s
----> Išvedimas į du naujus failus užtruko: 1.74311e+09 s
----> Programos vykdymo laikas užtruko: 2.9709 s
+---> Duomenų nuskaitymas iš failo užtruko: 0.864974 s
+---> Studentų rūšiavimas į dvi grupes užtruko: 0.151362 s
+---> Išvedimas į du naujus failus užtruko: 1.98811 s
+---> Programos vykdymo laikas užtruko: 3.09976 s
 
 Konteineris: vector
 Failas: studentai1000000.txt
----> Duomenų nuskaitymas iš failo užtruko: 0.820853 s
----> Studentų rūšiavimas į dvi grupes užtruko: 0.133813 s
----> Išvedimas į du naujus failus užtruko: 1.74311e+09 s
----> Programos vykdymo laikas užtruko: 2.90575 s
+---> Duomenų nuskaitymas iš failo užtruko: 0.817155 s
+---> Studentų rūšiavimas į dvi grupes užtruko: 0.146022 s
+---> Išvedimas į du naujus failus užtruko: 1.94253 s
+---> Programos vykdymo laikas užtruko: 3.01857 s
 
