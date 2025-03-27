@@ -57,7 +57,17 @@ Su kiekvienu failu buvo atlikta po 5 testus. Visų testų rezultatus galima rast
 
 Žemiau pateikiami atliktų spartos testų rezultatų vidurkiai (sekundėmis):
 
-![image](https://github.com/user-attachments/assets/209393ed-6b71-455f-b411-85acf06023bf)
+| Duomenų struktūra | Operacija | 1000 | 10 000 | 100 000 | 1 000 000 | 10 000 000 |
+|---|---|---|---|---|---|---|
+| Vector | Duomenų nuskaitymas | 0.00394612 | 0.03218134 | 0.2922336 | 1.720884 | 13.5894 |
+| Vector | Studentų rikiavimas | 0.00242398 | 0.02646942 | 0.2215282 | 1.758552 | 17.99632 |
+| Vector | Studentų rūšiavimas | 0.0007038 | 0.00822146 | 0.04376994 | 0.3579696 | 4.901402 |
+| Deque | Duomenų nuskaitymas | 0.0067162 | 0.06251178 | 0.6036332 | 3.023692 | 40.09678 |
+| Deque | Studentų rikiavimas | 0.0043023 | 0.05051884 | 0.4534964 | 3.297476 | 54.56224 |
+| Deque | Studentų rūšiavimas | 0.00163982 | 0.01585616 | 0.09194708 | 0.7219982 | 18.87748 |
+| List | Duomenų nuskaitymas | 0.00491358 | 0.04391852 | 0.4196124 | 3.85372 | 35.98742 |
+| List | Studentų rikiavimas | 0.00041554 | 0.00631776 | 0.09059564 | 1.182192 | 18.24816 |
+| List | Studentų rūšiavimas | 0.00125186 | 0.01564666 | 0.1747374 | 1.741926 | 18.07282 |
 
 Tyrimas parodė, kad naudojant didesnius failus, `vector` buvo efektyviausias, o `deque` buvo mažiausiai efektyvus.
 
@@ -83,18 +93,19 @@ Sukiekvienu failu buvo atlikta po 5 testus. Visų testų rezultatus galima rasti
 
 Žemiau pateikiami atliktų spartos testų rezultatų vidurkiai (sekundėmis):
 
-![image](https://github.com/user-attachments/assets/10b7ad8e-6318-4132-b525-47c0d6fcd5fe)
+| 1 strategija | 1000 | 10 000 | 100 000 | 1 000 000 | 10 000 000 |
+|---|---|---|---|---|---|
+| Vector | 0.00055988 | 0.00486994 | 0.03585648 | 0.197347 | 1.6541916 |
+| Deque | 0.00087304 | 0.00626222 | 0.06931568 | 0.6622848 | 9.665372 |
+| List | 0.00102564 | 0.00690396 | 0.0817173 | 0.799738 | 7.998806 |
 
 Žemiau pateikiamas RAM naudojimas su 10 000 000 įrašų failu:
 
-**Vector** 
-![vector1](https://github.com/user-attachments/assets/86ef0846-6e8e-43e2-a077-047dd9406407)
-
-**Deque** 
-![deque1](https://github.com/user-attachments/assets/9985949c-1c03-44d4-a1fc-7aba5dadfd8d)
-
-**List**
-![list1](https://github.com/user-attachments/assets/fd4726ee-3d4a-4a5d-a755-8bb14e98a23b)
+| Duomenų struktūra | MB |
+|---|---|
+| Vector | 3 305 |
+| Deque | 15 170 |
+| List | 5 962 |
 
 Tyrimas parodė, kad naudojant didesnius failus, `vector` buvo efektyviausias, o `deque` buvo mažiausiai efektyvus, nes naudojo daugiausiai atminties, `list` naudojo žymiai mažiau atminties nei `deque`, bet `vector` vistiek išliko efektyviausias atminties požiūriu.
 
@@ -105,18 +116,19 @@ Tyrimas parodė, kad naudojant didesnius failus, `vector` buvo efektyviausias, o
 
 Žemiau pateikiami atliktų spartos testų rezultatų vidurkiai (sekundėmis):
 
-![image](https://github.com/user-attachments/assets/f59092d6-65fe-497b-9d0c-c650b29e8946)
+| 2 strategija | 1000 | 10 000 | 100 000 | 1 000 000 | 10 000 000 |
+|---|---|---|---|---|---|
+| Vector | 0.00183944 | 0.01419072 | 0.169226 | 2.071518 | 23.32422 |
+| Deque | 0.00336874 | 0.02369356 | 0.3422922 | 3.955618 | 51.726 |
+| List | 0.0015255 | 0.01213894 | 0.2054402 | 2.608398 | 33.21178 |
 
 Žemiau pateikiamas RAM naudojimas su 10 000 000 įrašų failu:
 
-**Vector** 
-![vector2](https://github.com/user-attachments/assets/984edb45-7353-4805-adfa-c54352518c8b)
-
-**Deque**
-![deque2](https://github.com/user-attachments/assets/453e9517-9efa-4a38-a1e1-35f84358e80c)
-
-**List**
-![list2](https://github.com/user-attachments/assets/993f7511-a7a3-48cc-aa78-354b3dcf736f)
+| Duomenų struktūra | MB |
+|---|---|
+| Vector | 3 611 |
+| Deque | 11 607 |
+| List | 5 259 |
 
 Tyrimas parodė, kad antrojoje strategijoje `vector` išliko efektyviausias, kaip ir pirmoje strategijoje, `deque` buvo mažiau efektyvus ir naudoja daugiau atminties lyginant su pirma strategija, o `list` vis tiek buvo mažiausiai efektyvus tiek laiko, tiek atminties atžvilgiu, kaip ir pirmoje strategijoje.
 
@@ -128,11 +140,15 @@ Buvo optimizuotas `vector` tipo konteineris su pirma strategija.
 
 Žemiau pateikiami atliktų spartos testų rezultatų vidurkiai (sekundėmis):
 
-![image](https://github.com/user-attachments/assets/8b77907f-78ab-4319-b2d5-59cae73c90ef)
+| 3 strategija | 1000 | 10 000 | 100 000 | 1 000 000 | 10 000 000 |
+|---|---|---|---|---|---|
+| Vector | 0.00015976 | 0.0016721 | 0.01237 | 0.125375 | 1.168786 |
 
 Žemiau pateikiamas RAM naudojimas su 10 000 000 įrašų failu:
 
-![vector3](https://github.com/user-attachments/assets/8a2cd813-2709-46ad-86c0-c9ed2632f1f4)
+| Duomenų struktūra | MB |
+|---|---|
+| Vector | 3 067 |
 
 Tyrimas parodė, kad optimizuotas `deque` yra tiek efektyvesnis, tiek naudoja mažiau atminties nei pirmoje strategijoje. Pritaikius `std::partition` metodą, failo su 10 000 000 įrašų atžvilgiu, `vector` tapo efektyvesnis ~0.5 sek. 
 
@@ -150,15 +166,32 @@ Buvo tiriamos šios operacijos:
 Struct ir class buvo testuojamos su penkiais skirtingo dydžio failais, kurių įrašų skaičius buvo:
 - 100 000
 - 1 000 000
+  
 Kiekvienam failui buvo atlikti penki testai su kiekviena optimizavimo vėliavėle(`O1`, `O2` ir `O3`). Visų testų rezultatus galima rasti `analysis` -> `struct`/`class` -> `flags` kataloge.
 
 Žemiau pateikiami atliktų spartos testų rezultatų vidurkiai (sekundėmis):
 
-lentele....
+| Struct/Class | Failo dydis | Optimizavimo vėliavėlė | Nuskaitymas | Rūšiavimas | Išvedimas | Bendras laikas |
+|---|---|---|---|---|---|---|
+| struct | 100000 | O1 | 0.07926 | 0.003796 | 0.185189 | 0.272186 |
+| struct | 100000 | O2 | 0.081719 | 0.003677 | 0.182538 | 0.272865 |
+| struct | 100000 | O3 | 0.078733 | 0.004036 | 0.185513 | 0.272133 |
+| class | 100000 | O1 | 0.084179 | 0.013938 | x | x |
+| class | 100000 | O2 | 0.085759 | 0.014207 | x | x |
+| class | 100000 | O3 | 0.081620 | 0.013263 | x | x |
+| struct | 1000000 | O1 | 0.80038 | 0.040785 | 1.80158 | 2.68869 |
+| struct | 1000000 | O2 | 0.780445 | 0.042006 | 1.77595 | 2.62261 |
+| struct | 1000000 | O3 | 0.77838 | 0.041662 | 1.74775 | 2.62056 |
+| class | 1000000 | O1 | 0.824306 | 0.154756 | x| x |
+| class | 1000000 | O2 | 0.809257 | 0.147045 | x | x |
+| class | 1000000 | O3 | 0.832427 | 0.145412 | x| x |
 
-Žemiau pateikiama SSD naudojama vieta (kilobaitais:
+Žemiau pateikiama SSD naudojama vieta (KB):
 
-lentele.....
+| Struct/Class | O1 | O2 | O3 |
+|---|---|---|---|
+| struct | 128 | 127 | 149|
+| class | 135 | 149 | 189 |
 
 Tyrimas parodė, kad 
 
