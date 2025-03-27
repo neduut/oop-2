@@ -60,6 +60,7 @@ const string INVALID_SIZE_ERROR = "\nKlaida: dydis turi būti sveikasis skaičiu
 const string INVALID_MARKS_COUNT = "\nKlaida: turite įvesti bent vieną pažymį! ";
 const string INVALID_OUTPUT_TYPE_ERROR = "\nKlaida: netinkamas išvedimo tipas! ";
 const string FILE_OPEN_ERROR = "\nKlaida: nepavyko atidaryti failo! ";
+const string FILE_READ_ERROR = "\nKlaida: nepavyko nuskaityti failo! ";
 const string EMPTY_ARRAY_ERROR = "\nKlaida: pažymių masyvas tuščias! ";
 const string INVALID_GROUP_TYPE = "\nKlaida: netinkamas grupavimo tipas! ";
 const string INVALID_FILE_SIZE = "\nKlaida: netinkamas failo dydis! ";

@@ -33,8 +33,8 @@ void handleProgramMenu(std::vector<Student>& students) {
                 if (outputType == 1) {
                     printToConsole(kietiakai, vargsiukai);
                 } else {
-                    printToFile(kietiakai, "kietiakuRezultatai.txt");
-                    printToFile(vargsiukai, "vargsiukuRezultatai.txt");
+                    printToFile(kietiakai, "kietiakai.txt");
+                    printToFile(vargsiukai, "vargsiukai.txt");
                 }
             break;
             }
@@ -264,7 +264,7 @@ void fileGenTest(int size) {
 }
 
 void programTest(int size) {
-    std::ofstream runTimeResults("../analysis/class/flags/O1.txt", std::ios::app); // open file in append mode
+    std::ofstream runTimeResults("../analysis/class/flags/O3.txt", std::ios::app); // open file in append mode
 
     if (runTimeResults.is_open()) {
         runTimeResults << "Konteineris: vector\n";
@@ -292,8 +292,8 @@ void programTest(int size) {
         vargsiukai.shrink_to_fit();
 
         TimeMeasurement printTime("Išvedimas į du naujus failus");
-        printToFile(kietiakai, "kietiakuRezultatai.txt");
-        printToFile(vargsiukai, "vargsiukuRezultatai.txt");
+        printToFile(kietiakai, "kietiakai.txt");
+        printToFile(vargsiukai, "vargsiukai.txt");
         printTime.stop(runTimeResults);  
 
         programTime.stop(runTimeResults); 
@@ -301,7 +301,7 @@ void programTest(int size) {
 
         runTimeResults.close(); 
 
-        cout << TEST_SECCESS << "O1.txt" << "\n";
+        cout << TEST_SECCESS << "Ox.txt" << "\n";
     } else {
         std::cerr << FILE_OPEN_ERROR << std::endl;
     }
@@ -339,8 +339,8 @@ void vectorTest(int size) {
         kietiakai.shrink_to_fit();
         vargsiukai.shrink_to_fit();
 
-        printToFile(kietiakai, "kietiakuRezultatai.txt");
-        printToFile(vargsiukai, "vargsiukuRezultatai.txt");
+        printToFile(kietiakai, "kietiakai.txt");
+        printToFile(vargsiukai, "vargsiukai.txt");
 
         runTimeResults << "\n";
         runTimeResults.close(); 
@@ -386,8 +386,8 @@ void strategies(int size, int strategy) {
         kietiakai.shrink_to_fit();
         vargsiukai.shrink_to_fit();
 
-        printToFile(kietiakai, "kietiakuRezultatai.txt");
-        printToFile(vargsiukai, "vargsiukuRezultatai.txt");
+        printToFile(kietiakai, "kietiakai.txt");
+        printToFile(vargsiukai, "vargsiukai.txt");
 
         runTimeResults << "\n";
         runTimeResults.close(); 

@@ -2,116 +2,125 @@
 #include "utils.h"
 #include "constants.h"
 
-Student::Student() 
+Student::Student()
     : firstName_(""), lastName_(""), marks_(), examMark_(0), avgFinal_(0.0), medianFinal_(0.0) {}
 
-Student::Student(std::string firstName, std::string lastName, std::vector<int> marks, int examMark, double avgFinal, double medianFinal)
-    : firstName_(std::move(firstName)), lastName_(std::move(lastName)), marks_(std::move(marks)), examMark_(examMark), avgFinal_(avgFinal), medianFinal_(medianFinal) {}
+Student::Student(std::istream& is) {
+    readStudent(is);
+}
+
+std::istream& Student::readStudent(std::istream& is) {
+    is >> firstName_ >> lastName_;
+    int mark;
+    marks_.clear();
+    while (is >> mark) {
+        marks_.push_back(mark);
+    }
+    examMark_ = marks_.back();
+    marks_.pop_back();
+
+    return is;
+}
 
 void Student::readInput(std::vector<Student>& students, char menuChoice) {
     students.reserve(10000);
     string choice;
     do {
-        // first and last name
         string firstName = GetFirstName(menuChoice);
         string lastName = GetLastName(menuChoice);
-
-        // homework marks
         vector<int> marks = GetHomeworkMarks(menuChoice);
+        int examMark = GetExamMark(menuChoice);
 
-        // exam mark
-        int examMark = GetExamMark(menuChoice);     
-
-        Student student(firstName, lastName, marks, examMark, 0.0, 0.0);
-
-        student.calculateFinalMarks();
-
-        students.push_back(student);
+        Student temp;
+        temp.setFirstName(firstName);
+        temp.setLastName(lastName);
+        temp.setMarks(marks);
+        temp.setExamMark(examMark);
+        temp.calculateFinalMarks();
+        students.push_back(temp);
 
         cout << ADD_ANOTHER_STUDENT << endl;
         choice = getYesNo();
 
-    } while (choice == "taip"); 
+    } while (choice == "taip");
 
     students.shrink_to_fit();
 }
 
-void Student::readFromFile(vector<Student>& students, int fileSize) {
+void Student::readFromFile(std::vector<Student>& students, int fileSize) {
     try {
-        students.reserve(fileSize); 
-        
-        ifstream file("../files/studentai" + to_string(fileSize) + ".txt");
+        students.reserve(fileSize);
+
+        std::ifstream file("../files/studentai" + std::to_string(fileSize) + ".txt");
         if (!file) {
             throw std::runtime_error(FILE_OPEN_ERROR);
         }
 
-        file.ignore(numeric_limits<streamsize>::max(), '\n'); // skip the first line
+        std::string line;
+        std::getline(file, line);
 
-        string firstName, lastName, line;
-        while (getline(file, line)) {
-            istringstream stream(line);
-            stream >> firstName >> lastName;
-            
-            vector<int> marks;
-            marks.reserve(6); 
-            
-            int mark;
-            while (stream >> mark) {
-                marks.push_back(mark);
+        Student temp;
+        while (std::getline(file, line)) {
+            std::istringstream ss(line);
+            if (ss) {
+                temp.readStudent(ss);
+                temp.calculateFinalMarks();
+                students.push_back(temp);
+
+            } else {
+                std::cerr << FILE_READ_ERROR << std::endl;
             }
-
-            if (marks.empty()) throw std::runtime_error(EMPTY_ARRAY_ERROR);
-            
-            int examMark = marks.back();
-            marks.pop_back();
-            
-            Student student(firstName, lastName, marks, examMark, 0.0, 0.0);
-
-            student.calculateFinalMarks();
-
-            students.push_back(student);
         }
 
         file.close();
         students.shrink_to_fit();
-        cout << FILE_READ_SUCCESS << endl;
+        std::cout << FILE_READ_SUCCESS << std::endl;
 
     } catch (const std::exception& e) {
-        cerr << e.what() << endl;
+        std::cerr << e.what() << std::endl;
+    }
+}
+
+double Student::average(const std::vector<int>& marks) const {
+    if (marks.empty()) {
+        return 0.0;
+    }
+    double sum = std::accumulate(marks.begin(), marks.end(), 0.0);
+    return sum / marks.size();
+}
+
+double Student::median(const std::vector<int>& marks) const {
+    std::vector<int> sortedMarks = marks;
+    std::sort(sortedMarks.begin(), sortedMarks.end());
+    size_t size = sortedMarks.size();
+    if (size == 0) {
+        return 0.0;
+    }
+    if (size % 2 == 0) {
+        return (sortedMarks[size / 2 - 1] + sortedMarks[size / 2]) / 2.0;
+    } else {
+        return sortedMarks[size / 2];
     }
 }
 
 void Student::calculateFinalMarks() {
-    double average = std::accumulate(marks_.begin(), marks_.end(), 0.0) / marks_.size();
-    avgFinal_ = 0.4 * average + 0.6 * examMark_;
-
-    vector<int> sortedMarks = marks_;
-    sort(sortedMarks.begin(), sortedMarks.end());
-
-    double median = (sortedMarks.size() % 2 == 0) ? 
-         (sortedMarks[sortedMarks.size() / 2 - 1] + sortedMarks[sortedMarks.size() / 2]) / 2.0 : 
-         sortedMarks[sortedMarks.size() / 2];
-
-    medianFinal_ = 0.4 * median + 0.6 * examMark_;
+    avgFinal_ = 0.4 * average(marks_) + 0.6 * examMark_;
+    medianFinal_ = median(marks_);
 }
 
-void sortStudents(vector<Student>& students, char sortType) {
-    // if sortType is 1, sort by first name
+void sortStudents(std::vector<Student>& students, char sortType) {
     if (sortType == 1) {
         stable_sort(students.begin(), students.end(), [](const Student& a, const Student& b) {
             return a.getFirstName() < b.getFirstName();
         });
-    // if sortType is 2, sort by last name
     } else if (sortType == 2) {
         stable_sort(students.begin(), students.end(), [](const Student& a, const Student& b) {
             return a.getLastName() < b.getLastName();
         });
-    // if sortType is 3, sort by average final mark
-    } else if (sortType == 3) { 
+    } else if (sortType == 3) {
         stable_sort(students.begin(), students.end(), [](const Student& a, const Student& b) {
             return a.getAvgFinal() < b.getAvgFinal();
         });
-    // if sortType is 4, sort by median final mark
     } else {
         stable_sort(students.begin(), students.end(), [](const Student& a, const Student& b) {
             return a.getMedianFinal() < b.getMedianFinal();
