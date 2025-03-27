@@ -124,7 +124,7 @@ void generateFile(int size) {
 
 void groupStudents1(vector<Student>& students, vector<Student>& kietiakai, vector<Student>& vargsiukai, int groupType) {
     for (auto& student : students) {
-        double finalMark = (groupType == 1) ? student.getAvgFinal() : student.getMedianFinal();
+        float finalMark = (groupType == 1) ? student.getAvgFinal() : student.getMedianFinal();
 
         if (finalMark >= 5.0) {
             kietiakai.push_back(std::move(student));  
@@ -159,7 +159,7 @@ void groupStudents3(vector<Student>& students, vector<Student>& kietiakai, vecto
     vargsiukai.reserve(students.size());
 
     auto separator = std::partition(students.begin(), students.end(), [groupType](const Student& student) {
-        double finalMark = (groupType == 1) ? student.getAvgFinal() : student.getMedianFinal();
+        float finalMark = (groupType == 1) ? student.getAvgFinal() : student.getMedianFinal();
         return finalMark >= 5.0;
     });
 

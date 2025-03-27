@@ -13,11 +13,11 @@ private:
     std::string lastName_;
     std::vector<int> marks_;
     int examMark_;
-    double avgFinal_;
-    double medianFinal_;
+    float avgFinal_;
+    float medianFinal_;
 
-    double average(const std::vector<int>& marks) const;
-    double median(const std::vector<int>& marks) const;
+    float average(const std::vector<int>& marks) const;
+    float median(const std::vector<int>& marks) const;
 
 public:
     Student();
@@ -28,8 +28,8 @@ public:
     std::string getLastName() const { return lastName_; }
     const std::vector<int>& getHomeworkMarks() const { return marks_; }
     int getExamMark() const { return examMark_; }
-    double getAvgFinal() const { return avgFinal_; }
-    double getMedianFinal() const { return medianFinal_; }
+    float getAvgFinal() const { return avgFinal_; }
+    float getMedianFinal() const { return medianFinal_; }
 
     void setFirstName(std::string firstName) { firstName_ = firstName; }
     void setLastName(std::string lastName) { lastName_ = lastName; }

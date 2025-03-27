@@ -81,15 +81,15 @@ void Student::readFromFile(std::vector<Student>& students, int fileSize) {
     }
 }
 
-double Student::average(const std::vector<int>& marks) const {
+float Student::average(const std::vector<int>& marks) const {
     if (marks.empty()) {
         return 0.0;
     }
-    double sum = std::accumulate(marks.begin(), marks.end(), 0.0);
+    float sum = std::accumulate(marks.begin(), marks.end(), 0.0);
     return sum / marks.size();
 }
 
-double Student::median(const std::vector<int>& marks) const {
+float Student::median(const std::vector<int>& marks) const {
     std::vector<int> sortedMarks = marks;
     std::sort(sortedMarks.begin(), sortedMarks.end());
     size_t size = sortedMarks.size();
