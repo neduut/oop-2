@@ -154,7 +154,7 @@ Tyrimas parodė, kad optimizuotas `deque` yra tiek efektyvesnis, tiek naudoja ma
 
 
 
-# 3. Struct ir class tyrimas (v1.1)
+# 3. Struct ir class analizė (v1.1)
 
 Šiame tyrime buvo naudojamas greičiausias konteineris (`vector`) ir greičiausia strategija (trečia) iš v1.0 versijos. Buvo lyginamas `struct` ir `class` duomenų struktūrų spartos bei SSD disko vietos naudojimas, kiekvienai iš jų taikant tris optimizavimo vėliavėles: `O1`, `O2` ir `O3`.
 
