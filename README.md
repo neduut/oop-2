@@ -156,14 +156,14 @@ Tyrimas parodė, kad optimizuotas `deque` yra tiek efektyvesnis, tiek naudoja ma
 
 # 3. Struct ir class tyrimas (v1.1)
 
-Šiame tyrime buvo naudojamas greičiausias konteineris (`vector`) ir greičiausia strategija (trečia) iš v1.0 versijos. Buvo lyginamas `struct` ir `class` spartos bei SSD disko vietos naudojimas, kiekvienai iš jų taikant tris optimizavimo vėliavėles: `O1`, `O2` ir `O3`.
+Šiame tyrime buvo naudojamas greičiausias konteineris (`vector`) ir greičiausia strategija (trečia) iš v1.0 versijos. Buvo lyginamas `struct` ir `class` duomenų struktūrų spartos bei SSD disko vietos naudojimas, kiekvienai iš jų taikant tris optimizavimo vėliavėles: `O1`, `O2` ir `O3`.
 
 Buvo tiriamos šios operacijos:
 1. Duomenų nuskaitymas iš failų
 2. Studentų skirstymas į dvi grupes
 3. Duomenų išvedimas į du naujus failus
 
-Struct ir class buvo testuojamos su penkiais skirtingo dydžio failais, kurių įrašų skaičius buvo:
+`Struct` ir `class` buvo testuojamos su penkiais skirtingo dydžio failais, kurių įrašų skaičius buvo:
 - 100 000
 - 1 000 000
   
@@ -193,8 +193,7 @@ Kiekvienam failui buvo atlikti penki testai su kiekviena optimizavimo vėliavėl
 | struct | 128 | 127 | 149|
 | class | 116 | 128 | 167 |
 
-Tyrimas parodė, kad 
-
+Tyrimas parodė, kad naudojant `struct` duomenų struktūrą, programos vykdymo laikas ir SSD disko vietos naudojimas buvo mažesni, palyginti su `class` duomenų struktūra. Optimizavimo vėliavėlės `O1`, `O2` ir `O3` turėjo minimalų poveikį programos spartai ir SSD disko vietos naudojimui.
 
 
 # Programos versijos
@@ -221,4 +220,4 @@ Pridėta nauja laiko testavimo funkcija ir versija su 3 skirtingais konteineriai
 Pridėti testavimai su trimis skirtingomis strategijomis studentų rūšiavimo į grupes funkcijai. Optimizuotas geriausias rūšiavimas (`vector` konteinerio su pirma strategija). Atliktas spartos bei atminties naudojimo tyrimas, o rezultatai pateikti faile `README`. Pridėtas programos diegimo bei paleidimo  `CMake` failas bei `README` aprašyta įdiegimo instrukcija.
 
 ## v1.1
-`Vector` konteinerio versijoje struktūra pakeista į klasę. Atlikti programos spartos bei SSD naudojimo testai lyginant `struct` ir `class` su skirtingomis optimizavimo vėliavėlėmis: `O1`, `O2` ir `O3`. Tyrimo rezultatai aprašyti `README` faile.
+`Vector` konteinerio versijoje duomenų struktūra pakeista iš `struct` į `class`. Atlikti programos spartos bei SSD naudojimo testai lyginant `struct` ir `class` su skirtingomis optimizavimo vėliavėlėmis: `O1`, `O2` ir `O3`. Tyrimo rezultatai aprašyti `README` faile.
