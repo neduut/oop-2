@@ -21,11 +21,12 @@ Yra 3 skirtingos programos versijos: vector, deque ir list, jas galima rasti ati
 
 
 
-# Spartos tyrimai 
+# Tyrimai
 
-1. Konteinerių tyrimas (v1.0)
-2. Strategijų tyrimas (v1.0)
-3. Struct ir class tyrimas (v1.1)
+Buvo atlikti trys programos tyrimai:
+1. Konteinerių spartos analizė (v1.0)
+2. Strategijų spartos ir RAM naudojimo analizė (v1.0)
+3. Struktūrų ir klasių spartos bei SSD naudojimo analizė (v1.1)
 
 Testavimo sistemos parametrai:
 - CPU - AMD Ryzen AI 9 HX 370 (12 fizinių ir 24 loginiai branduoliai)
@@ -38,8 +39,7 @@ Testavimo sistemos parametrai:
 Visiems testams buvo naudojami tie patys failai, užtikrinant tyrimų patikimumą.
   
 
-
-# 1. Konteinerių tyrimas (v1.0)
+# 1. Konteinerių spartos analizė (v1.0)
 
 Buvo tiriamos šios operacijos:
 1. Duomenų nuskaitymas iš failų 
@@ -53,9 +53,9 @@ Kiekvienas konteineris (`vector`, `deque` ir `list`) buvo testuojamas su penkiai
 - 1 000 000
 - 10 000 000
 
-Sukiekvienu failu buvo atlikta po 5 testus. Visų testų rezultatus galima rasti `analysis` -> `struct` -> `containerTests` kataloge.
+Su kiekvienu failu buvo atlikta po 5 testus. Visų testų rezultatus galima rasti `analysis` -> `struct` -> `containers` kataloge.
 
-Žemiau pateikiami atliktų testų rezultatų vidurkiai (sekundėmis):
+Žemiau pateikiami atliktų spartos testų rezultatų vidurkiai (sekundėmis):
 
 ![image](https://github.com/user-attachments/assets/209393ed-6b71-455f-b411-85acf06023bf)
 
@@ -63,7 +63,7 @@ Tyrimas parodė, kad naudojant didesnius failus, `vector` buvo efektyviausias, o
 
 
 
-# 2. Strategijų tyrimas (v1.0)
+# 2. Strategijų spartos ir RAM naudojimo analizė (v1.0)
 
 Buvo tiriama studentų rūšiavimo į grupes operacija pagal tris skirtingas strategijas.
 
@@ -81,11 +81,11 @@ Sukiekvienu failu buvo atlikta po 5 testus. Visų testų rezultatus galima rasti
 
 Šioje strategijoje bendras studentų konteineris (`vector`, `deque` ir `list`) yra suskirstomas į du naujus konteinerius pagal studento pažymį. Vienas konteineris talpina "vargšiukus", kitas — "kietiakus". Kiekvienas studentas egzistuoja tiek bendrame konteineryje, tiek viename iš suskirstytų konteinerių. 
 
-Žemiau pateikiami atliktų testų rezultatų vidurkiai (sekundėmis):
+Žemiau pateikiami atliktų spartos testų rezultatų vidurkiai (sekundėmis):
 
 ![image](https://github.com/user-attachments/assets/10b7ad8e-6318-4132-b525-47c0d6fcd5fe)
 
-Žemiau pateikiamas atminties naudojimas su 10 000 000 įrašų failu:
+Žemiau pateikiamas RAM naudojimas su 10 000 000 įrašų failu:
 
 **Vector** 
 ![vector1](https://github.com/user-attachments/assets/86ef0846-6e8e-43e2-a077-047dd9406407)
@@ -103,11 +103,11 @@ Tyrimas parodė, kad naudojant didesnius failus, `vector` buvo efektyviausias, o
 
 Šioje strategijoje studentų konteineris yra skaidomas į "vargšiukų" konteinerį, tačiau tik vienas naujas konteineris yra sukuriamas. Jei studentas atitinka "vargšiuko" kriterijus, jis perkeliamas į šį naują konteinerį, o iš bendro studentų konteinerio ištrinamas. Po to bendrame konteineryje lieka tik "kietiakai".
 
-Žemiau pateikiami atliktų testų rezultatų vidurkiai (sekundėmis):
+Žemiau pateikiami atliktų spartos testų rezultatų vidurkiai (sekundėmis):
 
 ![image](https://github.com/user-attachments/assets/f59092d6-65fe-497b-9d0c-c650b29e8946)
 
-Žemiau pateikiamas atminties naudojimas su 10 000 000 įrašų failu:
+Žemiau pateikiamas RAM naudojimas su 10 000 000 įrašų failu:
 
 **Vector** 
 ![vector2](https://github.com/user-attachments/assets/984edb45-7353-4805-adfa-c54352518c8b)
@@ -126,11 +126,11 @@ Tyrimas parodė, kad antrojoje strategijoje `vector` išliko efektyviausias, kai
 Šioje strategijoje naudojamas bendro studentų konteinerio skaidymas (rūšiavimas) panaudojant greičiausiai veikianti iš pirmos arba antros strategijos, įtraukiant "efektyvius" darbo su konteineriais metodus. 
 Buvo optimizuotas `vector` tipo konteineris su pirma strategija.
 
-Žemiau pateikiami atliktų testų rezultatų vidurkiai (sekundėmis):
+Žemiau pateikiami atliktų spartos testų rezultatų vidurkiai (sekundėmis):
 
 ![image](https://github.com/user-attachments/assets/8b77907f-78ab-4319-b2d5-59cae73c90ef)
 
-Žemiau pateikiamas atminties naudojimas su 10 000 000 įrašų failu:
+Žemiau pateikiamas RAM naudojimas su 10 000 000 įrašų failu:
 
 ![vector3](https://github.com/user-attachments/assets/8a2cd813-2709-46ad-86c0-c9ed2632f1f4)
 
@@ -140,10 +140,28 @@ Tyrimas parodė, kad optimizuotas `deque` yra tiek efektyvesnis, tiek naudoja ma
 
 # 3. Struct ir class tyrimas (v1.1)
 
-su 100 000 ir 1 000 000 failais
-exe failu dydziai (struct ir class) su opt flagais
-greitis (struct ir class) su opt flagais
-vector versija, 3 strategija
+Šiame tyrime buvo naudojamas greičiausias konteineris (`vector`) ir greičiausia strategija (trečia) iš v1.0 versijos. Buvo lyginamas `struct` ir `class` spartos bei SSD disko vietos naudojimas, kiekvienai iš jų taikant tris optimizavimo vėliavėles: `O1`, `O2` ir `O3`.
+
+Buvo tiriamos šios operacijos:
+1. Duomenų nuskaitymas iš failų
+2. Studentų skirstymas į dvi grupes
+3. Duomenų išvedimas į du naujus failus
+
+Struct ir class buvo testuojamos su penkiais skirtingo dydžio failais, kurių įrašų skaičius buvo:
+- 100 000
+- 1 000 000
+Kiekvienam failui buvo atlikti penki testai su kiekviena optimizavimo vėliavėle(`O1`, `O2` ir `O3`). Visų testų rezultatus galima rasti `analysis` -> `struct`/`class` -> `flags` kataloge.
+
+Žemiau pateikiami atliktų spartos testų rezultatų vidurkiai (sekundėmis):
+
+lentele....
+
+Žemiau pateikiama SSD naudojama vieta (kilobaitais:
+
+lentele.....
+
+Tyrimas parodė, kad 
+
 
 
 # Programos versijos
@@ -170,4 +188,4 @@ Pridėta nauja laiko testavimo funkcija ir versija su 3 skirtingais konteineriai
 Pridėti testavimai su trimis skirtingomis strategijomis studentų rūšiavimo į grupes funkcijai. Optimizuotas geriausias rūšiavimas (`vector` konteinerio su pirma strategija). Atliktas spartos bei atminties naudojimo tyrimas, o rezultatai pateikti faile `README`. Pridėtas programos diegimo bei paleidimo  `CMake` failas bei `README` aprašyta įdiegimo instrukcija.
 
 ## v1.1
-dirbta tik su vector versija
+`Vector` konteinerio versijoje struktūra pakeista į klasę. Atlikti programos spartos bei SSD naudojimo testai lyginant `struct` ir `class` su skirtingomis optimizavimo vėliavėlėmis: `O1`, `O2` ir `O3`. Tyrimo rezultatai aprašyti `README` faile.
