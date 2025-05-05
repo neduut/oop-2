@@ -1,10 +1,8 @@
-#ifndef MYLIB1_H
-#define MYLIB1_H
-
+#pragma once
 #include <iostream>
 #include <fstream>
 #include <string>
-#include <deque>
+#include <vector>
 #include <limits>
 #include <iomanip>
 #include <cmath>
@@ -23,7 +21,7 @@ using std::cin;
 using std::cout;
 using std::endl;
 using std::string;
-using std::deque;
+using std::vector;
 using std::setw;
 using std::left;
 using std::right;
@@ -40,5 +38,3 @@ using std::ifstream;
 using std::ofstream;
 using std::cerr;
 using std::to_string;
-
-#endif

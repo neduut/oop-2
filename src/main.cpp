@@ -1,16 +1,19 @@
-#include "mylib1.h"
-#include "utils1.h"
-#include "functions1.h"
+#include "mylib.h"
+#include "utils.h"
+#include "functions.h"
+#include "student.h"
+//sutvarkyt kad visom sistemom kad veiktu simboliai
+#ifdef _WIN32
 #include <windows.h>
+#endif
 
 int main() {
+    #ifdef _WIN32
+    SetConsoleOutputCP(65001); 
+    #endif
 
-    // enable lithuanian characters in console
-    SetConsoleOutputCP(65001);
+    vector<Student> students;
 
-    deque<Student> students;
-
-    // ar testavimas ar programa
     int choice = getMenuChoice();
 
     if (choice == 1) {

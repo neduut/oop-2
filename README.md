@@ -1,6 +1,9 @@
-# Naudojimo instrukcijos
+# Aprašymas
 
-Yra 3 skirtingos programos versijos: vector, deque ir list, jas galima rasti atitinkamuose aplankuose. Kiekviena versija naudoja atskirą šaltinio failų rinkinį ir CMake konfigūraciją.
+Programa, skirta apdoroti studentų duomenis.
+Programos versijose analizuojamas bei tobulinamas programos našumas ir efektyvumas.
+
+# Naudojimo instrukcijos
 
 **Kad paleisti programą, turite atlikti šiuos veiksmus:**
 
@@ -220,4 +223,7 @@ Pridėta nauja laiko testavimo funkcija ir versija su 3 skirtingais konteineriai
 Pridėti testavimai su trimis skirtingomis strategijomis studentų rūšiavimo į grupes funkcijai. Optimizuotas geriausias rūšiavimas (`vector` konteinerio su pirma strategija). Atliktas spartos bei atminties naudojimo tyrimas, o rezultatai pateikti faile `README`. Pridėtas programos diegimo bei paleidimo  `CMake` failas bei `README` aprašyta įdiegimo instrukcija.
 
 ## v1.1
-`Vector` konteinerio versijoje duomenų struktūra pakeista iš `struct` į `class`. Atlikti programos spartos bei SSD naudojimo testai lyginant `struct` ir `class` su skirtingomis optimizavimo vėliavėlėmis: `O1`, `O2` ir `O3`. Tyrimo rezultatai aprašyti `README` faile.
+`Vector` konteinerio versijoje duomenų struktūra pakeista iš `struct` į `class`. Atlikti programos spartos bei SSD naudojimo testai lyginant `struct` ir `class` su skirtingomis optimizavimo vėliavėlėmis: `O1`, `O2` ir `O3`. Tyrimo rezultatai aprašyti `README` faile. 
+
+## v1.2
+Pašalinti `deque` bei `list` versijų katalogai.

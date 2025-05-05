@@ -1,7 +1,5 @@
-#ifndef UTILS1_H
-#define UTILS1_H
-
-#include "mylib1.h"
+#pragma once
+#include "mylib.h"
 
 // requests
 string getYesNo();
@@ -11,11 +9,11 @@ int getPrintType();
 int getMenuChoice();
 int getProgramMenuChoice();
 int getTestMenuChoice();
-string getFirstName(char menuChoice);
-string getLastName(char menuChoice);
-int getExamMark(char menuChoice);
-deque<int> getHomeworkMarks(char menuChoice);
 int getFileSize();
+string GetFirstName(char menuChoice);
+string GetLastName(char menuChoice);
+int GetExamMark(char menuChoice);
+vector<int> GetHomeworkMarks(char menuChoice);
 
 // validations
 bool isNameValid(string name);
@@ -27,4 +25,3 @@ string getRandomFirstName();
 string getRandomLastName();
 int getRandomMark();
 
-#endif

@@ -163,7 +163,7 @@ void printToConsole(vector<Student>& kietiakai, vector<Student>& vargsiukai) {
 
 void printToFile(vector<Student>& students, const string& fileName) {
     try {
-        ofstream file("../files/" + fileName);
+        ofstream file("files/" + fileName);
         if (!file) {
             throw std::runtime_error(FILE_OPEN_ERROR);
         }
@@ -202,7 +202,7 @@ void printToFile(vector<Student>& students, const string& fileName) {
 }
 
 void fileGenTest(int size) {
-    std::ofstream runTimeResults("../analysis/class/genTest.txt", std::ios::app); // open file in append mode
+    std::ofstream runTimeResults("analysis/class/genTest.txt", std::ios::app); // open file in append mode
 
     if (runTimeResults.is_open()) {
         runTimeResults << "Konteineris: vector\n";
@@ -224,7 +224,7 @@ void fileGenTest(int size) {
 }
 
 void programTest(int size) {
-    std::ofstream runTimeResults("../analysis/class/flags/O3.txt", std::ios::app); // open file in append mode
+    std::ofstream runTimeResults("analysis/class/flags/O3.txt", std::ios::app); // open file in append mode
 
     if (runTimeResults.is_open()) {
         runTimeResults << "Konteineris: vector\n";
@@ -250,6 +250,12 @@ void programTest(int size) {
         students.clear(); 
         kietiakai.shrink_to_fit();
         vargsiukai.shrink_to_fit();
+
+        TimeMeasurement sortTime("Studentų rikiavimas didėjimo tvarka");
+        sortTime.start();
+        sortStudents(kietiakai, 3);
+        sortStudents(vargsiukai, 3);
+        sortTime.stop(runTimeResults); 
 
         TimeMeasurement printTime("Išvedimas į du naujus failus");
         printTime.start();

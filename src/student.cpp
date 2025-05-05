@@ -51,7 +51,7 @@ void Student::readFromFile(std::vector<Student>& students, int fileSize) {
     try {
         students.reserve(fileSize);
 
-        std::ifstream file("../files/studentai" + std::to_string(fileSize) + ".txt");
+        std::ifstream file("files/studentai" + std::to_string(fileSize) + ".txt");
         if (!file) {
             throw std::runtime_error(FILE_OPEN_ERROR);
         }

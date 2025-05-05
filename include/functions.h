@@ -1,6 +1,4 @@
-#ifndef FUNCTIONS_H
-#define FUNCTIONS_H
-
+#pragma once
 #include "mylib.h"
 #include "student.h"
 
@@ -12,5 +10,3 @@ void printToConsole(vector<Student>& kietiakai, vector<Student>& vargsiukai);
 void printToFile(vector<Student>& students, const string& fileName);
 void fileGenTest(int size);
 void programTest(int size);
-
-#endif  

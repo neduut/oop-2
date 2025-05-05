@@ -1,7 +1,5 @@
-#ifndef CONSTANTS2_H
-#define CONSTANTS2_H
-
-#include "mylib2.h"
+#pragma once
+#include "mylib.h"
 
 // user prompts
 const string ENTER_FIRST_NAME = "Įveskite vardą: ";
@@ -19,16 +17,13 @@ const string ADD_ANOTHER_STUDENT = "Ar norite įvesti dar vieną studentą? (tai
 constexpr char MENU_TEXT[] = 
     "\nPasirinkite, ką norite daryti:\n"
     "1 - Vykdyti programą\n"
-    "2 - Atlikti pasirinktus tyrimus\n"
+    "2 - Atlikti tyrimą\n"
     "0 - Nieko nenoriu daryti\n";
 
     constexpr char TEST_MENU_TEXT[] =
     "\nPasirinkite tyrimą:\n"
     "1 - failu generavimas\n"
     "2 - programos veikimo laikas\n"
-    "3 - konteinerio testas\n" 
-    "4 - pirma strategija\n"
-    "5 - antra strategija\n"
     "0 - Užbaigti programa\n";
 
 constexpr char PROGRAM_MENU_TEXT[] = 
@@ -59,6 +54,7 @@ const string INVALID_SIZE_ERROR = "\nKlaida: dydis turi būti sveikasis skaičiu
 const string INVALID_MARKS_COUNT = "\nKlaida: turite įvesti bent vieną pažymį! ";
 const string INVALID_OUTPUT_TYPE_ERROR = "\nKlaida: netinkamas išvedimo tipas! ";
 const string FILE_OPEN_ERROR = "\nKlaida: nepavyko atidaryti failo! ";
+const string FILE_READ_ERROR = "\nKlaida: nepavyko nuskaityti failo! ";
 const string EMPTY_ARRAY_ERROR = "\nKlaida: pažymių masyvas tuščias! ";
 const string INVALID_GROUP_TYPE = "\nKlaida: netinkamas grupavimo tipas! ";
 const string INVALID_FILE_SIZE = "\nKlaida: netinkamas failo dydis! ";
@@ -67,7 +63,3 @@ const string INVALID_FILE_SIZE = "\nKlaida: netinkamas failo dydis! ";
 const string FILE_READ_SUCCESS = "\nDuomenys nuskaityti sėkmingai! ";
 const string FILE_WRITE_SUCCESS = "\nDuomenys įrašyti sėkmingai! ";
 const string TEST_SECCESS = "\nLaiko tyrimo rezultatai įrašyti į failą: ";
-
-
-
-#endif

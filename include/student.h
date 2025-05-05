@@ -1,6 +1,4 @@
-#ifndef STUDENT_H
-#define STUDENT_H
-
+#pragma once
 #include <iostream>
 #include <vector>
 #include <string>
@@ -22,7 +20,14 @@ private:
 public:
     Student();
     Student(std::istream& is);
-    ~Student() = default; 
+    ~Student() {
+        firstName_.clear();
+        lastName_.clear();
+        marks_.clear();
+        examMark_ = 0;
+        avgFinal_ = 0.0;
+        medianFinal_ = 0.0;
+    }
 
     std::string getFirstName() const { return firstName_; }
     std::string getLastName() const { return lastName_; }
@@ -44,4 +49,3 @@ public:
 
 void sortStudents(std::vector<Student>& students, char sortType);
 
-#endif 

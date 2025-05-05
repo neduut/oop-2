@@ -1,6 +1,4 @@
-#ifndef TIME_MEASUREMENT_H
-#define TIME_MEASUREMENT_H
-
+#pragma once
 #include <chrono>
 #include <iostream>
 #include <fstream>  
@@ -28,4 +26,3 @@ public:
     std::string getActionName() const { return actionName; }
 };
 
-#endif
