@@ -14,20 +14,73 @@ Student::Student(const Student& other)
     : firstName_(other.firstName_), lastName_(other.lastName_), marks_(other.marks_),
       examMark_(other.examMark_), avgFinal_(other.avgFinal_), medianFinal_(other.medianFinal_) {}
 
+// copy operator
+Student& Student::operator=(const Student& other) {
+    if (this != &other) {
+        firstName_ = other.firstName_;
+        lastName_ = other.lastName_;
+        marks_ = other.marks_;
+        examMark_ = other.examMark_;
+        avgFinal_ = other.avgFinal_;
+        medianFinal_ = other.medianFinal_;
+    }
+    return *this;
+}
+
 // move constructor
 Student::Student(Student&& other) noexcept
     : firstName_(std::move(other.firstName_)), lastName_(std::move(other.lastName_)), 
       marks_(std::move(other.marks_)), examMark_(other.examMark_), 
-      avgFinal_(other.avgFinal_), medianFinal_(other.medianFinal_) {}
+      avgFinal_(other.avgFinal_), medianFinal_(other.medianFinal_) {
+        other.examMark_ = 0;
+        other.avgFinal_ = 0.0;
+        other.medianFinal_ = 0.0;
+      }
+
+// move operator
+Student& Student::operator=(Student&& other) noexcept {
+    if (this != &other) {
+        firstName_ = std::move(other.firstName_);
+        lastName_ = std::move(other.lastName_);
+        marks_ = std::move(other.marks_);
+        examMark_ = other.examMark_;
+        avgFinal_ = other.avgFinal_;
+        medianFinal_ = other.medianFinal_;
+        
+        other.examMark_ = 0;
+        other.avgFinal_ = 0.0;
+        other.medianFinal_ = 0.0;
+    }
+    return *this;
+}
 
 // destructor
 Student::~Student() {
-    firstName_.clear();
-    lastName_.clear();
+    // kiek kartu iskviestas
+
+    //ar reik visu ar tik marks?
+    //firstName_.clear();
+    //lastName_.clear();
     marks_.clear();
-    examMark_ = 0;
-    avgFinal_ = 0.0;
-    medianFinal_ = 0.0;
+    //examMark_ = 0;
+    //avgFinal_ = 0.0;
+    //medianFinal_ = 0.0;
+}
+
+// input operator
+std::istream& operator>>(std::istream& is, Student& student) {
+    student.readStudent(is);
+    return is;
+}
+
+// output operator
+std::ostream& operator<<(std::ostream& os, const Student& student) {
+    os << student.firstName_ << " " << student.lastName_ << " ";
+    for (const auto& mark : student.marks_) {
+        os << mark << " ";
+    }
+    os << student.examMark_ << " " << student.avgFinal_ << " " << student.medianFinal_;
+    return os;
 }
 
 std::istream& Student::readStudent(std::istream& is) {
@@ -102,6 +155,11 @@ void Student::readFromFile(std::vector<Student>& students, int fileSize) {
     }
 }
 
+void Student::calculateFinalMarks() {
+    avgFinal_ = 0.4 * average(marks_) + 0.6 * examMark_;
+    medianFinal_ = median(marks_);
+}
+
 float Student::average(const std::vector<int>& marks) const {
     if (marks.empty()) {
         return 0.0;
@@ -122,11 +180,6 @@ float Student::median(const std::vector<int>& marks) const {
     } else {
         return sortedMarks[size / 2];
     }
-}
-
-void Student::calculateFinalMarks() {
-    avgFinal_ = 0.4 * average(marks_) + 0.6 * examMark_;
-    medianFinal_ = median(marks_);
 }
 
 void sortStudents(std::vector<Student>& students, char sortType) {
