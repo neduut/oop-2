@@ -45,7 +45,7 @@ Sukurtas testas `testRuleOfFive()`, kuris patikrina visus metodus.
 | Tipas        | Aprašymas                                                                 |
 |-------------|---------------------------------------------------------------------------|
 | Rankinis     | Vartotojas suveda duomenis ranka tiesiai į konsolę                        |
-| Automatinis  | Naudojamas testavimui su `istrinstream`                         |
+| Automatinis  | Naudojamas testavimui su `istringstream`                         |
 | Iš failo    | Skaitomi duomenys iš failo naudojant `ifstream` (v1.2 teste numatytas vienas dydis - 3, kitur galima rinktis iš 5 dydžių) |
 
 ## Duomenų išvestis
