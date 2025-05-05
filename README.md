@@ -80,7 +80,7 @@ Funkcija `testRuleOfFive()` tikrina:
 
 ## Išvestis:
 ![image](https://github.com/user-attachments/assets/0ea244ca-53b1-4e7b-895b-90f9d2f0dd81)
-![image](https://github.com/user-attachments/assets/e2b68880-0657-4c4c-b889-269ded13d5d8)
+![image](https://github.com/user-attachments/assets/a298d5f2-3d06-42ce-b860-54dd83f0d5f1)
 
 ## Destruktorius:
 ![image](https://github.com/user-attachments/assets/79f7f806-f530-4832-bc07-a181af206bab)
@@ -91,8 +91,6 @@ Funkcija `testRuleOfFive()` tikrina:
 `studentai3.txt` - 8 testui
 `testas2.txt` - 9 testui
 
-
-|-----------------------------------------------------------------------------------------------------------------------------------------|
 
 
 # Programos versijos
