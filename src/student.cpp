@@ -2,25 +2,29 @@
 #include "utils.h"
 #include "constants.h"
 
+int dstCount = 0;
+
 // default constructor
-Student::Student()
-    : firstName_(""), lastName_(""), marks_(), examMark_(0), avgFinal_(0.0), medianFinal_(0.0) {}
+Student::Student() 
+    : Zmogus(), examMark_(0), avgFinal_(0.0), medianFinal_(0.0) {}
 
 // constructor with input stream
 Student::Student(std::istream& is) {
-    readStudent(is);
+    read(is);
 }
 
 // copy constructor
 Student::Student(const Student& other)
-    : firstName_(other.firstName_), lastName_(other.lastName_), marks_(other.marks_),
-      examMark_(other.examMark_), avgFinal_(other.avgFinal_), medianFinal_(other.medianFinal_) {}
+    :  Zmogus(other), 
+    marks_(other.marks_),
+    examMark_(other.examMark_), 
+    avgFinal_(other.avgFinal_), 
+    medianFinal_(other.medianFinal_) {}
 
-// copy operator
+// copy assignment operator
 Student& Student::operator=(const Student& other) {
     if (this != &other) {
-        firstName_ = other.firstName_;
-        lastName_ = other.lastName_;
+        Zmogus::operator=(other);
         marks_ = other.marks_;
         examMark_ = other.examMark_;
         avgFinal_ = other.avgFinal_;
@@ -31,19 +35,21 @@ Student& Student::operator=(const Student& other) {
 
 // move constructor
 Student::Student(Student&& other) noexcept
-    : firstName_(std::move(other.firstName_)), lastName_(std::move(other.lastName_)), 
-      marks_(std::move(other.marks_)), examMark_(other.examMark_), 
-      avgFinal_(other.avgFinal_), medianFinal_(other.medianFinal_) {
+    : Zmogus(std::move(other)),  
+      marks_(std::move(other.marks_)), 
+      examMark_(other.examMark_), 
+      avgFinal_(other.avgFinal_), 
+      medianFinal_(other.medianFinal_) {
+
         other.examMark_ = 0;
         other.avgFinal_ = 0.0;
         other.medianFinal_ = 0.0;
       }
 
-// move operator
+// move assignment operator
 Student& Student::operator=(Student&& other) noexcept {
     if (this != &other) {
-        firstName_ = std::move(other.firstName_);
-        lastName_ = std::move(other.lastName_);
+        Zmogus::operator=(std::move(other)); 
         marks_ = std::move(other.marks_);
         examMark_ = other.examMark_;
         avgFinal_ = other.avgFinal_;
@@ -56,30 +62,31 @@ Student& Student::operator=(Student&& other) noexcept {
     return *this;
 }
 
-// input operator
+// input assignment operator
 std::istream& operator>>(std::istream& is, Student& student) {
-    student.readStudent(is);
+    student.read(is);
     return is;
 }
 
-// output operator
+// output assignment operator
 std::ostream& operator<<(std::ostream& os, const Student& student) {
-    os << student.firstName_ << " " << student.lastName_ << "  ND: ";
-    for (const auto& mark : student.marks_) {
+    os << static_cast<const Zmogus&>(student); 
+    for (const auto& mark : student.getHomeworkMarks()) {
         os << mark << " ";
     }
-    os << " Egz: " << student.examMark_ << "  Avg. gal: " << student.avgFinal_ << "  Avg. Med: " << student.medianFinal_;
+    os << "Egz: " << student.getExamMark()
+       << " Avg: " << student.getAvgFinal()
+       << " Med: " << student.getMedianFinal();
     return os;
 }
 
 // destructor
-int dstCount = 0;
 Student::~Student() {
     marks_.clear();
-    dstCount++;
+    ++dstCount;
 }
 
-std::istream& Student::readStudent(std::istream& is) {
+std::istream& Student::read(std::istream& is) {
     is >> firstName_ >> lastName_;
     int mark;
     marks_.clear();
@@ -88,8 +95,17 @@ std::istream& Student::readStudent(std::istream& is) {
     }
     examMark_ = marks_.back();
     marks_.pop_back();
-
+    calculateFinalMarks();
     return is;
+}
+
+std::ostream& Student::print(std::ostream& os) const {
+    os << firstName_ << " " << lastName_ << " ND: ";
+    for (const auto& mark : marks_) os << mark << " ";
+    os << "Egz: " << examMark_ 
+       << " Avg: " << avgFinal_ 
+       << " Med: " << medianFinal_;
+    return os;
 }
 
 void Student::readInput(std::vector<Student>& students, char menuChoice) {
@@ -133,7 +149,7 @@ void Student::readFromFile(std::vector<Student>& students, int fileSize) {
         while (std::getline(file, line)) {
             std::istringstream ss(line);
             if (ss) {
-                temp.readStudent(ss);
+                temp.read(ss);
                 temp.calculateFinalMarks();
                 students.push_back(temp);
 
