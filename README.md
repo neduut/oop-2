@@ -52,7 +52,10 @@ aprasymas ir sc
 
 
 ## failai
-
+studentai3.txt
+testas1.txt
+testas2.txt
+testas3.txt
 
 # Programos versijos
 

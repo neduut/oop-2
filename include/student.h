@@ -5,6 +5,8 @@
 #include <numeric>
 #include <algorithm>
 
+extern int dstCount; // for destructor test
+
 class Student {
 private:
     std::string firstName_;
@@ -18,9 +20,8 @@ private:
     float median(const std::vector<int>& marks) const;
 
 public:
-    // constructors
-    Student();
-    Student(std::istream& is);
+    Student(); // default constructor
+    Student(std::istream& is); // constructor with input stream
 
     // Rule of Five
     Student(const Student& other); // copy constructor

@@ -25,3 +25,5 @@ string getRandomFirstName();
 string getRandomLastName();
 int getRandomMark();
 
+// order track
+string printCount(int count);

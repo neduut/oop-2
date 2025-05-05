@@ -262,3 +262,21 @@ int getRandomMark() {
     std::uniform_int_distribution<int> mark(1, 10);
     return mark(mt);
 }
+
+// order track
+string printCount(int count) {
+    string temp;
+    // Skaičius 1, tačiau ne 11
+if (count % 10 == 1 && count % 100 != 11) {
+    temp = " kartą";
+} 
+// Skaičiai tarp 2 ir 4, tačiau ne 12-14
+else if ((count % 10 >= 2 && count % 10 <= 4) && (count % 100 < 10 || count % 100 >= 20)) {
+    temp = " kartus";
+} 
+// Visi kiti atvejai
+else {
+    temp = " kartų";
+}
+return temp;
+}

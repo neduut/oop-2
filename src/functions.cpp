@@ -3,6 +3,7 @@
 #include "constants.h"
 #include "timeMeasurement.h"
 #include "student.h"
+#include <cassert>
 
 void handleProgramMenu(std::vector<Student>& students) {
     while (true) {
@@ -65,6 +66,9 @@ void handleTestMenu() {
             int fileSize = getFileSize();
             for (int i = 0; i < 5; ++i) { programTest(fileSize);}
         }
+        else if (testMenuChoice == 3) {
+            testRuleOfFive();
+        }
     }
 }
 
@@ -81,7 +85,7 @@ void generateFile(int size) {
 
         // Add header
         ostringstream header;
-        header << left << setw(15) << "Vardas"
+        header << left << setw(15) << "getFirstName"
                << setw(15) << "Pavardė";
         for (int j = 1; j <= 5; ++j) {  
             header << setw(8) << "ND" + to_string(j);
@@ -92,7 +96,7 @@ void generateFile(int size) {
         // Generate student data
         for (int i = 0; i < size; ++i) {
             ostringstream ss;
-            ss << left << setw(15) << "Vardas" + to_string(i + 1)
+            ss << left << setw(15) << "getFirstName" + to_string(i + 1)
                << setw(15) << "Pavardė" + to_string(i + 1);
             for (int j = 0; j < 5; ++j) {  
                 ss << setw(8) << getRandomMark();  
@@ -133,8 +137,8 @@ void groupStudents(vector<Student>& students, vector<Student>& kietiakai, vector
 }
 
 void printToConsole(vector<Student>& kietiakai, vector<Student>& vargsiukai) {
-    cout << left << setw(17) << "Vardas"
-         << setw(17) << "Pavarde"
+    cout << left << setw(17) << "getFirstName"
+         << setw(17) << "getLastName"
          << setw(23) << "Galutinis (Vid.)"
          << setw(23) << "Galutinis (Med.)" << '\n'; 
     cout << string(80, '-') << '\n'; 
@@ -172,8 +176,8 @@ void printToFile(vector<Student>& students, const string& fileName) {
         lines.reserve(students.size() + 2);
 
         ostringstream header;
-        header << left << setw(17) << "Vardas"
-               << setw(16) << "Pavarde"
+        header << left << setw(17) << "getFirstName"
+               << setw(16) << "getLastName"
                << setw(20) << "Galutinis (Vid.)" 
                << setw(20) << "Galutinis (Med.)" << '\n'
                << string(69, '-') << '\n';
@@ -274,3 +278,120 @@ void programTest(int size) {
     }
 }
 
+void testRuleOfFive() {
+    // first test
+    cout << "\n1 TESTAS: default konstruktorius\n";
+    Student s1;
+    s1.setFirstName("testas");
+    s1.setLastName("testukas");
+    s1.setMarks({1, 2, 3, 4, 5});
+    s1.setExamMark(10);
+    s1.calculateFinalMarks();
+    cout << "Rezultatas: " << s1 << endl;
+    assert(s1.getFirstName() == "testas");
+
+    // second test
+    cout << "\n2 TESTAS: kopijavimo konstruktorius\n";
+    Student s2(s1);
+    cout << "Rezultatas: " << s2 << "\n";
+    assert(s2.getFirstName() == s1.getFirstName());
+
+    // third test
+    cout << "\n3 TESTAS: kopijavimo operatorius\n";
+    Student s3;
+    s3 = s1;
+    cout << "Rezultatas: " << s3 << "\n";
+    assert(s3.getFirstName() == s1.getFirstName());
+
+    // fourth test
+    cout << "\n4 TESTAS: perkėlimo konstruktorius\n";
+    Student s4(std::move(s1));
+    cout << "Rezultatas: " << s4 << "\n";
+    assert(s4.getFirstName() == "testas");
+    assert(s4.getExamMark() == 10);
+    assert(s1.getFirstName().empty()); // s1 turėtų būti "ištuštintas"
+
+    // fifth test
+    cout << "\n5 TESTAS: perkėlimo operatorius\n";
+    Student s5;
+    s5 = std::move(s2);
+    cout << "Rezultatas: " << s5 << "\n";
+    assert(s5.getFirstName() == "testas");
+    assert(s5.getExamMark() == 10);
+    assert(s2.getFirstName().empty());
+
+    // sixth test
+    cout << "\n6.1 TESTAS: įvesties operatorius (į stringstream)\n";
+    istringstream iss1("testas testukas 1 2 3 4 5 10\n");
+    Student s6;
+    iss1 >> s6;
+    cout << "Rezultatas: " << s6 << endl;
+    assert(s6.getFirstName() == "testas");
+    assert(s6.getExamMark() == 10);
+
+    // seventh test
+    cout << "\n6.2 TESTAS: įvesties operatorius (input iš konsolės)\n";
+    vector<Student> s7;
+    Student::readInput(s7, 1); 
+    cout << "Rezultatas: ";
+    for (const auto& student : s7) {
+        cout << student.getFirstName() << " " << student.getLastName() << " " << student.getAvgFinal() << " " << student.getMedianFinal() << endl;
+    }
+    assert(!s7[0].getFirstName().empty());
+
+    // eighth test
+    cout << "\n6.3 TESTAS: įvestis iš failo\n";
+    ofstream testFile1("files/testas1.txt");
+    testFile1 << "Antanas Antanaitis 9 8 7 6 5 9" << endl;
+    testFile1.close();
+
+    ifstream fr("files/testas1.txt");
+    Student s8;
+    fr >> s8;
+    fr.close();
+    cout << "Rezultatas: " << s8 << endl;
+    assert(s8.getFirstName() == "Antanas");
+    assert(s8.getLastName() == "Antanaitis");
+    assert((s8.getHomeworkMarks() == vector<int>{9, 8, 7, 6, 5}));
+    assert(s8.getExamMark() == 9);
+
+    // ninth test
+    cout << "\n7 TESTAS: išvesties operatorius \n";
+    ostringstream oss1;
+    oss1 << s8;
+    cout << "Rezultatas: " << oss1.str() << endl;
+    assert(oss1.str().find("Antanaitis") != std::string::npos);
+
+    // tenth test
+    cout << "\n8 TESTAS: studentų nuskaitymas iš failo (readFromFile)\n";
+    std::ofstream testFile2("files/studentai3.txt");
+    testFile2 << "antraste" << std::endl;
+    testFile2 << "Jonas Jonaitis 10 9 8 7 9 6" << std::endl;
+    testFile2 << "Vejas Vejukas 10 9 8 7 6 6" << std::endl;
+    testFile2 << "Petras Petrauskas 8 9 7 10 9 5" << std::endl;
+    testFile2.close();
+
+    std::vector<Student> tempStudents;
+    Student::readFromFile(tempStudents, 3);
+    std::cout << "Gauta studentu: " << tempStudents.size() << std::endl;
+    assert(tempStudents.size() == 3);
+    assert(tempStudents[0].getFirstName() == "Jonas");
+    assert(tempStudents[1].getLastName() == "Vejukas");
+
+    // eleventh test
+    cout << "\n9 TESTAS: išvedimas į failą\n";
+    ofstream testFile3("files/testas2.txt");
+    if (!testFile3) {
+        cerr << FILE_OPEN_ERROR << endl;
+    } else {
+        for (const auto& s : tempStudents) {
+            testFile3 << s << "\n";
+        }
+        testFile3.close();
+    }
+    cout << "Rezultatai išsaugoti faile: testas2.txt\n";
+
+    // twelfth test
+    cout << "\n10 TESTAS: destruktorius\n"; 
+    cout << "Destruktorius iškviestas " << dstCount << printCount(dstCount) << endl;
+}

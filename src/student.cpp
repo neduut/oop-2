@@ -2,9 +2,11 @@
 #include "utils.h"
 #include "constants.h"
 
+// default constructor
 Student::Student()
     : firstName_(""), lastName_(""), marks_(), examMark_(0), avgFinal_(0.0), medianFinal_(0.0) {}
 
+// constructor with input stream
 Student::Student(std::istream& is) {
     readStudent(is);
 }
@@ -54,19 +56,6 @@ Student& Student::operator=(Student&& other) noexcept {
     return *this;
 }
 
-// destructor
-Student::~Student() {
-    // kiek kartu iskviestas
-
-    //ar reik visu ar tik marks?
-    //firstName_.clear();
-    //lastName_.clear();
-    marks_.clear();
-    //examMark_ = 0;
-    //avgFinal_ = 0.0;
-    //medianFinal_ = 0.0;
-}
-
 // input operator
 std::istream& operator>>(std::istream& is, Student& student) {
     student.readStudent(is);
@@ -81,6 +70,13 @@ std::ostream& operator<<(std::ostream& os, const Student& student) {
     }
     os << student.examMark_ << " " << student.avgFinal_ << " " << student.medianFinal_;
     return os;
+}
+
+// destructor
+int dstCount = 0;
+Student::~Student() {
+    marks_.clear();
+    dstCount++;
 }
 
 std::istream& Student::readStudent(std::istream& is) {
