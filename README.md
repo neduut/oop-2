@@ -38,7 +38,7 @@ Perdengti >> ir << operatoriai:
 * Kad palaikytų įvestį iš vartotojo (konsolės), iš stringo (testavimui) ir iš failo
 * Kad palaikytų išvestį į ekraną ir į failą
 
-Sukurtas testas `testRuleOfFive()`, kuris patikrina visus metodus.
+Faile `functions` sukurtas testas `testRuleOfFive()`, kuris patikrina visus metodus.
 
   
 ## Duomenų įvestis

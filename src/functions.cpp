@@ -321,7 +321,7 @@ void testRuleOfFive() {
     assert(s2.getFirstName().empty());
 
     // 6th test 
-    cout << "\n6 TESTAS: įvesties operatorius (į stringstream)\n";
+    cout << "\n6 TESTAS: įvesties operatorius (į istringstream)\n";
     istringstream iss1("testas testukas 1 2 3 4 5 10\n");
     Student s6;
     iss1 >> s6;
