@@ -48,7 +48,31 @@ i ekrana, i faila
 
 
 ## testavimas
-aprasymas ir sc
+Funkcija StudentMethodsTest() tikrina:
+1. Default konstuktorių
+2. Kopijavimo konstruktorių
+3. Kopijavimo priskyrimo operatorių
+4. Perkėlimo konstruktorių
+5. Perkėlimo priskyrimo operatorių
+6. Įvesties operatorių
+   6.1 Įvestį iš konsolės
+   6.2 Įvestį iš failo
+7. Išvesties operatorių
+8. Nuskaitymą iš failo
+9. Išvedimą į failą
+10. Išvedimą į konsolę
+11. Destruktorių
+
+## Rule of five:
+![image](https://github.com/user-attachments/assets/c7df7e24-a823-40a5-9d61-87d07af39509)
+
+## Įvestis:
+
+## Išvestis:
+![image](https://github.com/user-attachments/assets/0ea244ca-53b1-4e7b-895b-90f9d2f0dd81)
+
+## Destruktorius:
+![image](https://github.com/user-attachments/assets/79f7f806-f530-4832-bc07-a181af206bab)
 
 
 ## failai
