@@ -24,31 +24,39 @@ Programos versijose analizuojamas bei tobulinamas programos našumas ir efektyvu
 
 
 # Versija 1.2
-# Rule of five ir operatorių persidengimas
+# "Rule of five" ir operatorių persidengimas
 
-Studentas klasėje pilnai realizuoti „Rule of Five“ metodus:
-default konstuktorių
-kopijavimo konstruktorių
-kopijavimo priskyrimo operatorių
-perkelimo konstruktorių
-perkelimo priskyrimo operatorių
-destruktorių
-Perdengti >> ir << operatorius:
-Kad palaikytų įvestį iš vartotojo (cin), iš stringo (testavimui), iš failo
-Kad palaikytų išvestį į ekraną ir į failą
-Sukurti testą (testuotiRuleOfFive()), kuris patikrina visus metodus.
+`Studentas` klasėje pilnai realizuoti "Rule of Five" metodai:
+* Default konstuktorius
+* Kopijavimo konstruktorius
+* Kopijavimo priskyrimo operatorius
+* Perkėlimo konstruktorius
+* Perkėlimo priskyrimo operatorius
+* Destruktorius
+
+Perdengti >> ir << operatoriai:
+* Kad palaikytų įvestį iš vartotojo (konsolės), iš stringo (testavimui) ir iš failo
+* Kad palaikytų išvestį į ekraną ir į failą
+
+Sukurtas testas `testRuleOfFive()`, kuris patikrina visus metodus.
 
   
-## duomenų įvestis
- rankiniu, automatiniu, is failo
+## Duomenų įvestis
+| Tipas        | Aprašymas                                                                 |
+|-------------|---------------------------------------------------------------------------|
+| Rankinis     | Vartotojas suveda duomenis ranka tiesiai į konsolę.                        |
+| Automatinis  | Naudojamas testavimui su `istrinstream`.                         |
+| Iš failo    | Skaitomi duomenys iš failo naudojant `ifstream`. (v1.2 teste numatytas vienas dydis - 3, kitur galima rinktis iš 5 dydžių) |
 
-
-## duomenų išvestis
-i ekrana, i faila
+## Duomenų išvestis
+| Tipas      | Aprašymas                             |
+|-----------|--------------------------------------|
+| Į ekraną  | Duomenys atvaizduojami konsolėje per `cout <<`. |
+| Į failą   | Duomenys saugomi faile per `ostringstream`. |
 
 
 ## testavimas
-Funkcija StudentMethodsTest() tikrina:
+Funkcija `testRuleOfFive()` tikrina:
 1. Default konstuktorių
 2. Kopijavimo konstruktorių
 3. Kopijavimo priskyrimo operatorių
@@ -67,6 +75,7 @@ Funkcija StudentMethodsTest() tikrina:
 ![image](https://github.com/user-attachments/assets/c7df7e24-a823-40a5-9d61-87d07af39509)
 
 ## Įvestis:
+![image](https://github.com/user-attachments/assets/9d6722bc-afc5-472a-a318-44a6cc3a8237)
 
 ## Išvestis:
 ![image](https://github.com/user-attachments/assets/0ea244ca-53b1-4e7b-895b-90f9d2f0dd81)
@@ -75,11 +84,10 @@ Funkcija StudentMethodsTest() tikrina:
 ![image](https://github.com/user-attachments/assets/79f7f806-f530-4832-bc07-a181af206bab)
 
 
-## failai
-studentai3.txt
-testas1.txt
-testas2.txt
-testas3.txt
+## Papildomi failai testavimui
+`testas1.txt` - 6.2 testui 
+`studentai3.txt` - 8 testui
+`testas2.txt` - 9 testui
 
 # Programos versijos
 
