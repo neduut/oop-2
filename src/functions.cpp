@@ -321,7 +321,7 @@ void testRuleOfFive() {
     assert(s2.getFirstName().empty());
 
     // 6th test 
-    cout << "\n6.1 TESTAS: įvesties operatorius (į stringstream)\n";
+    cout << "\n6 TESTAS: įvesties operatorius (į stringstream)\n";
     istringstream iss1("testas testukas 1 2 3 4 5 10\n");
     Student s6;
     iss1 >> s6;
@@ -331,7 +331,7 @@ void testRuleOfFive() {
     assert(s6.getExamMark() == 10);
 
     // 7th test
-    cout << "\n6.2 TESTAS: įvesties operatorius (input iš konsolės)\n";
+    cout << "\n6.1 TESTAS: įvesties operatorius (input iš konsolės)\n";
     vector<Student> s7;
     Student::readInput(s7, 1); 
     cout << "Rezultatas: ";
@@ -341,7 +341,7 @@ void testRuleOfFive() {
     assert(!s7[0].getFirstName().empty());
 
     // 8th test 
-    cout << "\n6.3 TESTAS: įvestis iš failo\n";
+    cout << "\n6.2 TESTAS: įvestis iš failo\n";
     ofstream testFile1("files/testas1.txt");
     testFile1 << "Antanas Antanaitis 9 8 7 6 5 9" << endl;
     testFile1.close();
