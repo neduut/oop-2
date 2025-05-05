@@ -57,14 +57,15 @@ Sukurtas testas `testRuleOfFive()`, kuris patikrina visus metodus.
 
 ## testavimas
 Funkcija `testRuleOfFive()` tikrina:
-1. Default konstuktorių
-2. Kopijavimo konstruktorių
-3. Kopijavimo priskyrimo operatorių
-4. Perkėlimo konstruktorių
-5. Perkėlimo priskyrimo operatorių
-6. Įvesties operatorių
-   6.1 Įvestį iš konsolės
-   6.2 Įvestį iš failo
+
+1. Default konstruktorius
+2. Kopijavimo konstruktorius
+3. Kopijavimo priskyrimo operatorius
+4. Perkėlimo konstruktorius
+5. Perkėlimo priskyrimo operatorius
+6. Įvesties operatoriai
+    * 6.1 Įvestį iš konsolės
+    * 6.2 Įvestį iš failo
 7. Išvesties operatorių
 8. Nuskaitymą iš failo
 9. Išvedimą į failą
@@ -88,6 +89,10 @@ Funkcija `testRuleOfFive()` tikrina:
 `testas1.txt` - 6.2 testui 
 `studentai3.txt` - 8 testui
 `testas2.txt` - 9 testui
+
+
+|-----------------------------------------------------------------------------------------------------------------------------------------|
+
 
 # Programos versijos
 
