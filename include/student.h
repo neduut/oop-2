@@ -18,16 +18,20 @@ private:
     float median(const std::vector<int>& marks) const;
 
 public:
+    // default constructor
     Student();
+
+    // constructor with parameters
     Student(std::istream& is);
-    ~Student() {
-        firstName_.clear();
-        lastName_.clear();
-        marks_.clear();
-        examMark_ = 0;
-        avgFinal_ = 0.0;
-        medianFinal_ = 0.0;
-    }
+
+    // copy constructor
+    Student(const Student& other);
+    
+    // move constructor
+    Student(Student&& other) noexcept;
+
+    // destructor
+    ~Student();
 
     std::string getFirstName() const { return firstName_; }
     std::string getLastName() const { return lastName_; }
@@ -45,6 +49,11 @@ public:
     static void readFromFile(std::vector<Student>& students, int fileSize);
     std::istream& readStudent(std::istream&);
     void calculateFinalMarks(); 
+
+    // operators
+    //friend std::ostream& operator<<(std::ostream& os, const Student& student);
+    //friend std::istream& operator>>(std::istream& is, Student& student);
+    //friend void swap(Student& first, Student& second) noexcept;
 };
 
 void sortStudents(std::vector<Student>& students, char sortType);

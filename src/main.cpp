@@ -2,7 +2,7 @@
 #include "utils.h"
 #include "functions.h"
 #include "student.h"
-//sutvarkyt kad visom sistemom kad veiktu simboliai
+//sutvarkyt kad visom sistemom veiktu simboliai
 #ifdef _WIN32
 #include <windows.h>
 #endif

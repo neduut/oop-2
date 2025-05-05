@@ -9,6 +9,27 @@ Student::Student(std::istream& is) {
     readStudent(is);
 }
 
+// copy constructor
+Student::Student(const Student& other)
+    : firstName_(other.firstName_), lastName_(other.lastName_), marks_(other.marks_),
+      examMark_(other.examMark_), avgFinal_(other.avgFinal_), medianFinal_(other.medianFinal_) {}
+
+// move constructor
+Student::Student(Student&& other) noexcept
+    : firstName_(std::move(other.firstName_)), lastName_(std::move(other.lastName_)), 
+      marks_(std::move(other.marks_)), examMark_(other.examMark_), 
+      avgFinal_(other.avgFinal_), medianFinal_(other.medianFinal_) {}
+
+// destructor
+Student::~Student() {
+    firstName_.clear();
+    lastName_.clear();
+    marks_.clear();
+    examMark_ = 0;
+    avgFinal_ = 0.0;
+    medianFinal_ = 0.0;
+}
+
 std::istream& Student::readStudent(std::istream& is) {
     is >> firstName_ >> lastName_;
     int mark;
