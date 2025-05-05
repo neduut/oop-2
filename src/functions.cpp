@@ -279,7 +279,7 @@ void programTest(int size) {
 }
 
 void testRuleOfFive() {
-    // first test
+    // 1st test
     cout << "\n1 TESTAS: default konstruktorius\n";
     Student s1;
     s1.setFirstName("testas");
@@ -290,20 +290,20 @@ void testRuleOfFive() {
     cout << "Rezultatas: " << s1 << endl;
     assert(s1.getFirstName() == "testas");
 
-    // second test
+    // 2nd test
     cout << "\n2 TESTAS: kopijavimo konstruktorius\n";
     Student s2(s1);
     cout << "Rezultatas: " << s2 << "\n";
     assert(s2.getFirstName() == s1.getFirstName());
 
-    // third test
+    // 3rd test
     cout << "\n3 TESTAS: kopijavimo operatorius\n";
     Student s3;
     s3 = s1;
     cout << "Rezultatas: " << s3 << "\n";
     assert(s3.getFirstName() == s1.getFirstName());
 
-    // fourth test
+    // 4th test
     cout << "\n4 TESTAS: perkėlimo konstruktorius\n";
     Student s4(std::move(s1));
     cout << "Rezultatas: " << s4 << "\n";
@@ -311,7 +311,7 @@ void testRuleOfFive() {
     assert(s4.getExamMark() == 10);
     assert(s1.getFirstName().empty()); // s1 turėtų būti "ištuštintas"
 
-    // fifth test
+    // 5th test
     cout << "\n5 TESTAS: perkėlimo operatorius\n";
     Student s5;
     s5 = std::move(s2);
@@ -320,16 +320,17 @@ void testRuleOfFive() {
     assert(s5.getExamMark() == 10);
     assert(s2.getFirstName().empty());
 
-    // sixth test
+    // 6th test 
     cout << "\n6.1 TESTAS: įvesties operatorius (į stringstream)\n";
     istringstream iss1("testas testukas 1 2 3 4 5 10\n");
     Student s6;
     iss1 >> s6;
+    s6.calculateFinalMarks();
     cout << "Rezultatas: " << s6 << endl;
     assert(s6.getFirstName() == "testas");
     assert(s6.getExamMark() == 10);
 
-    // seventh test
+    // 7th test
     cout << "\n6.2 TESTAS: įvesties operatorius (input iš konsolės)\n";
     vector<Student> s7;
     Student::readInput(s7, 1); 
@@ -339,7 +340,7 @@ void testRuleOfFive() {
     }
     assert(!s7[0].getFirstName().empty());
 
-    // eighth test
+    // 8th test 
     cout << "\n6.3 TESTAS: įvestis iš failo\n";
     ofstream testFile1("files/testas1.txt");
     testFile1 << "Antanas Antanaitis 9 8 7 6 5 9" << endl;
@@ -349,20 +350,21 @@ void testRuleOfFive() {
     Student s8;
     fr >> s8;
     fr.close();
+    s8.calculateFinalMarks();
     cout << "Rezultatas: " << s8 << endl;
     assert(s8.getFirstName() == "Antanas");
     assert(s8.getLastName() == "Antanaitis");
     assert((s8.getHomeworkMarks() == vector<int>{9, 8, 7, 6, 5}));
     assert(s8.getExamMark() == 9);
 
-    // ninth test
+    // 9th test 
     cout << "\n7 TESTAS: išvesties operatorius \n";
     ostringstream oss1;
     oss1 << s8;
     cout << "Rezultatas: " << oss1.str() << endl;
     assert(oss1.str().find("Antanaitis") != std::string::npos);
 
-    // tenth test
+    // 10th test
     cout << "\n8 TESTAS: studentų nuskaitymas iš failo (readFromFile)\n";
     std::ofstream testFile2("files/studentai3.txt");
     testFile2 << "antraste" << std::endl;
@@ -378,7 +380,7 @@ void testRuleOfFive() {
     assert(tempStudents[0].getFirstName() == "Jonas");
     assert(tempStudents[1].getLastName() == "Vejukas");
 
-    // eleventh test
+    // 11th test
     cout << "\n9 TESTAS: išvedimas į failą\n";
     ofstream testFile3("files/testas2.txt");
     if (!testFile3) {
@@ -391,7 +393,11 @@ void testRuleOfFive() {
     }
     cout << "Rezultatai išsaugoti faile: testas2.txt\n";
 
-    // twelfth test
-    cout << "\n10 TESTAS: destruktorius\n"; 
+    // 12th test
+    cout << "\n10 TESTAS: studentų išvedimas į konsolę\n";
+    for (const auto& s : tempStudents) std::cout << s << std::endl;
+
+    // 13th test
+    cout << "\n11 TESTAS: destruktorius\n"; 
     cout << "Destruktorius iškviestas " << dstCount << printCount(dstCount) << endl;
 }

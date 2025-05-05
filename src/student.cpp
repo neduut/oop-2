@@ -64,11 +64,11 @@ std::istream& operator>>(std::istream& is, Student& student) {
 
 // output operator
 std::ostream& operator<<(std::ostream& os, const Student& student) {
-    os << student.firstName_ << " " << student.lastName_ << " ";
+    os << student.firstName_ << " " << student.lastName_ << "  ND: ";
     for (const auto& mark : student.marks_) {
         os << mark << " ";
     }
-    os << student.examMark_ << " " << student.avgFinal_ << " " << student.medianFinal_;
+    os << " Egz: " << student.examMark_ << "  Avg. gal: " << student.avgFinal_ << "  Avg. Med: " << student.medianFinal_;
     return os;
 }
 
