@@ -22,15 +22,6 @@ Programos versijose analizuojamas bei tobulinamas programos našumas ir efektyvu
 - Įdiegta CMake (3.25 arba naujesnė versija)
 - Kompiliatorius: g++ (su C++11 arba naujesne versija)
 
-
-# Versija 1.5
-# Bazinė ir derived klasės
-
-Sukurta nauja bazinė klasė `Zmogus`, klasė `Student` paversta į derived.
-Faile `functions` sukurtas naujas testas `testZmogusClass()`, kuris patikrina, ar `Zmogus` klasė yra abstrakti.
-Panaudotas testas iš v1.2 `testRuleOfFive()`, kuris patikrina visus metodus.
-
-  
 ## Duomenų įvestis
 | Tipas        | Aprašymas                                                                 |
 |-------------|---------------------------------------------------------------------------|
@@ -44,70 +35,78 @@ Panaudotas testas iš v1.2 `testRuleOfFive()`, kuris patikrina visus metodus.
 | Į ekraną  | Duomenys atvaizduojami konsolėje per `cout <<` |
 | Į failą   | Duomenys saugomi faile per `ostringstream` |
 
+
+# Versija 1.5
+# Bazinė ir derived klasės
+
+Sukurta nauja bazinė klasė `Zmogus`, klasė `Student` paversta į derived.
+Faile `functions` sukurtas naujas testas `testZmogusClass()`, kuris patikrina, ar `Zmogus` klasė yra abstrakti.
+Panaudotas testas iš v1.2 `testRuleOfFive()`, kuris patikrina visus metodus.
+
 ## `Zmogus` bazinė klasė
 
 **Protected atributai**
-*`firstName_` - studento vardas
-*`lastName_ ` - studento pavardė
+- `firstName_` - studento vardas
+- `lastName_ ` - studento pavardė
 
 **Konstruktoriai**
-*`Zmogus()` – default konstruktorius
-*`Zmogus(const std::string& firstName, const std::string& lastName)` – konstruktorius su parametrais
-*`virtual ~Zmogus() = 0` – virtualus abstrakčios klasės destruktorius 
+- `Zmogus()` – default konstruktorius
+- `Zmogus(const std::string& firstName, const std::string& lastName)` – konstruktorius su parametrais
+- `virtual ~Zmogus() = 0` – virtualus abstrakčios klasės destruktorius 
 
 **Virtualios funkcijos**
-*`virtual void read(std::istream& is) = 0` – input'ui
-*`virtual void print(std::ostream& os) const = 0` – output'ui
+- `virtual void read(std::istream& is) = 0` – input'ui
+- `virtual void print(std::ostream& os) const = 0` – output'ui
 
 **Getteriai ir setteriai**
-*`string getFirstName() const` – grąžina vardą
-*`string getLastName() const` – grąžina pavardę
-*`void setFirstName(const std::string& firstName)` – nustato vardą
-*`void setLastName(const std::string& lastName)` – nustato pavardę
+- `string getFirstName() const` – grąžina vardą
+- `string getLastName() const` – grąžina pavardę
+- `void setFirstName(const std::string& firstName)` – nustato vardą
+- `void setLastName(const std::string& lastName)` – nustato pavardę
 
 **Globalūs operatoriai**
-*`inline std::istream& operator>>(std::istream& is, Zmogus& zmogus)`
-*`inline std::ostream& operator<<(std::ostream& os, const Zmogus& zmogus)`
+- `inline std::istream& operator>>(std::istream& is, Zmogus& zmogus)`
+- `inline std::ostream& operator<<(std::ostream& os, const Zmogus& zmogus)`
 
 ## `Student` išvestinė klasė
 
 **Privatūs atributai**
-*`std::vector<int> marks_` - pažymiai
-*`int examMark_ ` - egzamino pažymys
-*`float avgFinal_;` - galutinis pažymys pagal vidurkį
-*`float medianFinal_;` - galutinis pažymys pagal medianą
+- `std::vector<int> marks_` - pažymiai
+- `int examMark_ ` - egzamino pažymys
+- `float avgFinal_;` - galutinis pažymys pagal vidurkį
+- `float medianFinal_;` - galutinis pažymys pagal medianą
 
 **Privatūs metodai**
-*`float average(const std::vector<int>& marks) const` - apskaičiuoją galutinį pažymį pagal vidurkį
-*`float median(const std::vector<int>& marks) const` - apskaičiuoją galutinį pažymį pagal medianą
+- `float average(const std::vector<int>& marks) const` - apskaičiuoją galutinį pažymį pagal vidurkį
+- `float median(const std::vector<int>& marks) const` - apskaičiuoją galutinį pažymį pagal medianą
 
 **Konstruktoriai**
-*`Student()` – default konstruktorius
-*`Student(std::istream& is)` – konstruktorius su input stream'u
-*`Student::Student(const Student& other)` – kopijavimo konstruktorius
-*`Student::Student(Student&& other) noexcept` - perkėlimo konstruktorius
+- `Student()` – default konstruktorius
+- `Student(std::istream& is)` – konstruktorius su input stream'u
+- `Student::Student(const Student& other)` – kopijavimo konstruktorius
+- `Student::Student(Student&& other) noexcept` - perkėlimo konstruktorius
 
 **Persidengimo operatoriai**
-*`Student& Student::operator=(const Student& other)` - kopijavimo operatorius
-*`Student& Student::operator=(Student&& other) noexcept` - perkėlimo operatorius
+- `Student& Student::operator=(const Student& other)` - kopijavimo operatorius
+- `Student& Student::operator=(Student&& other) noexcept` - perkėlimo operatorius
 
 **Getteriai ir setteriai**
-*`const std::vector<int>& getHomeworkMarks() const` - grąžina pažymius
-*`int getExamMark() const` – grąžina egzamino pažymį
-*`float getAvgFinal() const` – grąžina galutinį pažymį pagal vidurkį
-*`float getMedianFinal() const` – grąžina galutinį pažymį pagal medianą
-*`void setMarks(std::vector<int> marks)` – nustato pažymius
-*`void setExamMark(int examMark)` - nustato galutinį pažymį
+- `const std::vector<int>& getHomeworkMarks() const` - grąžina pažymius
+- `int getExamMark() const` – grąžina egzamino pažymį
+- `float getAvgFinal() const` – grąžina galutinį pažymį pagal vidurkį
+- `float getMedianFinal() const` – grąžina galutinį pažymį pagal medianą
+- `void setMarks(std::vector<int> marks)` – nustato pažymius
+- `void setExamMark(int examMark)` - nustato galutinį pažymį
 
 **Įgyvendintos virtualios funkcijos**
-*`void Student::read(std::istream& is)` – input'ui
-*`void Student::print(std::ostream& os) const` – output'ui
+- `void Student::read(std::istream& is)` – input'ui
+- `void Student::print(std::ostream& os) const` – output'ui
 
 **Kiti metodai**
-*`std::istream& readStudent(std::istream& is)` - input'ui
-*`void calculateFinalMarks();` - iškviečia 2 galutinio pažymio skaičiavimo funkcijas (vid. ir med.)
-*`static void readInput(std::vector<Student>& students, char menuChoice);` - skaito studento duomenis įvestus konsolėje
-*`static void readFromFile(std::vector<Student>& students, int fileSize);` - skaito studento duomenis iš failo
+- `std::istream& readStudent(std::istream& is)` - input'ui
+- `void calculateFinalMarks();` - iškviečia 2 galutinio pažymio skaičiavimo funkcijas (vid. ir med.)
+- `static void readInput(std::vector<Student>& students, char menuChoice);` - skaito studento duomenis įvestus konsolėje
+- `static void readFromFile(std::vector<Student>& students, int fileSize);` - skaito studento duomenis iš failo
 
 ## Testavimas
 
