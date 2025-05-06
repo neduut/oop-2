@@ -1,0 +1,43 @@
+\doxysection{zmogus.\+h}
+\hypertarget{zmogus_8h_source}{}\label{zmogus_8h_source}\index{include/zmogus.h@{include/zmogus.h}}
+\mbox{\hyperlink{zmogus_8h}{Eiti į šio failo dokumentaciją.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_zmogus_aa7a8ba4d3c4778f9b35d59eef3e72574}{Zmogus}}\ \{}
+\DoxyCodeLine{00006\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00007\ \ \ \ \ std::string\ \mbox{\hyperlink{class_zmogus_a60ab38ca75dc57762f069f97da76cb38}{firstName\_}};}
+\DoxyCodeLine{00008\ \ \ \ \ std::string\ \mbox{\hyperlink{class_zmogus_a5ff50a27f18f3b7bdaae42f218e3cb02}{lastName\_}};}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00011\ \ \ \ \ \mbox{\hyperlink{class_zmogus_aa7a8ba4d3c4778f9b35d59eef3e72574}{Zmogus}}()\ :\ \mbox{\hyperlink{class_zmogus_a60ab38ca75dc57762f069f97da76cb38}{firstName\_}}(\textcolor{stringliteral}{"{}"{}}),\ \mbox{\hyperlink{class_zmogus_a5ff50a27f18f3b7bdaae42f218e3cb02}{lastName\_}}(\textcolor{stringliteral}{"{}"{}})\ \{\}}
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{class_zmogus_aa2fecd7cbd53f263200b272fdf5c891f}{Zmogus}}(\textcolor{keyword}{const}\ std::string\&\ firstName,\ \textcolor{keyword}{const}\ std::string\&\ lastName)}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_zmogus_a60ab38ca75dc57762f069f97da76cb38}{firstName\_}}(firstName),\ \mbox{\hyperlink{class_zmogus_a5ff50a27f18f3b7bdaae42f218e3cb02}{lastName\_}}(lastName)\ \{\}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_zmogus_a6183937c7da8254430a6c99cfa89fe69}{\string~Zmogus}}()\ =\ \textcolor{keywordflow}{default};\ \textcolor{comment}{//\ virtual\ destructor}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{comment}{//\ abstract\ class\ interface}}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_zmogus_a8fe0dd00effd9b5da56a7a4b0f1890a2}{read}}(std::istream\&\ is)\ =\ 0;}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_zmogus_a54c34a84f8fee7c318a3c69072521b5f}{print}}(std::ostream\&\ os)\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{comment}{//\ getters/setters}}
+\DoxyCodeLine{00022\ \ \ \ \ std::string\ \mbox{\hyperlink{class_zmogus_a544d0bbab1b6eadf4c11bd14d2f73b2f}{getFirstName}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_zmogus_a60ab38ca75dc57762f069f97da76cb38}{firstName\_}};\ \}}
+\DoxyCodeLine{00023\ \ \ \ \ std::string\ \mbox{\hyperlink{class_zmogus_aaedc19c008babd010132eba0d59659c2}{getLastName}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_zmogus_a5ff50a27f18f3b7bdaae42f218e3cb02}{lastName\_}};\ \}}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_zmogus_a35a25f40937ed8ffa7961dbe3a9a5275}{setFirstName}}(\textcolor{keyword}{const}\ std::string\&\ firstName)\ \{\ \mbox{\hyperlink{class_zmogus_a60ab38ca75dc57762f069f97da76cb38}{firstName\_}}\ =\ firstName;\ \}}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_zmogus_af9c10c2fd44544700f72b2cf2b9ea019}{setLastName}}(\textcolor{keyword}{const}\ std::string\&\ lastName)\ \{\ \mbox{\hyperlink{class_zmogus_a5ff50a27f18f3b7bdaae42f218e3cb02}{lastName\_}}\ =\ lastName;\ \}}
+\DoxyCodeLine{00026\ \};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{comment}{//\ global\ operators}}
+\DoxyCodeLine{00029\ \textcolor{keyword}{inline}\ std::istream\&\ \mbox{\hyperlink{zmogus_8h_a4757b75cec6ed4b36bef3442aad7ba64}{operator>>}}(std::istream\&\ is,\ \mbox{\hyperlink{class_zmogus}{Zmogus}}\&\ zmogus)\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ zmogus.\mbox{\hyperlink{class_zmogus_a8fe0dd00effd9b5da56a7a4b0f1890a2}{read}}(is);\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordflow}{return}\ is;}
+\DoxyCodeLine{00032\ \}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{keyword}{inline}\ std::ostream\&\ \mbox{\hyperlink{zmogus_8h_a1abe8d7f968fa7fa8c6f3d9308450199}{operator<<}}(std::ostream\&\ os,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_zmogus}{Zmogus}}\&\ zmogus)\ \{}
+\DoxyCodeLine{00035\ \ \ \ \ zmogus.\mbox{\hyperlink{class_zmogus_a54c34a84f8fee7c318a3c69072521b5f}{print}}(os);\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordflow}{return}\ os;}
+\DoxyCodeLine{00037\ \}}
+
+\end{DoxyCode}

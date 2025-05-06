@@ -1,0 +1,63 @@
+\doxysection{student.\+h}
+\hypertarget{student_8h_source}{}\label{student_8h_source}\index{include/student.h@{include/student.h}}
+\mbox{\hyperlink{student_8h}{Eiti į šio failo dokumentaciją.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{zmogus_8h}{zmogus.h}}"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <numeric>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{student_8h_ab1aee96285dcc90c5bea1492c259b848}{dstCount}};\ \textcolor{comment}{//\ for\ destructor\ test}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_student_af9168cedbfa5565cf0b20c1a9d3f5c9d}{Student}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_zmogus_aa7a8ba4d3c4778f9b35d59eef3e72574}{Zmogus}}\ \{}
+\DoxyCodeLine{00010\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00011\ \ \ \ \ std::vector<int>\ \mbox{\hyperlink{class_student_a4c11872d1a860856667fa204b8c7cf77}{marks\_}};}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_student_a85bccebd6358c4ae9b1696145d54cb80}{examMark\_}};}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_student_a90810f860deec80bcdefd2d79a0ca2d0}{avgFinal\_}};}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_student_a76010a5863b884f603e5f6ece35dd031}{medianFinal\_}};}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{comment}{//\ private\ methods}}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_student_adf2aa14d1ad82059f3bece77ece507e6}{average}}(\textcolor{keyword}{const}\ std::vector<int>\&\ marks)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_student_acba95ae7bdd406b62ab42b296abaf8c5}{median}}(\textcolor{keyword}{const}\ std::vector<int>\&\ marks)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{comment}{//\ constructors\ }}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{class_student_af9168cedbfa5565cf0b20c1a9d3f5c9d}{Student}}();}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_student_af9168cedbfa5565cf0b20c1a9d3f5c9d}{Student}}(std::istream\&\ is);}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{comment}{/*Student(const\ std::string\&\ firstName,\ const\ std::string\&\ lastName,\ const\ std::vector<int>\&\ marks,\ int\ examMark)}}
+\DoxyCodeLine{00025\ \textcolor{comment}{\ \ \ \ \ \ \ \ :\ Zmogus(firstName,\ lastName),\ marks\_(marks),\ examMark\_(examMark)\ \{}}
+\DoxyCodeLine{00026\ \textcolor{comment}{\ \ \ \ \ \ \ \ calculateFinalMarks();}}
+\DoxyCodeLine{00027\ \textcolor{comment}{\ \ \ \ \}*/}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{comment}{//\ rule\ of\ five}}
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{class_student_af9168cedbfa5565cf0b20c1a9d3f5c9d}{Student}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_student_af9168cedbfa5565cf0b20c1a9d3f5c9d}{Student}}\&\ other);\ \textcolor{comment}{//\ copy\ constructor}}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{class_student_af9168cedbfa5565cf0b20c1a9d3f5c9d}{Student}}\&\ \mbox{\hyperlink{class_student_ad05dd6148523a2a8b38128b60297b52a}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_student_af9168cedbfa5565cf0b20c1a9d3f5c9d}{Student}}\&\ other);\ \textcolor{comment}{//\ copy\ assignment\ operator}}
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{class_student_af9168cedbfa5565cf0b20c1a9d3f5c9d}{Student}}(\mbox{\hyperlink{class_student_af9168cedbfa5565cf0b20c1a9d3f5c9d}{Student}}\&\&\ other)\ \textcolor{keyword}{noexcept};\ \textcolor{comment}{//\ move\ constructor}}
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{class_student_af9168cedbfa5565cf0b20c1a9d3f5c9d}{Student}}\&\ \mbox{\hyperlink{class_student_ad05dd6148523a2a8b38128b60297b52a}{operator=}}(\mbox{\hyperlink{class_student_af9168cedbfa5565cf0b20c1a9d3f5c9d}{Student}}\&\&\ other)\ \textcolor{keyword}{noexcept};\ \textcolor{comment}{//\ move\ assignment\ operator}}
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{class_student_a54a8ea060d6cd04222c3a2f89829f105}{\string~Student}}();\ \textcolor{comment}{//\ destructor}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{comment}{//\ getters}}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{const}\ std::vector<int>\&\ \mbox{\hyperlink{class_student_affbd7fe73a022eb70db0a1071b729786}{getHomeworkMarks}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_student_a4c11872d1a860856667fa204b8c7cf77}{marks\_}};\ \}}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_student_a1fd355b9a10854aec4f3fe23da695b9d}{getExamMark}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_student_a85bccebd6358c4ae9b1696145d54cb80}{examMark\_}};\ \}}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_student_a722c0008d4cbff9e8e27d91a76cdf527}{getAvgFinal}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_student_a90810f860deec80bcdefd2d79a0ca2d0}{avgFinal\_}};\ \}}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_student_aa8dc467117f73f6b6f0dfce115e3a369}{getMedianFinal}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_student_a76010a5863b884f603e5f6ece35dd031}{medianFinal\_}};\ \}}
+\DoxyCodeLine{00041\ \ \ \ \ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{comment}{//\ setters}}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_student_a393e0c0481850a2bc316894c252ec8b2}{setMarks}}(std::vector<int>\ marks)\ \{\ \mbox{\hyperlink{class_student_a4c11872d1a860856667fa204b8c7cf77}{marks\_}}\ =\ marks;\ \}}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_student_a5cbdb6d7c8683ee6b9ced0454b22810f}{setExamMark}}(\textcolor{keywordtype}{int}\ examMark)\ \{\ \mbox{\hyperlink{class_student_a85bccebd6358c4ae9b1696145d54cb80}{examMark\_}}\ =\ examMark;\ \}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{comment}{//\ implementation\ of\ virtual\ functions}}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_student_a07bb1cfc7e2aa216ea1f472b7e7289e8}{print}}(std::ostream\&\ os)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_student_a55ef28ccf00fd9d754a95d784ad8de21}{read}}(std::istream\&\ is)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{comment}{//\ methods}}
+\DoxyCodeLine{00051\ \ \ \ \ std::istream\&\ \mbox{\hyperlink{class_student_a9c5cbd2b4ce6628b671a1dfd54faa0f6}{readStudent}}(std::istream\&\ is);}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_student_ac70e606bdafb395855171b26ff2727b2}{calculateFinalMarks}}();}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_student_aa805754cd6f9c57be68e4001483936a2}{readInput}}(std::vector<Student>\&\ students,\ \textcolor{keywordtype}{char}\ menuChoice);}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_student_a544708ac9d96da4ed0132fb2d3697964}{readFromFile}}(std::vector<Student>\&\ students,\ \textcolor{keywordtype}{int}\ fileSize);}
+\DoxyCodeLine{00055\ \};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{student_8h_ae3fc249faffaec1ad525054e2fae3f9a}{sortStudents}}(std::vector<Student>\&\ students,\ \textcolor{keywordtype}{char}\ sortType);}
+
+\end{DoxyCode}

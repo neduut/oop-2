@@ -1,0 +1,28 @@
+digraph "include/mylib.h"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  Node1 [id="Node000001",label="include/mylib.h",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge14_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="include/constants.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$constants_8h.html",tooltip=" "];
+  Node2 -> Node3 [id="edge15_Node000002_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="src/functions.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$functions_8cpp.html",tooltip=" "];
+  Node2 -> Node4 [id="edge16_Node000002_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="src/student.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$student_8cpp.html",tooltip=" "];
+  Node2 -> Node5 [id="edge17_Node000002_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="src/utils.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$utils_8cpp.html",tooltip=" "];
+  Node1 -> Node6 [id="edge18_Node000001_Node000006",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="include/functions.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$functions_8h.html",tooltip=" "];
+  Node6 -> Node3 [id="edge19_Node000006_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node6 -> Node7 [id="edge20_Node000006_Node000007",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="src/main.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$main_8cpp.html",tooltip=" "];
+  Node1 -> Node8 [id="edge21_Node000001_Node000008",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node8 [id="Node000008",label="include/utils.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$utils_8h.html",tooltip=" "];
+  Node8 -> Node3 [id="edge22_Node000008_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node8 -> Node7 [id="edge23_Node000008_Node000007",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node8 -> Node4 [id="edge24_Node000008_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node8 -> Node5 [id="edge25_Node000008_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node7 [id="edge26_Node000001_Node000007",dir="back",color="steelblue1",style="solid",tooltip=" "];
+}

@@ -1,0 +1,72 @@
+\doxysection{constants.\+h}
+\hypertarget{constants_8h_source}{}\label{constants_8h_source}\index{include/constants.h@{include/constants.h}}
+\mbox{\hyperlink{constants_8h}{Eiti į šio failo dokumentaciją.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{mylib_8h}{mylib.h}}"{}}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ user\ prompts}}
+\DoxyCodeLine{00005\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{constants_8h_aa266108fe69aad10df59d8bf87a41510}{ENTER\_FIRST\_NAME}}\ =\ \textcolor{stringliteral}{"{}Įveskite\ vardą:\ "{}};}
+\DoxyCodeLine{00006\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{constants_8h_a27c187ab481aceff5d5deda6d6ad12ee}{ENTER\_LAST\_NAME}}\ =\ \textcolor{stringliteral}{"{}Įveskite\ pavardę:\ "{}};\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{constants_8h_ac9f5526a0dfb706b74ca6c6069eb61f7}{ENTER\_MARK}}\ =\ \textcolor{stringliteral}{"{}Įveskite\ namų\ darbų\ pažymį\ (norint\ sustoti,\ įveskite\ -\/1):\ "{}};\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{constants_8h_a61edf539f0c5ce6f35086663588a02ab}{ENTER\_MARK\_IN\_MIXED}}\ =\ \textcolor{stringliteral}{"{}Įveskite\ namų\ darbų\ pažymį:\ "{}};}
+\DoxyCodeLine{00009\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{constants_8h_a959291afd6b0df06380195314bddd421}{ENTER\_EXAM\_MARK}}\ =\ \textcolor{stringliteral}{"{}Įveskite\ egzamino\ pažymį:\ "{}};}
+\DoxyCodeLine{00010\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{constants_8h_ad5a619cdbcf7a27d72846c12b8d01173}{ENTER\_GROUP\_TYPE}}\ =\ \textcolor{stringliteral}{"{}Pasirinkite\ grupavimo\ tipą\ (1\ -\/\ vidurkis\ /\ 2\ -\/\ mediana):\ "{}};}
+\DoxyCodeLine{00011\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{constants_8h_a4b745c650bfa71e9c658c2428ad90d29}{ENTER\_SORT\_TYPE}}\ =\ \textcolor{stringliteral}{"{}Pasirinkite,\ pagal\ ką\ rūšiuoti\ studentus\ (1\ -\/\ vardą\ /\ 2\ -\/\ pavardę\ /\ 3\ -\/\ galutinį\ balą\ (vid.)\ /\ 4\ -\/\ galutinį\ balą\ (med.)):\ "{}};}
+\DoxyCodeLine{00012\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{constants_8h_af929c25d588cc5fa30afd5ad68e449a4}{ENTER\_PRINT\_TYPE}}\ =\ \textcolor{stringliteral}{"{}Pasirinkite,\ kur\ išvesti\ duomenis\ (1\ -\/\ ekraną\ /\ 2\ -\/\ failą):\ "{}};}
+\DoxyCodeLine{00013\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{constants_8h_a37712a08ca83e1bfe88c99b32413914f}{ENTER\_MARKS\_COUNT}}\ =\ \textcolor{stringliteral}{"{}Įveskite\ namų\ darbų\ pažymių\ skaičių:\ "{}};}
+\DoxyCodeLine{00014\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{constants_8h_a8ca9331619ca32df4b61c7e7a7cd3584}{ADD\_ANOTHER\_MARK}}\ =\ \textcolor{stringliteral}{"{}Ar\ norite\ įvesti\ dar\ vieną\ namų\ darbą?\ (taip/ne):\ "{}};}
+\DoxyCodeLine{00015\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{constants_8h_a7bf7b02b94ee7c13ebfd8d2e33eed9a3}{ADD\_ANOTHER\_STUDENT}}\ =\ \textcolor{stringliteral}{"{}Ar\ norite\ įvesti\ dar\ vieną\ studentą?\ (taip/ne):\ "{}};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{constants_8h_aba5e8a17fcbe56f1e3c39b00b1c1e4fc}{MENU\_TEXT}}[]\ =\ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{stringliteral}{"{}\(\backslash\)nPasirinkite,\ ką\ norite\ daryti:\(\backslash\)n"{}}}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{stringliteral}{"{}1\ -\/\ Vykdyti\ programą\(\backslash\)n"{}}}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{stringliteral}{"{}2\ -\/\ Atlikti\ tyrimą\(\backslash\)n"{}}}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{stringliteral}{"{}0\ -\/\ Nieko\ nenoriu\ daryti\(\backslash\)n"{}};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{constants_8h_a12d82531c3ff8eb958ea20e6c9b09d92}{TEST\_MENU\_TEXT}}[]\ =}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{stringliteral}{"{}\(\backslash\)nPasirinkite\ tyrimą:\(\backslash\)n"{}}}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{stringliteral}{"{}1\ -\/\ failu\ generavimas\(\backslash\)n"{}}}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{stringliteral}{"{}2\ -\/\ programos\ veikimo\ laikas\(\backslash\)n"{}}}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{stringliteral}{"{}3\ -\/\ Rule\ of\ Five\ testavimas\(\backslash\)n"{}}}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{stringliteral}{"{}0\ -\/\ Užbaigti\ programa\(\backslash\)n"{}};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{constants_8h_aaa17b4f1d843b0d4b29d7bfd578ad6e6}{PROGRAM\_MENU\_TEXT}}[]\ =\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{stringliteral}{"{}\(\backslash\)nPasirinkite,\ ką\ norite\ daryti:\(\backslash\)n"{}}}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{stringliteral}{"{}1\ -\/\ Įvesti\ viską\ rankiniu\ būdu\(\backslash\)n"{}}}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{stringliteral}{"{}2\ -\/\ Generuoti\ atsitiktinius\ pažymius\ (vardus\ įvesti\ ranka)\(\backslash\)n"{}}}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{stringliteral}{"{}3\ -\/\ Generuoti\ atsitiktinius\ vardus\ ir\ pažymius\(\backslash\)n"{}}}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{stringliteral}{"{}4\ -\/\ Skaityti\ iš\ failo\(\backslash\)n"{}}}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{stringliteral}{"{}5\ -\/\ Užbaigti\ programą\(\backslash\)n"{}};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{constants_8h_a3653d15f4ab5aaeb1126013aec7a77ab}{ENTER\_FILE\_SIZE}}[]\ =\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{stringliteral}{"{}\(\backslash\)nPasirinkite\ failo\ dydį:\(\backslash\)n"{}}}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{stringliteral}{"{}1\ -\/\ 1\ 000\(\backslash\)n"{}}}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{stringliteral}{"{}2\ -\/\ 10\ 000\(\backslash\)n"{}}}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{stringliteral}{"{}3\ -\/\ 100\ 000\(\backslash\)n"{}}}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{stringliteral}{"{}4\ -\/\ 1\ 000\ 000\(\backslash\)n"{}}}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{stringliteral}{"{}5\ -\/\ 10\ 000\ 000\(\backslash\)n"{}};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{comment}{//\ errors}}
+\DoxyCodeLine{00047\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{constants_8h_a9d99075caff2db0bc114b9785f3b8047}{INVALID\_FIRST\_NAME\_ERROR}}\ =\ \textcolor{stringliteral}{"{}\(\backslash\)nKlaida:\ įvestas\ netinkamas\ vardas!\ "{}};\ }
+\DoxyCodeLine{00048\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{constants_8h_a3e1537baab383728624d9bdb20e51fd9}{INVALID\_LAST\_NAME\_ERROR}}\ =\ \textcolor{stringliteral}{"{}\(\backslash\)nKlaida:\ įvesta\ netinkama\ pavardė!\ "{}};\ }
+\DoxyCodeLine{00049\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{constants_8h_a5c8c2ad549fa0dc3e9fb2a93629fe6f4}{INVALID\_MARK\_ERROR}}\ =\ \textcolor{stringliteral}{"{}\(\backslash\)nKlaida:\ pažymys\ turi\ būti\ sveikasis\ skaičius\ nuo\ 1\ iki\ 10!\ "{}};\ }
+\DoxyCodeLine{00050\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{constants_8h_a5ff6a755162a6fbdee2db87b11dd227d}{INVALID\_EXAM\_MARK\_ERROR}}\ =\ \textcolor{stringliteral}{"{}\(\backslash\)nKlaida:\ egzamino\ pažymys\ turi\ būti\ sveikasis\ skaičius\ nuo\ 1\ iki\ 10!\ "{}};\ }
+\DoxyCodeLine{00051\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{constants_8h_a18906fa7c26fdb799b0094fc1a716f51}{INVALID\_MARKS\_COUNT\_ERROR}}\ =\ \textcolor{stringliteral}{"{}\(\backslash\)nKlaida:\ pažymių\ skaičius\ turi\ būti\ sveikasis\ skaičius\ ir\ mažesnis\ nei\ 10!\ "{}};}
+\DoxyCodeLine{00052\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{constants_8h_a276fb4d6c7d8a103b8dc65c9f0f420ca}{INVALID\_MENU\_CHOICE}}\ =\ \textcolor{stringliteral}{"{}\(\backslash\)nKlaida:\ netinkamas\ meniu\ pasirinkimas!\ "{}};}
+\DoxyCodeLine{00053\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{constants_8h_a1cd46cbd056e60ceec208e6460a13dc0}{INVALID\_CHOICE}}\ =\ \textcolor{stringliteral}{"{}\(\backslash\)nKlaida:\ netinkamas\ pasirinkimas!\ "{}};}
+\DoxyCodeLine{00054\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{constants_8h_a03ef2acced40734ac937f12ec81ec34b}{INVALID\_SIZE\_ERROR}}\ =\ \textcolor{stringliteral}{"{}\(\backslash\)nKlaida:\ dydis\ turi\ būti\ sveikasis\ skaičius!\ "{}};}
+\DoxyCodeLine{00055\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{constants_8h_aa96c7100f34d6bc7b257331d8bfbe44e}{INVALID\_MARKS\_COUNT}}\ =\ \textcolor{stringliteral}{"{}\(\backslash\)nKlaida:\ turite\ įvesti\ bent\ vieną\ pažymį!\ "{}};}
+\DoxyCodeLine{00056\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{constants_8h_a618c23b3805963eda519efc12e36b2cf}{INVALID\_OUTPUT\_TYPE\_ERROR}}\ =\ \textcolor{stringliteral}{"{}\(\backslash\)nKlaida:\ netinkamas\ išvedimo\ tipas!\ "{}};}
+\DoxyCodeLine{00057\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{constants_8h_a90054597e953146286721ae6524929ad}{FILE\_OPEN\_ERROR}}\ =\ \textcolor{stringliteral}{"{}\(\backslash\)nKlaida:\ nepavyko\ atidaryti\ failo!\ "{}};}
+\DoxyCodeLine{00058\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{constants_8h_a7d86c733f02eb6f7862940ad1817ecbe}{FILE\_READ\_ERROR}}\ =\ \textcolor{stringliteral}{"{}\(\backslash\)nKlaida:\ nepavyko\ nuskaityti\ failo!\ "{}};}
+\DoxyCodeLine{00059\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{constants_8h_a694efef8a743538fdea8b79b6b368be0}{EMPTY\_ARRAY\_ERROR}}\ =\ \textcolor{stringliteral}{"{}\(\backslash\)nKlaida:\ pažymių\ masyvas\ tuščias!\ "{}};}
+\DoxyCodeLine{00060\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{constants_8h_ac77631222a231f394db6778ad0f75b54}{INVALID\_GROUP\_TYPE}}\ =\ \textcolor{stringliteral}{"{}\(\backslash\)nKlaida:\ netinkamas\ grupavimo\ tipas!\ "{}};}
+\DoxyCodeLine{00061\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{constants_8h_ac5d5ce11fb31ccbb936fb0d698866aa1}{INVALID\_FILE\_SIZE}}\ =\ \textcolor{stringliteral}{"{}\(\backslash\)nKlaida:\ netinkamas\ failo\ dydis!\ "{}};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \textcolor{comment}{//\ success\ }}
+\DoxyCodeLine{00064\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{constants_8h_a194b3faac76be48a3b612569bfe8e1b6}{FILE\_READ\_SUCCESS}}\ =\ \textcolor{stringliteral}{"{}\(\backslash\)nDuomenys\ nuskaityti\ sėkmingai!\ "{}};}
+\DoxyCodeLine{00065\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{constants_8h_a8749526368e698d4c37ddbb165d8d4f2}{FILE\_WRITE\_SUCCESS}}\ =\ \textcolor{stringliteral}{"{}\(\backslash\)nDuomenys\ įrašyti\ sėkmingai!\ "{}};}
+\DoxyCodeLine{00066\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{constants_8h_a06c389417a3b5d3f00fbe6e59767eaf8}{TEST\_SECCESS}}\ =\ \textcolor{stringliteral}{"{}\(\backslash\)nLaiko\ tyrimo\ rezultatai\ įrašyti\ į\ failą:\ "{}};}
+
+\end{DoxyCode}

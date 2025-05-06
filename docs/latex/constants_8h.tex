@@ -1,0 +1,318 @@
+\doxysection{include/constants.h Failo Nuoroda}
+\hypertarget{constants_8h}{}\label{constants_8h}\index{include/constants.h@{include/constants.h}}
+{\ttfamily \#include "{}mylib.\+h"{}}\newline
+Įtraukimo priklausomybių diagrama constants.\+h\+:
+% FIG 0
+Šis grafas rodo, kuris failas tiesiogiai ar netiesiogiai įtraukia šį failą\+:
+% FIG 1
+\doxysubsubsection*{Kintamieji}
+\begin{DoxyCompactItemize}
+\item 
+const string \mbox{\hyperlink{constants_8h_aa266108fe69aad10df59d8bf87a41510}{ENTER\+\_\+\+FIRST\+\_\+\+NAME}} = "{}Įveskite vardą\+: "{}
+\item 
+const string \mbox{\hyperlink{constants_8h_a27c187ab481aceff5d5deda6d6ad12ee}{ENTER\+\_\+\+LAST\+\_\+\+NAME}} = "{}Įveskite pavardę\+: "{}
+\item 
+const string \mbox{\hyperlink{constants_8h_ac9f5526a0dfb706b74ca6c6069eb61f7}{ENTER\+\_\+\+MARK}} = "{}Įveskite namų darbų pažymį (norint sustoti, įveskite -\/1)\+: "{}
+\item 
+const string \mbox{\hyperlink{constants_8h_a61edf539f0c5ce6f35086663588a02ab}{ENTER\+\_\+\+MARK\+\_\+\+IN\+\_\+\+MIXED}} = "{}Įveskite namų darbų pažymį\+: "{}
+\item 
+const string \mbox{\hyperlink{constants_8h_a959291afd6b0df06380195314bddd421}{ENTER\+\_\+\+EXAM\+\_\+\+MARK}} = "{}Įveskite egzamino pažymį\+: "{}
+\item 
+const string \mbox{\hyperlink{constants_8h_ad5a619cdbcf7a27d72846c12b8d01173}{ENTER\+\_\+\+GROUP\+\_\+\+TYPE}} = "{}Pasirinkite grupavimo tipą (1 -\/ vidurkis / 2 -\/ mediana)\+: "{}
+\item 
+const string \mbox{\hyperlink{constants_8h_a4b745c650bfa71e9c658c2428ad90d29}{ENTER\+\_\+\+SORT\+\_\+\+TYPE}} = "{}Pasirinkite, pagal ką rūšiuoti studentus (1 -\/ vardą / 2 -\/ pavardę / 3 -\/ galutinį balą (vid.) / 4 -\/ galutinį balą (med.))\+: "{}
+\item 
+const string \mbox{\hyperlink{constants_8h_af929c25d588cc5fa30afd5ad68e449a4}{ENTER\+\_\+\+PRINT\+\_\+\+TYPE}} = "{}Pasirinkite, kur išvesti duomenis (1 -\/ ekraną / 2 -\/ failą)\+: "{}
+\item 
+const string \mbox{\hyperlink{constants_8h_a37712a08ca83e1bfe88c99b32413914f}{ENTER\+\_\+\+MARKS\+\_\+\+COUNT}} = "{}Įveskite namų darbų pažymių skaičių\+: "{}
+\item 
+const string \mbox{\hyperlink{constants_8h_a8ca9331619ca32df4b61c7e7a7cd3584}{ADD\+\_\+\+ANOTHER\+\_\+\+MARK}} = "{}Ar norite įvesti dar vieną namų darbą? (taip/ne)\+: "{}
+\item 
+const string \mbox{\hyperlink{constants_8h_a7bf7b02b94ee7c13ebfd8d2e33eed9a3}{ADD\+\_\+\+ANOTHER\+\_\+\+STUDENT}} = "{}Ar norite įvesti dar vieną studentą? (taip/ne)\+: "{}
+\item 
+constexpr char \mbox{\hyperlink{constants_8h_aba5e8a17fcbe56f1e3c39b00b1c1e4fc}{MENU\+\_\+\+TEXT}} \mbox{[}$\,$\mbox{]}
+\item 
+constexpr char \mbox{\hyperlink{constants_8h_a12d82531c3ff8eb958ea20e6c9b09d92}{TEST\+\_\+\+MENU\+\_\+\+TEXT}} \mbox{[}$\,$\mbox{]}
+\item 
+constexpr char \mbox{\hyperlink{constants_8h_aaa17b4f1d843b0d4b29d7bfd578ad6e6}{PROGRAM\+\_\+\+MENU\+\_\+\+TEXT}} \mbox{[}$\,$\mbox{]}
+\item 
+constexpr char \mbox{\hyperlink{constants_8h_a3653d15f4ab5aaeb1126013aec7a77ab}{ENTER\+\_\+\+FILE\+\_\+\+SIZE}} \mbox{[}$\,$\mbox{]}
+\item 
+const string \mbox{\hyperlink{constants_8h_a9d99075caff2db0bc114b9785f3b8047}{INVALID\+\_\+\+FIRST\+\_\+\+NAME\+\_\+\+ERROR}} = "{}\textbackslash{}n\+Klaida\+: įvestas netinkamas vardas! "{}
+\item 
+const string \mbox{\hyperlink{constants_8h_a3e1537baab383728624d9bdb20e51fd9}{INVALID\+\_\+\+LAST\+\_\+\+NAME\+\_\+\+ERROR}} = "{}\textbackslash{}n\+Klaida\+: įvesta netinkama pavardė! "{}
+\item 
+const string \mbox{\hyperlink{constants_8h_a5c8c2ad549fa0dc3e9fb2a93629fe6f4}{INVALID\+\_\+\+MARK\+\_\+\+ERROR}} = "{}\textbackslash{}n\+Klaida\+: pažymys turi būti sveikasis skaičius nuo 1 iki 10! "{}
+\item 
+const string \mbox{\hyperlink{constants_8h_a5ff6a755162a6fbdee2db87b11dd227d}{INVALID\+\_\+\+EXAM\+\_\+\+MARK\+\_\+\+ERROR}} = "{}\textbackslash{}n\+Klaida\+: egzamino pažymys turi būti sveikasis skaičius nuo 1 iki 10! "{}
+\item 
+const string \mbox{\hyperlink{constants_8h_a18906fa7c26fdb799b0094fc1a716f51}{INVALID\+\_\+\+MARKS\+\_\+\+COUNT\+\_\+\+ERROR}} = "{}\textbackslash{}n\+Klaida\+: pažymių skaičius turi būti sveikasis skaičius ir mažesnis nei 10! "{}
+\item 
+const string \mbox{\hyperlink{constants_8h_a276fb4d6c7d8a103b8dc65c9f0f420ca}{INVALID\+\_\+\+MENU\+\_\+\+CHOICE}} = "{}\textbackslash{}n\+Klaida\+: netinkamas meniu pasirinkimas! "{}
+\item 
+const string \mbox{\hyperlink{constants_8h_a1cd46cbd056e60ceec208e6460a13dc0}{INVALID\+\_\+\+CHOICE}} = "{}\textbackslash{}n\+Klaida\+: netinkamas pasirinkimas! "{}
+\item 
+const string \mbox{\hyperlink{constants_8h_a03ef2acced40734ac937f12ec81ec34b}{INVALID\+\_\+\+SIZE\+\_\+\+ERROR}} = "{}\textbackslash{}n\+Klaida\+: dydis turi būti sveikasis skaičius! "{}
+\item 
+const string \mbox{\hyperlink{constants_8h_aa96c7100f34d6bc7b257331d8bfbe44e}{INVALID\+\_\+\+MARKS\+\_\+\+COUNT}} = "{}\textbackslash{}n\+Klaida\+: turite įvesti bent vieną pažymį! "{}
+\item 
+const string \mbox{\hyperlink{constants_8h_a618c23b3805963eda519efc12e36b2cf}{INVALID\+\_\+\+OUTPUT\+\_\+\+TYPE\+\_\+\+ERROR}} = "{}\textbackslash{}n\+Klaida\+: netinkamas išvedimo tipas! "{}
+\item 
+const string \mbox{\hyperlink{constants_8h_a90054597e953146286721ae6524929ad}{FILE\+\_\+\+OPEN\+\_\+\+ERROR}} = "{}\textbackslash{}n\+Klaida\+: nepavyko atidaryti failo! "{}
+\item 
+const string \mbox{\hyperlink{constants_8h_a7d86c733f02eb6f7862940ad1817ecbe}{FILE\+\_\+\+READ\+\_\+\+ERROR}} = "{}\textbackslash{}n\+Klaida\+: nepavyko nuskaityti failo! "{}
+\item 
+const string \mbox{\hyperlink{constants_8h_a694efef8a743538fdea8b79b6b368be0}{EMPTY\+\_\+\+ARRAY\+\_\+\+ERROR}} = "{}\textbackslash{}n\+Klaida\+: pažymių masyvas tuščias! "{}
+\item 
+const string \mbox{\hyperlink{constants_8h_ac77631222a231f394db6778ad0f75b54}{INVALID\+\_\+\+GROUP\+\_\+\+TYPE}} = "{}\textbackslash{}n\+Klaida\+: netinkamas grupavimo tipas! "{}
+\item 
+const string \mbox{\hyperlink{constants_8h_ac5d5ce11fb31ccbb936fb0d698866aa1}{INVALID\+\_\+\+FILE\+\_\+\+SIZE}} = "{}\textbackslash{}n\+Klaida\+: netinkamas failo dydis! "{}
+\item 
+const string \mbox{\hyperlink{constants_8h_a194b3faac76be48a3b612569bfe8e1b6}{FILE\+\_\+\+READ\+\_\+\+SUCCESS}} = "{}\textbackslash{}n\+Duomenys nuskaityti sėkmingai! "{}
+\item 
+const string \mbox{\hyperlink{constants_8h_a8749526368e698d4c37ddbb165d8d4f2}{FILE\+\_\+\+WRITE\+\_\+\+SUCCESS}} = "{}\textbackslash{}n\+Duomenys įrašyti sėkmingai! "{}
+\item 
+const string \mbox{\hyperlink{constants_8h_a06c389417a3b5d3f00fbe6e59767eaf8}{TEST\+\_\+\+SECCESS}} = "{}\textbackslash{}n\+Laiko tyrimo rezultatai įrašyti į failą\+: "{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Kintamojo Dokumentacija}
+\Hypertarget{constants_8h_a8ca9331619ca32df4b61c7e7a7cd3584}\index{constants.h@{constants.h}!ADD\_ANOTHER\_MARK@{ADD\_ANOTHER\_MARK}}
+\index{ADD\_ANOTHER\_MARK@{ADD\_ANOTHER\_MARK}!constants.h@{constants.h}}
+\doxysubsubsection{\texorpdfstring{ADD\_ANOTHER\_MARK}{ADD\_ANOTHER\_MARK}}
+{\footnotesize\ttfamily \label{constants_8h_a8ca9331619ca32df4b61c7e7a7cd3584} 
+const string ADD\+\_\+\+ANOTHER\+\_\+\+MARK = "{}Ar norite įvesti dar vieną namų darbą? (taip/ne)\+: "{}}
+
+\Hypertarget{constants_8h_a7bf7b02b94ee7c13ebfd8d2e33eed9a3}\index{constants.h@{constants.h}!ADD\_ANOTHER\_STUDENT@{ADD\_ANOTHER\_STUDENT}}
+\index{ADD\_ANOTHER\_STUDENT@{ADD\_ANOTHER\_STUDENT}!constants.h@{constants.h}}
+\doxysubsubsection{\texorpdfstring{ADD\_ANOTHER\_STUDENT}{ADD\_ANOTHER\_STUDENT}}
+{\footnotesize\ttfamily \label{constants_8h_a7bf7b02b94ee7c13ebfd8d2e33eed9a3} 
+const string ADD\+\_\+\+ANOTHER\+\_\+\+STUDENT = "{}Ar norite įvesti dar vieną studentą? (taip/ne)\+: "{}}
+
+\Hypertarget{constants_8h_a694efef8a743538fdea8b79b6b368be0}\index{constants.h@{constants.h}!EMPTY\_ARRAY\_ERROR@{EMPTY\_ARRAY\_ERROR}}
+\index{EMPTY\_ARRAY\_ERROR@{EMPTY\_ARRAY\_ERROR}!constants.h@{constants.h}}
+\doxysubsubsection{\texorpdfstring{EMPTY\_ARRAY\_ERROR}{EMPTY\_ARRAY\_ERROR}}
+{\footnotesize\ttfamily \label{constants_8h_a694efef8a743538fdea8b79b6b368be0} 
+const string EMPTY\+\_\+\+ARRAY\+\_\+\+ERROR = "{}\textbackslash{}n\+Klaida\+: pažymių masyvas tuščias! "{}}
+
+\Hypertarget{constants_8h_a959291afd6b0df06380195314bddd421}\index{constants.h@{constants.h}!ENTER\_EXAM\_MARK@{ENTER\_EXAM\_MARK}}
+\index{ENTER\_EXAM\_MARK@{ENTER\_EXAM\_MARK}!constants.h@{constants.h}}
+\doxysubsubsection{\texorpdfstring{ENTER\_EXAM\_MARK}{ENTER\_EXAM\_MARK}}
+{\footnotesize\ttfamily \label{constants_8h_a959291afd6b0df06380195314bddd421} 
+const string ENTER\+\_\+\+EXAM\+\_\+\+MARK = "{}Įveskite egzamino pažymį\+: "{}}
+
+\Hypertarget{constants_8h_a3653d15f4ab5aaeb1126013aec7a77ab}\index{constants.h@{constants.h}!ENTER\_FILE\_SIZE@{ENTER\_FILE\_SIZE}}
+\index{ENTER\_FILE\_SIZE@{ENTER\_FILE\_SIZE}!constants.h@{constants.h}}
+\doxysubsubsection{\texorpdfstring{ENTER\_FILE\_SIZE}{ENTER\_FILE\_SIZE}}
+{\footnotesize\ttfamily \label{constants_8h_a3653d15f4ab5aaeb1126013aec7a77ab} 
+char ENTER\+\_\+\+FILE\+\_\+\+SIZE\mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+{\bfseries Pradinė reikšmė\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ }
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}\(\backslash\)nPasirinkite\ failo\ dydį:\(\backslash\)n"{}}}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}1\ -\/\ 1\ 000\(\backslash\)n"{}}}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}2\ -\/\ 10\ 000\(\backslash\)n"{}}}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}3\ -\/\ 100\ 000\(\backslash\)n"{}}}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}4\ -\/\ 1\ 000\ 000\(\backslash\)n"{}}}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}5\ -\/\ 10\ 000\ 000\(\backslash\)n"{}}}
+
+\end{DoxyCode}
+\Hypertarget{constants_8h_aa266108fe69aad10df59d8bf87a41510}\index{constants.h@{constants.h}!ENTER\_FIRST\_NAME@{ENTER\_FIRST\_NAME}}
+\index{ENTER\_FIRST\_NAME@{ENTER\_FIRST\_NAME}!constants.h@{constants.h}}
+\doxysubsubsection{\texorpdfstring{ENTER\_FIRST\_NAME}{ENTER\_FIRST\_NAME}}
+{\footnotesize\ttfamily \label{constants_8h_aa266108fe69aad10df59d8bf87a41510} 
+const string ENTER\+\_\+\+FIRST\+\_\+\+NAME = "{}Įveskite vardą\+: "{}}
+
+\Hypertarget{constants_8h_ad5a619cdbcf7a27d72846c12b8d01173}\index{constants.h@{constants.h}!ENTER\_GROUP\_TYPE@{ENTER\_GROUP\_TYPE}}
+\index{ENTER\_GROUP\_TYPE@{ENTER\_GROUP\_TYPE}!constants.h@{constants.h}}
+\doxysubsubsection{\texorpdfstring{ENTER\_GROUP\_TYPE}{ENTER\_GROUP\_TYPE}}
+{\footnotesize\ttfamily \label{constants_8h_ad5a619cdbcf7a27d72846c12b8d01173} 
+const string ENTER\+\_\+\+GROUP\+\_\+\+TYPE = "{}Pasirinkite grupavimo tipą (1 -\/ vidurkis / 2 -\/ mediana)\+: "{}}
+
+\Hypertarget{constants_8h_a27c187ab481aceff5d5deda6d6ad12ee}\index{constants.h@{constants.h}!ENTER\_LAST\_NAME@{ENTER\_LAST\_NAME}}
+\index{ENTER\_LAST\_NAME@{ENTER\_LAST\_NAME}!constants.h@{constants.h}}
+\doxysubsubsection{\texorpdfstring{ENTER\_LAST\_NAME}{ENTER\_LAST\_NAME}}
+{\footnotesize\ttfamily \label{constants_8h_a27c187ab481aceff5d5deda6d6ad12ee} 
+const string ENTER\+\_\+\+LAST\+\_\+\+NAME = "{}Įveskite pavardę\+: "{}}
+
+\Hypertarget{constants_8h_ac9f5526a0dfb706b74ca6c6069eb61f7}\index{constants.h@{constants.h}!ENTER\_MARK@{ENTER\_MARK}}
+\index{ENTER\_MARK@{ENTER\_MARK}!constants.h@{constants.h}}
+\doxysubsubsection{\texorpdfstring{ENTER\_MARK}{ENTER\_MARK}}
+{\footnotesize\ttfamily \label{constants_8h_ac9f5526a0dfb706b74ca6c6069eb61f7} 
+const string ENTER\+\_\+\+MARK = "{}Įveskite namų darbų pažymį (norint sustoti, įveskite -\/1)\+: "{}}
+
+\Hypertarget{constants_8h_a61edf539f0c5ce6f35086663588a02ab}\index{constants.h@{constants.h}!ENTER\_MARK\_IN\_MIXED@{ENTER\_MARK\_IN\_MIXED}}
+\index{ENTER\_MARK\_IN\_MIXED@{ENTER\_MARK\_IN\_MIXED}!constants.h@{constants.h}}
+\doxysubsubsection{\texorpdfstring{ENTER\_MARK\_IN\_MIXED}{ENTER\_MARK\_IN\_MIXED}}
+{\footnotesize\ttfamily \label{constants_8h_a61edf539f0c5ce6f35086663588a02ab} 
+const string ENTER\+\_\+\+MARK\+\_\+\+IN\+\_\+\+MIXED = "{}Įveskite namų darbų pažymį\+: "{}}
+
+\Hypertarget{constants_8h_a37712a08ca83e1bfe88c99b32413914f}\index{constants.h@{constants.h}!ENTER\_MARKS\_COUNT@{ENTER\_MARKS\_COUNT}}
+\index{ENTER\_MARKS\_COUNT@{ENTER\_MARKS\_COUNT}!constants.h@{constants.h}}
+\doxysubsubsection{\texorpdfstring{ENTER\_MARKS\_COUNT}{ENTER\_MARKS\_COUNT}}
+{\footnotesize\ttfamily \label{constants_8h_a37712a08ca83e1bfe88c99b32413914f} 
+const string ENTER\+\_\+\+MARKS\+\_\+\+COUNT = "{}Įveskite namų darbų pažymių skaičių\+: "{}}
+
+\Hypertarget{constants_8h_af929c25d588cc5fa30afd5ad68e449a4}\index{constants.h@{constants.h}!ENTER\_PRINT\_TYPE@{ENTER\_PRINT\_TYPE}}
+\index{ENTER\_PRINT\_TYPE@{ENTER\_PRINT\_TYPE}!constants.h@{constants.h}}
+\doxysubsubsection{\texorpdfstring{ENTER\_PRINT\_TYPE}{ENTER\_PRINT\_TYPE}}
+{\footnotesize\ttfamily \label{constants_8h_af929c25d588cc5fa30afd5ad68e449a4} 
+const string ENTER\+\_\+\+PRINT\+\_\+\+TYPE = "{}Pasirinkite, kur išvesti duomenis (1 -\/ ekraną / 2 -\/ failą)\+: "{}}
+
+\Hypertarget{constants_8h_a4b745c650bfa71e9c658c2428ad90d29}\index{constants.h@{constants.h}!ENTER\_SORT\_TYPE@{ENTER\_SORT\_TYPE}}
+\index{ENTER\_SORT\_TYPE@{ENTER\_SORT\_TYPE}!constants.h@{constants.h}}
+\doxysubsubsection{\texorpdfstring{ENTER\_SORT\_TYPE}{ENTER\_SORT\_TYPE}}
+{\footnotesize\ttfamily \label{constants_8h_a4b745c650bfa71e9c658c2428ad90d29} 
+const string ENTER\+\_\+\+SORT\+\_\+\+TYPE = "{}Pasirinkite, pagal ką rūšiuoti studentus (1 -\/ vardą / 2 -\/ pavardę / 3 -\/ galutinį balą (vid.) / 4 -\/ galutinį balą (med.))\+: "{}}
+
+\Hypertarget{constants_8h_a90054597e953146286721ae6524929ad}\index{constants.h@{constants.h}!FILE\_OPEN\_ERROR@{FILE\_OPEN\_ERROR}}
+\index{FILE\_OPEN\_ERROR@{FILE\_OPEN\_ERROR}!constants.h@{constants.h}}
+\doxysubsubsection{\texorpdfstring{FILE\_OPEN\_ERROR}{FILE\_OPEN\_ERROR}}
+{\footnotesize\ttfamily \label{constants_8h_a90054597e953146286721ae6524929ad} 
+const string FILE\+\_\+\+OPEN\+\_\+\+ERROR = "{}\textbackslash{}n\+Klaida\+: nepavyko atidaryti failo! "{}}
+
+\Hypertarget{constants_8h_a7d86c733f02eb6f7862940ad1817ecbe}\index{constants.h@{constants.h}!FILE\_READ\_ERROR@{FILE\_READ\_ERROR}}
+\index{FILE\_READ\_ERROR@{FILE\_READ\_ERROR}!constants.h@{constants.h}}
+\doxysubsubsection{\texorpdfstring{FILE\_READ\_ERROR}{FILE\_READ\_ERROR}}
+{\footnotesize\ttfamily \label{constants_8h_a7d86c733f02eb6f7862940ad1817ecbe} 
+const string FILE\+\_\+\+READ\+\_\+\+ERROR = "{}\textbackslash{}n\+Klaida\+: nepavyko nuskaityti failo! "{}}
+
+\Hypertarget{constants_8h_a194b3faac76be48a3b612569bfe8e1b6}\index{constants.h@{constants.h}!FILE\_READ\_SUCCESS@{FILE\_READ\_SUCCESS}}
+\index{FILE\_READ\_SUCCESS@{FILE\_READ\_SUCCESS}!constants.h@{constants.h}}
+\doxysubsubsection{\texorpdfstring{FILE\_READ\_SUCCESS}{FILE\_READ\_SUCCESS}}
+{\footnotesize\ttfamily \label{constants_8h_a194b3faac76be48a3b612569bfe8e1b6} 
+const string FILE\+\_\+\+READ\+\_\+\+SUCCESS = "{}\textbackslash{}n\+Duomenys nuskaityti sėkmingai! "{}}
+
+\Hypertarget{constants_8h_a8749526368e698d4c37ddbb165d8d4f2}\index{constants.h@{constants.h}!FILE\_WRITE\_SUCCESS@{FILE\_WRITE\_SUCCESS}}
+\index{FILE\_WRITE\_SUCCESS@{FILE\_WRITE\_SUCCESS}!constants.h@{constants.h}}
+\doxysubsubsection{\texorpdfstring{FILE\_WRITE\_SUCCESS}{FILE\_WRITE\_SUCCESS}}
+{\footnotesize\ttfamily \label{constants_8h_a8749526368e698d4c37ddbb165d8d4f2} 
+const string FILE\+\_\+\+WRITE\+\_\+\+SUCCESS = "{}\textbackslash{}n\+Duomenys įrašyti sėkmingai! "{}}
+
+\Hypertarget{constants_8h_a1cd46cbd056e60ceec208e6460a13dc0}\index{constants.h@{constants.h}!INVALID\_CHOICE@{INVALID\_CHOICE}}
+\index{INVALID\_CHOICE@{INVALID\_CHOICE}!constants.h@{constants.h}}
+\doxysubsubsection{\texorpdfstring{INVALID\_CHOICE}{INVALID\_CHOICE}}
+{\footnotesize\ttfamily \label{constants_8h_a1cd46cbd056e60ceec208e6460a13dc0} 
+const string INVALID\+\_\+\+CHOICE = "{}\textbackslash{}n\+Klaida\+: netinkamas pasirinkimas! "{}}
+
+\Hypertarget{constants_8h_a5ff6a755162a6fbdee2db87b11dd227d}\index{constants.h@{constants.h}!INVALID\_EXAM\_MARK\_ERROR@{INVALID\_EXAM\_MARK\_ERROR}}
+\index{INVALID\_EXAM\_MARK\_ERROR@{INVALID\_EXAM\_MARK\_ERROR}!constants.h@{constants.h}}
+\doxysubsubsection{\texorpdfstring{INVALID\_EXAM\_MARK\_ERROR}{INVALID\_EXAM\_MARK\_ERROR}}
+{\footnotesize\ttfamily \label{constants_8h_a5ff6a755162a6fbdee2db87b11dd227d} 
+const string INVALID\+\_\+\+EXAM\+\_\+\+MARK\+\_\+\+ERROR = "{}\textbackslash{}n\+Klaida\+: egzamino pažymys turi būti sveikasis skaičius nuo 1 iki 10! "{}}
+
+\Hypertarget{constants_8h_ac5d5ce11fb31ccbb936fb0d698866aa1}\index{constants.h@{constants.h}!INVALID\_FILE\_SIZE@{INVALID\_FILE\_SIZE}}
+\index{INVALID\_FILE\_SIZE@{INVALID\_FILE\_SIZE}!constants.h@{constants.h}}
+\doxysubsubsection{\texorpdfstring{INVALID\_FILE\_SIZE}{INVALID\_FILE\_SIZE}}
+{\footnotesize\ttfamily \label{constants_8h_ac5d5ce11fb31ccbb936fb0d698866aa1} 
+const string INVALID\+\_\+\+FILE\+\_\+\+SIZE = "{}\textbackslash{}n\+Klaida\+: netinkamas failo dydis! "{}}
+
+\Hypertarget{constants_8h_a9d99075caff2db0bc114b9785f3b8047}\index{constants.h@{constants.h}!INVALID\_FIRST\_NAME\_ERROR@{INVALID\_FIRST\_NAME\_ERROR}}
+\index{INVALID\_FIRST\_NAME\_ERROR@{INVALID\_FIRST\_NAME\_ERROR}!constants.h@{constants.h}}
+\doxysubsubsection{\texorpdfstring{INVALID\_FIRST\_NAME\_ERROR}{INVALID\_FIRST\_NAME\_ERROR}}
+{\footnotesize\ttfamily \label{constants_8h_a9d99075caff2db0bc114b9785f3b8047} 
+const string INVALID\+\_\+\+FIRST\+\_\+\+NAME\+\_\+\+ERROR = "{}\textbackslash{}n\+Klaida\+: įvestas netinkamas vardas! "{}}
+
+\Hypertarget{constants_8h_ac77631222a231f394db6778ad0f75b54}\index{constants.h@{constants.h}!INVALID\_GROUP\_TYPE@{INVALID\_GROUP\_TYPE}}
+\index{INVALID\_GROUP\_TYPE@{INVALID\_GROUP\_TYPE}!constants.h@{constants.h}}
+\doxysubsubsection{\texorpdfstring{INVALID\_GROUP\_TYPE}{INVALID\_GROUP\_TYPE}}
+{\footnotesize\ttfamily \label{constants_8h_ac77631222a231f394db6778ad0f75b54} 
+const string INVALID\+\_\+\+GROUP\+\_\+\+TYPE = "{}\textbackslash{}n\+Klaida\+: netinkamas grupavimo tipas! "{}}
+
+\Hypertarget{constants_8h_a3e1537baab383728624d9bdb20e51fd9}\index{constants.h@{constants.h}!INVALID\_LAST\_NAME\_ERROR@{INVALID\_LAST\_NAME\_ERROR}}
+\index{INVALID\_LAST\_NAME\_ERROR@{INVALID\_LAST\_NAME\_ERROR}!constants.h@{constants.h}}
+\doxysubsubsection{\texorpdfstring{INVALID\_LAST\_NAME\_ERROR}{INVALID\_LAST\_NAME\_ERROR}}
+{\footnotesize\ttfamily \label{constants_8h_a3e1537baab383728624d9bdb20e51fd9} 
+const string INVALID\+\_\+\+LAST\+\_\+\+NAME\+\_\+\+ERROR = "{}\textbackslash{}n\+Klaida\+: įvesta netinkama pavardė! "{}}
+
+\Hypertarget{constants_8h_a5c8c2ad549fa0dc3e9fb2a93629fe6f4}\index{constants.h@{constants.h}!INVALID\_MARK\_ERROR@{INVALID\_MARK\_ERROR}}
+\index{INVALID\_MARK\_ERROR@{INVALID\_MARK\_ERROR}!constants.h@{constants.h}}
+\doxysubsubsection{\texorpdfstring{INVALID\_MARK\_ERROR}{INVALID\_MARK\_ERROR}}
+{\footnotesize\ttfamily \label{constants_8h_a5c8c2ad549fa0dc3e9fb2a93629fe6f4} 
+const string INVALID\+\_\+\+MARK\+\_\+\+ERROR = "{}\textbackslash{}n\+Klaida\+: pažymys turi būti sveikasis skaičius nuo 1 iki 10! "{}}
+
+\Hypertarget{constants_8h_aa96c7100f34d6bc7b257331d8bfbe44e}\index{constants.h@{constants.h}!INVALID\_MARKS\_COUNT@{INVALID\_MARKS\_COUNT}}
+\index{INVALID\_MARKS\_COUNT@{INVALID\_MARKS\_COUNT}!constants.h@{constants.h}}
+\doxysubsubsection{\texorpdfstring{INVALID\_MARKS\_COUNT}{INVALID\_MARKS\_COUNT}}
+{\footnotesize\ttfamily \label{constants_8h_aa96c7100f34d6bc7b257331d8bfbe44e} 
+const string INVALID\+\_\+\+MARKS\+\_\+\+COUNT = "{}\textbackslash{}n\+Klaida\+: turite įvesti bent vieną pažymį! "{}}
+
+\Hypertarget{constants_8h_a18906fa7c26fdb799b0094fc1a716f51}\index{constants.h@{constants.h}!INVALID\_MARKS\_COUNT\_ERROR@{INVALID\_MARKS\_COUNT\_ERROR}}
+\index{INVALID\_MARKS\_COUNT\_ERROR@{INVALID\_MARKS\_COUNT\_ERROR}!constants.h@{constants.h}}
+\doxysubsubsection{\texorpdfstring{INVALID\_MARKS\_COUNT\_ERROR}{INVALID\_MARKS\_COUNT\_ERROR}}
+{\footnotesize\ttfamily \label{constants_8h_a18906fa7c26fdb799b0094fc1a716f51} 
+const string INVALID\+\_\+\+MARKS\+\_\+\+COUNT\+\_\+\+ERROR = "{}\textbackslash{}n\+Klaida\+: pažymių skaičius turi būti sveikasis skaičius ir mažesnis nei 10! "{}}
+
+\Hypertarget{constants_8h_a276fb4d6c7d8a103b8dc65c9f0f420ca}\index{constants.h@{constants.h}!INVALID\_MENU\_CHOICE@{INVALID\_MENU\_CHOICE}}
+\index{INVALID\_MENU\_CHOICE@{INVALID\_MENU\_CHOICE}!constants.h@{constants.h}}
+\doxysubsubsection{\texorpdfstring{INVALID\_MENU\_CHOICE}{INVALID\_MENU\_CHOICE}}
+{\footnotesize\ttfamily \label{constants_8h_a276fb4d6c7d8a103b8dc65c9f0f420ca} 
+const string INVALID\+\_\+\+MENU\+\_\+\+CHOICE = "{}\textbackslash{}n\+Klaida\+: netinkamas meniu pasirinkimas! "{}}
+
+\Hypertarget{constants_8h_a618c23b3805963eda519efc12e36b2cf}\index{constants.h@{constants.h}!INVALID\_OUTPUT\_TYPE\_ERROR@{INVALID\_OUTPUT\_TYPE\_ERROR}}
+\index{INVALID\_OUTPUT\_TYPE\_ERROR@{INVALID\_OUTPUT\_TYPE\_ERROR}!constants.h@{constants.h}}
+\doxysubsubsection{\texorpdfstring{INVALID\_OUTPUT\_TYPE\_ERROR}{INVALID\_OUTPUT\_TYPE\_ERROR}}
+{\footnotesize\ttfamily \label{constants_8h_a618c23b3805963eda519efc12e36b2cf} 
+const string INVALID\+\_\+\+OUTPUT\+\_\+\+TYPE\+\_\+\+ERROR = "{}\textbackslash{}n\+Klaida\+: netinkamas išvedimo tipas! "{}}
+
+\Hypertarget{constants_8h_a03ef2acced40734ac937f12ec81ec34b}\index{constants.h@{constants.h}!INVALID\_SIZE\_ERROR@{INVALID\_SIZE\_ERROR}}
+\index{INVALID\_SIZE\_ERROR@{INVALID\_SIZE\_ERROR}!constants.h@{constants.h}}
+\doxysubsubsection{\texorpdfstring{INVALID\_SIZE\_ERROR}{INVALID\_SIZE\_ERROR}}
+{\footnotesize\ttfamily \label{constants_8h_a03ef2acced40734ac937f12ec81ec34b} 
+const string INVALID\+\_\+\+SIZE\+\_\+\+ERROR = "{}\textbackslash{}n\+Klaida\+: dydis turi būti sveikasis skaičius! "{}}
+
+\Hypertarget{constants_8h_aba5e8a17fcbe56f1e3c39b00b1c1e4fc}\index{constants.h@{constants.h}!MENU\_TEXT@{MENU\_TEXT}}
+\index{MENU\_TEXT@{MENU\_TEXT}!constants.h@{constants.h}}
+\doxysubsubsection{\texorpdfstring{MENU\_TEXT}{MENU\_TEXT}}
+{\footnotesize\ttfamily \label{constants_8h_aba5e8a17fcbe56f1e3c39b00b1c1e4fc} 
+char MENU\+\_\+\+TEXT\mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+{\bfseries Pradinė reikšmė\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ }
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}\(\backslash\)nPasirinkite,\ ką\ norite\ daryti:\(\backslash\)n"{}}}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}1\ -\/\ Vykdyti\ programą\(\backslash\)n"{}}}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}2\ -\/\ Atlikti\ tyrimą\(\backslash\)n"{}}}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}0\ -\/\ Nieko\ nenoriu\ daryti\(\backslash\)n"{}}}
+
+\end{DoxyCode}
+\Hypertarget{constants_8h_aaa17b4f1d843b0d4b29d7bfd578ad6e6}\index{constants.h@{constants.h}!PROGRAM\_MENU\_TEXT@{PROGRAM\_MENU\_TEXT}}
+\index{PROGRAM\_MENU\_TEXT@{PROGRAM\_MENU\_TEXT}!constants.h@{constants.h}}
+\doxysubsubsection{\texorpdfstring{PROGRAM\_MENU\_TEXT}{PROGRAM\_MENU\_TEXT}}
+{\footnotesize\ttfamily \label{constants_8h_aaa17b4f1d843b0d4b29d7bfd578ad6e6} 
+char PROGRAM\+\_\+\+MENU\+\_\+\+TEXT\mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+{\bfseries Pradinė reikšmė\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ }
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}\(\backslash\)nPasirinkite,\ ką\ norite\ daryti:\(\backslash\)n"{}}}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}1\ -\/\ Įvesti\ viską\ rankiniu\ būdu\(\backslash\)n"{}}}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}2\ -\/\ Generuoti\ atsitiktinius\ pažymius\ (vardus\ įvesti\ ranka)\(\backslash\)n"{}}}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}3\ -\/\ Generuoti\ atsitiktinius\ vardus\ ir\ pažymius\(\backslash\)n"{}}}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}4\ -\/\ Skaityti\ iš\ failo\(\backslash\)n"{}}}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}5\ -\/\ Užbaigti\ programą\(\backslash\)n"{}}}
+
+\end{DoxyCode}
+\Hypertarget{constants_8h_a12d82531c3ff8eb958ea20e6c9b09d92}\index{constants.h@{constants.h}!TEST\_MENU\_TEXT@{TEST\_MENU\_TEXT}}
+\index{TEST\_MENU\_TEXT@{TEST\_MENU\_TEXT}!constants.h@{constants.h}}
+\doxysubsubsection{\texorpdfstring{TEST\_MENU\_TEXT}{TEST\_MENU\_TEXT}}
+{\footnotesize\ttfamily \label{constants_8h_a12d82531c3ff8eb958ea20e6c9b09d92} 
+char TEST\+\_\+\+MENU\+\_\+\+TEXT\mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+{\bfseries Pradinė reikšmė\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}\(\backslash\)nPasirinkite\ tyrimą:\(\backslash\)n"{}}}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}1\ -\/\ failu\ generavimas\(\backslash\)n"{}}}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}2\ -\/\ programos\ veikimo\ laikas\(\backslash\)n"{}}}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}3\ -\/\ Rule\ of\ Five\ testavimas\(\backslash\)n"{}}}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}0\ -\/\ Užbaigti\ programa\(\backslash\)n"{}}}
+
+\end{DoxyCode}
+\Hypertarget{constants_8h_a06c389417a3b5d3f00fbe6e59767eaf8}\index{constants.h@{constants.h}!TEST\_SECCESS@{TEST\_SECCESS}}
+\index{TEST\_SECCESS@{TEST\_SECCESS}!constants.h@{constants.h}}
+\doxysubsubsection{\texorpdfstring{TEST\_SECCESS}{TEST\_SECCESS}}
+{\footnotesize\ttfamily \label{constants_8h_a06c389417a3b5d3f00fbe6e59767eaf8} 
+const string TEST\+\_\+\+SECCESS = "{}\textbackslash{}n\+Laiko tyrimo rezultatai įrašyti į failą\+: "{}}
+

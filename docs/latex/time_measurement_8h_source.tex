@@ -1,0 +1,34 @@
+\doxysection{time\+Measurement.\+h}
+\hypertarget{time_measurement_8h_source}{}\label{time_measurement_8h_source}\index{include/timeMeasurement.h@{include/timeMeasurement.h}}
+\mbox{\hyperlink{time_measurement_8h}{Eiti į šio failo dokumentaciją.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <chrono>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <fstream>}\ \ }
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_time_measurement_a93ef3a16e622412da08204b8a7c90541}{TimeMeasurement}}\ \{}
+\DoxyCodeLine{00007\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00008\ \ \ \ \ std::chrono::high\_resolution\_clock::time\_point\ \mbox{\hyperlink{class_time_measurement_a92d2f83f37bb6a09098ce7ed28d27c8a}{startTime}};}
+\DoxyCodeLine{00009\ \ \ \ \ std::chrono::high\_resolution\_clock::time\_point\ \mbox{\hyperlink{class_time_measurement_a551db3c383d41c92eaefbc1b6c416b5e}{endTime}};}
+\DoxyCodeLine{00010\ \ \ \ \ std::string\ \mbox{\hyperlink{class_time_measurement_a75724c4c5ed66ecb3092c5f13ce9979d}{actionName}};}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{comment}{//\ Constructor\ with\ an\ action\ name}}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{class_time_measurement_a93ef3a16e622412da08204b8a7c90541}{TimeMeasurement}}(\textcolor{keyword}{const}\ std::string\&\ name);}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{comment}{//\ Start\ measurement}}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_time_measurement_aa25d876890795c05839d0d4c72c4a207}{start}}();}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{comment}{//\ Stop\ measurement\ and\ log\ the\ time\ to\ file}}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_time_measurement_ad6ee2d14e2ef15b2f256c69ee1a00743}{stop}}(std::ofstream\&\ runTimeResults);}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{comment}{//\ Get\ time\ difference\ (seconds)}}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_time_measurement_a5c5224e612a6319c645f642f41839104}{getTimeDifference}}();}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{comment}{//\ Getter\ for\ action\ name\ (optional)}}
+\DoxyCodeLine{00026\ \ \ \ \ std::string\ \mbox{\hyperlink{class_time_measurement_a9501099e2f5d6b4ce76189a9306fcc89}{getActionName}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_time_measurement_a75724c4c5ed66ecb3092c5f13ce9979d}{actionName}};\ \}}
+\DoxyCodeLine{00027\ \};}
+\DoxyCodeLine{00028\ }
+
+\end{DoxyCode}

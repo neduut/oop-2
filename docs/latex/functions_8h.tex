@@ -1,0 +1,115 @@
+\doxysection{include/functions.h Failo Nuoroda}
+\hypertarget{functions_8h}{}\label{functions_8h}\index{include/functions.h@{include/functions.h}}
+{\ttfamily \#include "{}mylib.\+h"{}}\newline
+{\ttfamily \#include "{}student.\+h"{}}\newline
+{\ttfamily \#include $<$cassert$>$}\newline
+Įtraukimo priklausomybių diagrama functions.\+h\+:
+% FIG 0
+Šis grafas rodo, kuris failas tiesiogiai ar netiesiogiai įtraukia šį failą\+:
+% FIG 1
+\doxysubsubsection*{Funkcijos}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{functions_8h_a743106f550f610218ab55e5a0c5dd602}{handle\+Program\+Menu}} (vector$<$ \mbox{\hyperlink{class_student}{Student}} $>$ \&students)
+\item 
+void \mbox{\hyperlink{functions_8h_ae3945d9a3e81968f87ca4f0de3e8e399}{handle\+Test\+Menu}} ()
+\item 
+void \mbox{\hyperlink{functions_8h_a85ebe43058c72adb44d0371354520f5c}{generate\+File}} (int size)
+\item 
+void \mbox{\hyperlink{functions_8h_aea8212146936ce4ec5170ed4f10f4dda}{group\+Students}} (vector$<$ \mbox{\hyperlink{class_student}{Student}} $>$ \&students, vector$<$ \mbox{\hyperlink{class_student}{Student}} $>$ \&kietiakai, vector$<$ \mbox{\hyperlink{class_student}{Student}} $>$ \&vargsiukai, int group\+Type)
+\item 
+void \mbox{\hyperlink{functions_8h_a12dd54c0ece6f204312a9bc35a79a64a}{print\+To\+Console}} (vector$<$ \mbox{\hyperlink{class_student}{Student}} $>$ \&kietiakai, vector$<$ \mbox{\hyperlink{class_student}{Student}} $>$ \&vargsiukai)
+\item 
+void \mbox{\hyperlink{functions_8h_ab00906945cdf01843f13000ff8110fcf}{print\+To\+File}} (vector$<$ \mbox{\hyperlink{class_student}{Student}} $>$ \&students, const string \&file\+Name)
+\item 
+void \mbox{\hyperlink{functions_8h_ab2bc1125054c6e1d5cd45a648fcd60a5}{file\+Gen\+Test}} (int size)
+\item 
+void \mbox{\hyperlink{functions_8h_a5382f5576ea5117c1e5e76b424308676}{program\+Test}} (int size)
+\item 
+void \mbox{\hyperlink{functions_8h_a49ee3f6d9717457a62ff562e1048bc64}{test\+Rule\+Of\+Five}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Funkcijos Dokumentacija}
+\Hypertarget{functions_8h_ab2bc1125054c6e1d5cd45a648fcd60a5}\index{functions.h@{functions.h}!fileGenTest@{fileGenTest}}
+\index{fileGenTest@{fileGenTest}!functions.h@{functions.h}}
+\doxysubsubsection{\texorpdfstring{fileGenTest()}{fileGenTest()}}
+{\footnotesize\ttfamily \label{functions_8h_ab2bc1125054c6e1d5cd45a648fcd60a5} 
+void file\+Gen\+Test (\begin{DoxyParamCaption}\item[{int}]{size}{}\end{DoxyParamCaption})}
+
+Funkcijos kvietimo grafas\+:
+% FIG 2
+Here is the caller graph for this function\+:
+% FIG 3
+\Hypertarget{functions_8h_a85ebe43058c72adb44d0371354520f5c}\index{functions.h@{functions.h}!generateFile@{generateFile}}
+\index{generateFile@{generateFile}!functions.h@{functions.h}}
+\doxysubsubsection{\texorpdfstring{generateFile()}{generateFile()}}
+{\footnotesize\ttfamily \label{functions_8h_a85ebe43058c72adb44d0371354520f5c} 
+void generate\+File (\begin{DoxyParamCaption}\item[{int}]{size}{}\end{DoxyParamCaption})}
+
+Funkcijos kvietimo grafas\+:
+% FIG 4
+Here is the caller graph for this function\+:
+% FIG 5
+\Hypertarget{functions_8h_aea8212146936ce4ec5170ed4f10f4dda}\index{functions.h@{functions.h}!groupStudents@{groupStudents}}
+\index{groupStudents@{groupStudents}!functions.h@{functions.h}}
+\doxysubsubsection{\texorpdfstring{groupStudents()}{groupStudents()}}
+{\footnotesize\ttfamily \label{functions_8h_aea8212146936ce4ec5170ed4f10f4dda} 
+void group\+Students (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{class_student}{Student}} $>$ \&}]{students}{, }\item[{vector$<$ \mbox{\hyperlink{class_student}{Student}} $>$ \&}]{kietiakai}{, }\item[{vector$<$ \mbox{\hyperlink{class_student}{Student}} $>$ \&}]{vargsiukai}{, }\item[{int}]{group\+Type}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+% FIG 6
+\Hypertarget{functions_8h_a743106f550f610218ab55e5a0c5dd602}\index{functions.h@{functions.h}!handleProgramMenu@{handleProgramMenu}}
+\index{handleProgramMenu@{handleProgramMenu}!functions.h@{functions.h}}
+\doxysubsubsection{\texorpdfstring{handleProgramMenu()}{handleProgramMenu()}}
+{\footnotesize\ttfamily \label{functions_8h_a743106f550f610218ab55e5a0c5dd602} 
+void handle\+Program\+Menu (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{class_student}{Student}} $>$ \&}]{students}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+% FIG 7
+\Hypertarget{functions_8h_ae3945d9a3e81968f87ca4f0de3e8e399}\index{functions.h@{functions.h}!handleTestMenu@{handleTestMenu}}
+\index{handleTestMenu@{handleTestMenu}!functions.h@{functions.h}}
+\doxysubsubsection{\texorpdfstring{handleTestMenu()}{handleTestMenu()}}
+{\footnotesize\ttfamily \label{functions_8h_ae3945d9a3e81968f87ca4f0de3e8e399} 
+void handle\+Test\+Menu (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Funkcijos kvietimo grafas\+:
+% FIG 8
+Here is the caller graph for this function\+:
+% FIG 9
+\Hypertarget{functions_8h_a12dd54c0ece6f204312a9bc35a79a64a}\index{functions.h@{functions.h}!printToConsole@{printToConsole}}
+\index{printToConsole@{printToConsole}!functions.h@{functions.h}}
+\doxysubsubsection{\texorpdfstring{printToConsole()}{printToConsole()}}
+{\footnotesize\ttfamily \label{functions_8h_a12dd54c0ece6f204312a9bc35a79a64a} 
+void print\+To\+Console (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{class_student}{Student}} $>$ \&}]{kietiakai}{, }\item[{vector$<$ \mbox{\hyperlink{class_student}{Student}} $>$ \&}]{vargsiukai}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+% FIG 10
+\Hypertarget{functions_8h_ab00906945cdf01843f13000ff8110fcf}\index{functions.h@{functions.h}!printToFile@{printToFile}}
+\index{printToFile@{printToFile}!functions.h@{functions.h}}
+\doxysubsubsection{\texorpdfstring{printToFile()}{printToFile()}}
+{\footnotesize\ttfamily \label{functions_8h_ab00906945cdf01843f13000ff8110fcf} 
+void print\+To\+File (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{class_student}{Student}} $>$ \&}]{students}{, }\item[{const string \&}]{file\+Name}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+% FIG 11
+\Hypertarget{functions_8h_a5382f5576ea5117c1e5e76b424308676}\index{functions.h@{functions.h}!programTest@{programTest}}
+\index{programTest@{programTest}!functions.h@{functions.h}}
+\doxysubsubsection{\texorpdfstring{programTest()}{programTest()}}
+{\footnotesize\ttfamily \label{functions_8h_a5382f5576ea5117c1e5e76b424308676} 
+void program\+Test (\begin{DoxyParamCaption}\item[{int}]{size}{}\end{DoxyParamCaption})}
+
+Funkcijos kvietimo grafas\+:
+% FIG 12
+Here is the caller graph for this function\+:
+% FIG 13
+\Hypertarget{functions_8h_a49ee3f6d9717457a62ff562e1048bc64}\index{functions.h@{functions.h}!testRuleOfFive@{testRuleOfFive}}
+\index{testRuleOfFive@{testRuleOfFive}!functions.h@{functions.h}}
+\doxysubsubsection{\texorpdfstring{testRuleOfFive()}{testRuleOfFive()}}
+{\footnotesize\ttfamily \label{functions_8h_a49ee3f6d9717457a62ff562e1048bc64} 
+void test\+Rule\+Of\+Five (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Funkcijos kvietimo grafas\+:
+% FIG 14
+Here is the caller graph for this function\+:
+% FIG 15

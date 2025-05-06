@@ -1,0 +1,913 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="lt">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Objektinis: Student Klasė</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Objektinis
+   </div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Paieška" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Sugeneruota Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('class_student.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Vieši Metodai</a> &#124;
+<a href="#pub-static-methods">Statiniai Vieši Metodai</a> &#124;
+<a href="#pri-methods">Privatatūs Metodai</a> &#124;
+<a href="#pri-attribs">Privatūs Atributai</a> &#124;
+<a href="class_student-members.html">Visų narių sąrašas</a>  </div>
+  <div class="headertitle"><div class="title">Student Klasė</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="student_8h_source.html">student.h</a>&gt;</code></p>
+<div class="dynheader">
+Paveldimumo diagrama Student:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_student__inherit__graph.png" border="0" usemap="#a_student_inherit__map" alt="Inheritance graph"/></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legenda</a>]</span></center></div>
+<div class="dynheader">
+Bendradarbiavimo diagrama Student:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_student__coll__graph.png" border="0" usemap="#a_student_coll__map" alt="Collaboration graph"/></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legenda</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Vieši Metodai</h2></td></tr>
+<tr class="memitem:af9168cedbfa5565cf0b20c1a9d3f5c9d" id="r_af9168cedbfa5565cf0b20c1a9d3f5c9d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af9168cedbfa5565cf0b20c1a9d3f5c9d">Student</a> ()</td></tr>
+<tr class="separator:af9168cedbfa5565cf0b20c1a9d3f5c9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63c032998418356143a76538b65acc02" id="r_a63c032998418356143a76538b65acc02"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a63c032998418356143a76538b65acc02">Student</a> (std::istream &amp;is)</td></tr>
+<tr class="separator:a63c032998418356143a76538b65acc02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05b37ffb050ddb039db63a8764d790cb" id="r_a05b37ffb050ddb039db63a8764d790cb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a05b37ffb050ddb039db63a8764d790cb">Student</a> (const <a class="el" href="class_student.html">Student</a> &amp;other)</td></tr>
+<tr class="separator:a05b37ffb050ddb039db63a8764d790cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad05dd6148523a2a8b38128b60297b52a" id="r_ad05dd6148523a2a8b38128b60297b52a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_student.html">Student</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad05dd6148523a2a8b38128b60297b52a">operator=</a> (const <a class="el" href="class_student.html">Student</a> &amp;other)</td></tr>
+<tr class="separator:ad05dd6148523a2a8b38128b60297b52a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a154f8e92f220eff931891d336ebed0be" id="r_a154f8e92f220eff931891d336ebed0be"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a154f8e92f220eff931891d336ebed0be">Student</a> (<a class="el" href="class_student.html">Student</a> &amp;&amp;other) noexcept</td></tr>
+<tr class="separator:a154f8e92f220eff931891d336ebed0be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a458365d8621d8e49e17ed809a272feeb" id="r_a458365d8621d8e49e17ed809a272feeb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_student.html">Student</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a458365d8621d8e49e17ed809a272feeb">operator=</a> (<a class="el" href="class_student.html">Student</a> &amp;&amp;other) noexcept</td></tr>
+<tr class="separator:a458365d8621d8e49e17ed809a272feeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54a8ea060d6cd04222c3a2f89829f105" id="r_a54a8ea060d6cd04222c3a2f89829f105"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a54a8ea060d6cd04222c3a2f89829f105">~Student</a> ()</td></tr>
+<tr class="separator:a54a8ea060d6cd04222c3a2f89829f105"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affbd7fe73a022eb70db0a1071b729786" id="r_affbd7fe73a022eb70db0a1071b729786"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; int &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#affbd7fe73a022eb70db0a1071b729786">getHomeworkMarks</a> () const</td></tr>
+<tr class="separator:affbd7fe73a022eb70db0a1071b729786"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fd355b9a10854aec4f3fe23da695b9d" id="r_a1fd355b9a10854aec4f3fe23da695b9d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1fd355b9a10854aec4f3fe23da695b9d">getExamMark</a> () const</td></tr>
+<tr class="separator:a1fd355b9a10854aec4f3fe23da695b9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a722c0008d4cbff9e8e27d91a76cdf527" id="r_a722c0008d4cbff9e8e27d91a76cdf527"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a722c0008d4cbff9e8e27d91a76cdf527">getAvgFinal</a> () const</td></tr>
+<tr class="separator:a722c0008d4cbff9e8e27d91a76cdf527"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8dc467117f73f6b6f0dfce115e3a369" id="r_aa8dc467117f73f6b6f0dfce115e3a369"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa8dc467117f73f6b6f0dfce115e3a369">getMedianFinal</a> () const</td></tr>
+<tr class="separator:aa8dc467117f73f6b6f0dfce115e3a369"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a393e0c0481850a2bc316894c252ec8b2" id="r_a393e0c0481850a2bc316894c252ec8b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a393e0c0481850a2bc316894c252ec8b2">setMarks</a> (std::vector&lt; int &gt; marks)</td></tr>
+<tr class="separator:a393e0c0481850a2bc316894c252ec8b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cbdb6d7c8683ee6b9ced0454b22810f" id="r_a5cbdb6d7c8683ee6b9ced0454b22810f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5cbdb6d7c8683ee6b9ced0454b22810f">setExamMark</a> (int examMark)</td></tr>
+<tr class="separator:a5cbdb6d7c8683ee6b9ced0454b22810f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07bb1cfc7e2aa216ea1f472b7e7289e8" id="r_a07bb1cfc7e2aa216ea1f472b7e7289e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a07bb1cfc7e2aa216ea1f472b7e7289e8">print</a> (std::ostream &amp;os) const override</td></tr>
+<tr class="separator:a07bb1cfc7e2aa216ea1f472b7e7289e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55ef28ccf00fd9d754a95d784ad8de21" id="r_a55ef28ccf00fd9d754a95d784ad8de21"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a55ef28ccf00fd9d754a95d784ad8de21">read</a> (std::istream &amp;is) override</td></tr>
+<tr class="separator:a55ef28ccf00fd9d754a95d784ad8de21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c5cbd2b4ce6628b671a1dfd54faa0f6" id="r_a9c5cbd2b4ce6628b671a1dfd54faa0f6"><td class="memItemLeft" align="right" valign="top">std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9c5cbd2b4ce6628b671a1dfd54faa0f6">readStudent</a> (std::istream &amp;is)</td></tr>
+<tr class="separator:a9c5cbd2b4ce6628b671a1dfd54faa0f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac70e606bdafb395855171b26ff2727b2" id="r_ac70e606bdafb395855171b26ff2727b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac70e606bdafb395855171b26ff2727b2">calculateFinalMarks</a> ()</td></tr>
+<tr class="separator:ac70e606bdafb395855171b26ff2727b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_zmogus"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_zmogus')"><img src="closed.png" alt="-"/>&#160;Vieši Metodai inherited from <a class="el" href="class_zmogus.html">Zmogus</a></td></tr>
+<tr class="memitem:aa7a8ba4d3c4778f9b35d59eef3e72574 inherit pub_methods_class_zmogus" id="r_aa7a8ba4d3c4778f9b35d59eef3e72574"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_zmogus.html#aa7a8ba4d3c4778f9b35d59eef3e72574">Zmogus</a> ()</td></tr>
+<tr class="separator:aa7a8ba4d3c4778f9b35d59eef3e72574 inherit pub_methods_class_zmogus"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2fecd7cbd53f263200b272fdf5c891f inherit pub_methods_class_zmogus" id="r_aa2fecd7cbd53f263200b272fdf5c891f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_zmogus.html#aa2fecd7cbd53f263200b272fdf5c891f">Zmogus</a> (const std::string &amp;firstName, const std::string &amp;lastName)</td></tr>
+<tr class="separator:aa2fecd7cbd53f263200b272fdf5c891f inherit pub_methods_class_zmogus"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6183937c7da8254430a6c99cfa89fe69 inherit pub_methods_class_zmogus" id="r_a6183937c7da8254430a6c99cfa89fe69"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_zmogus.html#a6183937c7da8254430a6c99cfa89fe69">~Zmogus</a> ()=default</td></tr>
+<tr class="separator:a6183937c7da8254430a6c99cfa89fe69 inherit pub_methods_class_zmogus"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a544d0bbab1b6eadf4c11bd14d2f73b2f inherit pub_methods_class_zmogus" id="r_a544d0bbab1b6eadf4c11bd14d2f73b2f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_zmogus.html#a544d0bbab1b6eadf4c11bd14d2f73b2f">getFirstName</a> () const</td></tr>
+<tr class="separator:a544d0bbab1b6eadf4c11bd14d2f73b2f inherit pub_methods_class_zmogus"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaedc19c008babd010132eba0d59659c2 inherit pub_methods_class_zmogus" id="r_aaedc19c008babd010132eba0d59659c2"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_zmogus.html#aaedc19c008babd010132eba0d59659c2">getLastName</a> () const</td></tr>
+<tr class="separator:aaedc19c008babd010132eba0d59659c2 inherit pub_methods_class_zmogus"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35a25f40937ed8ffa7961dbe3a9a5275 inherit pub_methods_class_zmogus" id="r_a35a25f40937ed8ffa7961dbe3a9a5275"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_zmogus.html#a35a25f40937ed8ffa7961dbe3a9a5275">setFirstName</a> (const std::string &amp;firstName)</td></tr>
+<tr class="separator:a35a25f40937ed8ffa7961dbe3a9a5275 inherit pub_methods_class_zmogus"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9c10c2fd44544700f72b2cf2b9ea019 inherit pub_methods_class_zmogus" id="r_af9c10c2fd44544700f72b2cf2b9ea019"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_zmogus.html#af9c10c2fd44544700f72b2cf2b9ea019">setLastName</a> (const std::string &amp;lastName)</td></tr>
+<tr class="separator:af9c10c2fd44544700f72b2cf2b9ea019 inherit pub_methods_class_zmogus"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Statiniai Vieši Metodai</h2></td></tr>
+<tr class="memitem:aa805754cd6f9c57be68e4001483936a2" id="r_aa805754cd6f9c57be68e4001483936a2"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa805754cd6f9c57be68e4001483936a2">readInput</a> (std::vector&lt; <a class="el" href="class_student.html">Student</a> &gt; &amp;students, char menuChoice)</td></tr>
+<tr class="separator:aa805754cd6f9c57be68e4001483936a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a544708ac9d96da4ed0132fb2d3697964" id="r_a544708ac9d96da4ed0132fb2d3697964"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a544708ac9d96da4ed0132fb2d3697964">readFromFile</a> (std::vector&lt; <a class="el" href="class_student.html">Student</a> &gt; &amp;students, int fileSize)</td></tr>
+<tr class="separator:a544708ac9d96da4ed0132fb2d3697964"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Privatatūs Metodai</h2></td></tr>
+<tr class="memitem:adf2aa14d1ad82059f3bece77ece507e6" id="r_adf2aa14d1ad82059f3bece77ece507e6"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf2aa14d1ad82059f3bece77ece507e6">average</a> (const std::vector&lt; int &gt; &amp;marks) const</td></tr>
+<tr class="separator:adf2aa14d1ad82059f3bece77ece507e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acba95ae7bdd406b62ab42b296abaf8c5" id="r_acba95ae7bdd406b62ab42b296abaf8c5"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acba95ae7bdd406b62ab42b296abaf8c5">median</a> (const std::vector&lt; int &gt; &amp;marks) const</td></tr>
+<tr class="separator:acba95ae7bdd406b62ab42b296abaf8c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Privatūs Atributai</h2></td></tr>
+<tr class="memitem:a4c11872d1a860856667fa204b8c7cf77" id="r_a4c11872d1a860856667fa204b8c7cf77"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4c11872d1a860856667fa204b8c7cf77">marks_</a></td></tr>
+<tr class="separator:a4c11872d1a860856667fa204b8c7cf77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85bccebd6358c4ae9b1696145d54cb80" id="r_a85bccebd6358c4ae9b1696145d54cb80"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a85bccebd6358c4ae9b1696145d54cb80">examMark_</a></td></tr>
+<tr class="separator:a85bccebd6358c4ae9b1696145d54cb80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90810f860deec80bcdefd2d79a0ca2d0" id="r_a90810f860deec80bcdefd2d79a0ca2d0"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a90810f860deec80bcdefd2d79a0ca2d0">avgFinal_</a></td></tr>
+<tr class="separator:a90810f860deec80bcdefd2d79a0ca2d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76010a5863b884f603e5f6ece35dd031" id="r_a76010a5863b884f603e5f6ece35dd031"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a76010a5863b884f603e5f6ece35dd031">medianFinal_</a></td></tr>
+<tr class="separator:a76010a5863b884f603e5f6ece35dd031"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_attribs_class_zmogus"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_class_zmogus')"><img src="closed.png" alt="-"/>&#160;Apsaugoti Atributai inherited from <a class="el" href="class_zmogus.html">Zmogus</a></td></tr>
+<tr class="memitem:a60ab38ca75dc57762f069f97da76cb38 inherit pro_attribs_class_zmogus" id="r_a60ab38ca75dc57762f069f97da76cb38"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_zmogus.html#a60ab38ca75dc57762f069f97da76cb38">firstName_</a></td></tr>
+<tr class="separator:a60ab38ca75dc57762f069f97da76cb38 inherit pro_attribs_class_zmogus"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ff50a27f18f3b7bdaae42f218e3cb02 inherit pro_attribs_class_zmogus" id="r_a5ff50a27f18f3b7bdaae42f218e3cb02"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_zmogus.html#a5ff50a27f18f3b7bdaae42f218e3cb02">lastName_</a></td></tr>
+<tr class="separator:a5ff50a27f18f3b7bdaae42f218e3cb02 inherit pro_attribs_class_zmogus"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Konstruktoriaus ir Destruktoriaus Dokumentacija</h2>
+<a id="af9168cedbfa5565cf0b20c1a9d3f5c9d" name="af9168cedbfa5565cf0b20c1a9d3f5c9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9168cedbfa5565cf0b20c1a9d3f5c9d">&#9670;&#160;</a></span>Student() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Student::Student </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Funkcijos kvietimo grafas:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_student_af9168cedbfa5565cf0b20c1a9d3f5c9d_cgraph.png" border="0" usemap="#aclass_student_af9168cedbfa5565cf0b20c1a9d3f5c9d_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_student_af9168cedbfa5565cf0b20c1a9d3f5c9d_icgraph.png" border="0" usemap="#aclass_student_af9168cedbfa5565cf0b20c1a9d3f5c9d_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a63c032998418356143a76538b65acc02" name="a63c032998418356143a76538b65acc02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63c032998418356143a76538b65acc02">&#9670;&#160;</a></span>Student() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Student::Student </td>
+          <td>(</td>
+          <td class="paramtype">std::istream &amp;</td>          <td class="paramname"><span class="paramname"><em>is</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Funkcijos kvietimo grafas:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_student_a63c032998418356143a76538b65acc02_cgraph.png" border="0" usemap="#aclass_student_a63c032998418356143a76538b65acc02_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a05b37ffb050ddb039db63a8764d790cb" name="a05b37ffb050ddb039db63a8764d790cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05b37ffb050ddb039db63a8764d790cb">&#9670;&#160;</a></span>Student() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Student::Student </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_student.html">Student</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Funkcijos kvietimo grafas:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_student_a05b37ffb050ddb039db63a8764d790cb_cgraph.png" border="0" usemap="#aclass_student_a05b37ffb050ddb039db63a8764d790cb_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a154f8e92f220eff931891d336ebed0be" name="a154f8e92f220eff931891d336ebed0be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a154f8e92f220eff931891d336ebed0be">&#9670;&#160;</a></span>Student() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Student::Student </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_student.html">Student</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Funkcijos kvietimo grafas:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_student_a154f8e92f220eff931891d336ebed0be_cgraph.png" border="0" usemap="#aclass_student_a154f8e92f220eff931891d336ebed0be_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a54a8ea060d6cd04222c3a2f89829f105" name="a54a8ea060d6cd04222c3a2f89829f105"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54a8ea060d6cd04222c3a2f89829f105">&#9670;&#160;</a></span>~Student()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Student::~Student </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Metodų Dokumentacija</h2>
+<a id="adf2aa14d1ad82059f3bece77ece507e6" name="adf2aa14d1ad82059f3bece77ece507e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf2aa14d1ad82059f3bece77ece507e6">&#9670;&#160;</a></span>average()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Student::average </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; int &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>marks</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_student_adf2aa14d1ad82059f3bece77ece507e6_icgraph.png" border="0" usemap="#aclass_student_adf2aa14d1ad82059f3bece77ece507e6_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ac70e606bdafb395855171b26ff2727b2" name="ac70e606bdafb395855171b26ff2727b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac70e606bdafb395855171b26ff2727b2">&#9670;&#160;</a></span>calculateFinalMarks()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Student::calculateFinalMarks </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Funkcijos kvietimo grafas:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_student_ac70e606bdafb395855171b26ff2727b2_cgraph.png" border="0" usemap="#aclass_student_ac70e606bdafb395855171b26ff2727b2_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_student_ac70e606bdafb395855171b26ff2727b2_icgraph.png" border="0" usemap="#aclass_student_ac70e606bdafb395855171b26ff2727b2_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a722c0008d4cbff9e8e27d91a76cdf527" name="a722c0008d4cbff9e8e27d91a76cdf527"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a722c0008d4cbff9e8e27d91a76cdf527">&#9670;&#160;</a></span>getAvgFinal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Student::getAvgFinal </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1fd355b9a10854aec4f3fe23da695b9d" name="a1fd355b9a10854aec4f3fe23da695b9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fd355b9a10854aec4f3fe23da695b9d">&#9670;&#160;</a></span>getExamMark()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Student::getExamMark </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_student_a1fd355b9a10854aec4f3fe23da695b9d_icgraph.png" border="0" usemap="#aclass_student_a1fd355b9a10854aec4f3fe23da695b9d_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="affbd7fe73a022eb70db0a1071b729786" name="affbd7fe73a022eb70db0a1071b729786"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affbd7fe73a022eb70db0a1071b729786">&#9670;&#160;</a></span>getHomeworkMarks()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt; int &gt; &amp; Student::getHomeworkMarks </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_student_affbd7fe73a022eb70db0a1071b729786_icgraph.png" border="0" usemap="#aclass_student_affbd7fe73a022eb70db0a1071b729786_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="aa8dc467117f73f6b6f0dfce115e3a369" name="aa8dc467117f73f6b6f0dfce115e3a369"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8dc467117f73f6b6f0dfce115e3a369">&#9670;&#160;</a></span>getMedianFinal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Student::getMedianFinal </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acba95ae7bdd406b62ab42b296abaf8c5" name="acba95ae7bdd406b62ab42b296abaf8c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acba95ae7bdd406b62ab42b296abaf8c5">&#9670;&#160;</a></span>median()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Student::median </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; int &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>marks</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_student_acba95ae7bdd406b62ab42b296abaf8c5_icgraph.png" border="0" usemap="#aclass_student_acba95ae7bdd406b62ab42b296abaf8c5_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ad05dd6148523a2a8b38128b60297b52a" name="ad05dd6148523a2a8b38128b60297b52a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad05dd6148523a2a8b38128b60297b52a">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_student.html">Student</a> &amp; Student::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_student.html">Student</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Funkcijos kvietimo grafas:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_student_ad05dd6148523a2a8b38128b60297b52a_cgraph.png" border="0" usemap="#aclass_student_ad05dd6148523a2a8b38128b60297b52a_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a458365d8621d8e49e17ed809a272feeb" name="a458365d8621d8e49e17ed809a272feeb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a458365d8621d8e49e17ed809a272feeb">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_student.html">Student</a> &amp; Student::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_student.html">Student</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Funkcijos kvietimo grafas:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_student_a458365d8621d8e49e17ed809a272feeb_cgraph.png" border="0" usemap="#aclass_student_a458365d8621d8e49e17ed809a272feeb_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a07bb1cfc7e2aa216ea1f472b7e7289e8" name="a07bb1cfc7e2aa216ea1f472b7e7289e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07bb1cfc7e2aa216ea1f472b7e7289e8">&#9670;&#160;</a></span>print()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Student::print </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;</td>          <td class="paramname"><span class="paramname"><em>os</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Realizuoja <a class="el" href="class_zmogus.html#a54c34a84f8fee7c318a3c69072521b5f">Zmogus</a>.</p>
+
+</div>
+</div>
+<a id="a55ef28ccf00fd9d754a95d784ad8de21" name="a55ef28ccf00fd9d754a95d784ad8de21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55ef28ccf00fd9d754a95d784ad8de21">&#9670;&#160;</a></span>read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Student::read </td>
+          <td>(</td>
+          <td class="paramtype">std::istream &amp;</td>          <td class="paramname"><span class="paramname"><em>is</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Realizuoja <a class="el" href="class_zmogus.html#a8fe0dd00effd9b5da56a7a4b0f1890a2">Zmogus</a>.</p>
+<div class="dynheader">
+Funkcijos kvietimo grafas:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_student_a55ef28ccf00fd9d754a95d784ad8de21_cgraph.png" border="0" usemap="#aclass_student_a55ef28ccf00fd9d754a95d784ad8de21_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_student_a55ef28ccf00fd9d754a95d784ad8de21_icgraph.png" border="0" usemap="#aclass_student_a55ef28ccf00fd9d754a95d784ad8de21_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a544708ac9d96da4ed0132fb2d3697964" name="a544708ac9d96da4ed0132fb2d3697964"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a544708ac9d96da4ed0132fb2d3697964">&#9670;&#160;</a></span>readFromFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Student::readFromFile </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_student.html">Student</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>students</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>fileSize</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Funkcijos kvietimo grafas:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_student_a544708ac9d96da4ed0132fb2d3697964_cgraph.png" border="0" usemap="#aclass_student_a544708ac9d96da4ed0132fb2d3697964_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_student_a544708ac9d96da4ed0132fb2d3697964_icgraph.png" border="0" usemap="#aclass_student_a544708ac9d96da4ed0132fb2d3697964_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="aa805754cd6f9c57be68e4001483936a2" name="aa805754cd6f9c57be68e4001483936a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa805754cd6f9c57be68e4001483936a2">&#9670;&#160;</a></span>readInput()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Student::readInput </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_student.html">Student</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>students</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>menuChoice</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Funkcijos kvietimo grafas:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_student_aa805754cd6f9c57be68e4001483936a2_cgraph.png" border="0" usemap="#aclass_student_aa805754cd6f9c57be68e4001483936a2_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_student_aa805754cd6f9c57be68e4001483936a2_icgraph.png" border="0" usemap="#aclass_student_aa805754cd6f9c57be68e4001483936a2_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a9c5cbd2b4ce6628b671a1dfd54faa0f6" name="a9c5cbd2b4ce6628b671a1dfd54faa0f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c5cbd2b4ce6628b671a1dfd54faa0f6">&#9670;&#160;</a></span>readStudent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::istream &amp; Student::readStudent </td>
+          <td>(</td>
+          <td class="paramtype">std::istream &amp;</td>          <td class="paramname"><span class="paramname"><em>is</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Funkcijos kvietimo grafas:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_student_a9c5cbd2b4ce6628b671a1dfd54faa0f6_cgraph.png" border="0" usemap="#aclass_student_a9c5cbd2b4ce6628b671a1dfd54faa0f6_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_student_a9c5cbd2b4ce6628b671a1dfd54faa0f6_icgraph.png" border="0" usemap="#aclass_student_a9c5cbd2b4ce6628b671a1dfd54faa0f6_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a5cbdb6d7c8683ee6b9ced0454b22810f" name="a5cbdb6d7c8683ee6b9ced0454b22810f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cbdb6d7c8683ee6b9ced0454b22810f">&#9670;&#160;</a></span>setExamMark()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Student::setExamMark </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>examMark</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_student_a5cbdb6d7c8683ee6b9ced0454b22810f_icgraph.png" border="0" usemap="#aclass_student_a5cbdb6d7c8683ee6b9ced0454b22810f_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a393e0c0481850a2bc316894c252ec8b2" name="a393e0c0481850a2bc316894c252ec8b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a393e0c0481850a2bc316894c252ec8b2">&#9670;&#160;</a></span>setMarks()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Student::setMarks </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; int &gt;</td>          <td class="paramname"><span class="paramname"><em>marks</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_student_a393e0c0481850a2bc316894c252ec8b2_icgraph.png" border="0" usemap="#aclass_student_a393e0c0481850a2bc316894c252ec8b2_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Atributų Dokumentacija</h2>
+<a id="a90810f860deec80bcdefd2d79a0ca2d0" name="a90810f860deec80bcdefd2d79a0ca2d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90810f860deec80bcdefd2d79a0ca2d0">&#9670;&#160;</a></span>avgFinal_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Student::avgFinal_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a85bccebd6358c4ae9b1696145d54cb80" name="a85bccebd6358c4ae9b1696145d54cb80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85bccebd6358c4ae9b1696145d54cb80">&#9670;&#160;</a></span>examMark_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Student::examMark_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4c11872d1a860856667fa204b8c7cf77" name="a4c11872d1a860856667fa204b8c7cf77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c11872d1a860856667fa204b8c7cf77">&#9670;&#160;</a></span>marks_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;int&gt; Student::marks_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a76010a5863b884f603e5f6ece35dd031" name="a76010a5863b884f603e5f6ece35dd031"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76010a5863b884f603e5f6ece35dd031">&#9670;&#160;</a></span>medianFinal_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Student::medianFinal_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Dokumentacija šiai klasei sugeneruota iš šių failų:<ul>
+<li>include/<a class="el" href="student_8h_source.html">student.h</a></li>
+<li>src/<a class="el" href="student_8cpp.html">student.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_student.html">Student</a></li>
+    <li class="footer">Sugeneruota <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

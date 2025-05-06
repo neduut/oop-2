@@ -1,0 +1,238 @@
+\doxysection{src/utils.cpp Failo Nuoroda}
+\hypertarget{utils_8cpp}{}\label{utils_8cpp}\index{src/utils.cpp@{src/utils.cpp}}
+{\ttfamily \#include "{}utils.\+h"{}}\newline
+{\ttfamily \#include "{}constants.\+h"{}}\newline
+Įtraukimo priklausomybių diagrama utils.\+cpp\+:
+% FIG 0
+\doxysubsubsection*{Funkcijos}
+\begin{DoxyCompactItemize}
+\item 
+std\+::mt19937 \mbox{\hyperlink{utils_8cpp_ad8991efbf41263f691b2074023f4359a}{mt}} (\mbox{\hyperlink{utils_8cpp_a7071b0092ad8c5b57d6cc40c5f803df5}{rd}}())
+\item 
+string \mbox{\hyperlink{utils_8cpp_a86a50f99ecdde09872190856798be41c}{get\+Yes\+No}} ()
+\item 
+int \mbox{\hyperlink{utils_8cpp_ae6f11bcd4eaff529149572cbaa1172d0}{get\+Sort\+Type}} ()
+\item 
+int \mbox{\hyperlink{utils_8cpp_ad9444437325ff96beb42d486679faa2f}{get\+Print\+Type}} ()
+\item 
+int \mbox{\hyperlink{utils_8cpp_a209d2105e9ad36e42b5474ad80c9beba}{get\+Menu\+Choice}} ()
+\item 
+int \mbox{\hyperlink{utils_8cpp_af205c6d96f2cf26db120c1dc989a9a08}{get\+Test\+Menu\+Choice}} ()
+\item 
+int \mbox{\hyperlink{utils_8cpp_aab1650a1aa152074924cf4b8d6016269}{get\+Program\+Menu\+Choice}} ()
+\item 
+string \mbox{\hyperlink{utils_8cpp_a960939442b980737b48cf012b27440c5}{Get\+First\+Name}} (char menu\+Choice)
+\item 
+string \mbox{\hyperlink{utils_8cpp_a23d9c85ae9385c554870eb219b25e4d5}{Get\+Last\+Name}} (char menu\+Choice)
+\item 
+int \mbox{\hyperlink{utils_8cpp_af1258e4d18fbd126d914335119f6c4d0}{Get\+Exam\+Mark}} (char menu\+Choice)
+\item 
+vector$<$ int $>$ \mbox{\hyperlink{utils_8cpp_a757af56c8bf9b713f11d8a2426d71b17}{Get\+Homework\+Marks}} (char menu\+Choice)
+\item 
+int \mbox{\hyperlink{utils_8cpp_a97d70f13f60f7bc1f41d8096865654b0}{get\+Group\+Type}} ()
+\item 
+int \mbox{\hyperlink{utils_8cpp_ac4465cfb146410e557acc4892afd9e7c}{get\+File\+Size}} ()
+\item 
+bool \mbox{\hyperlink{utils_8cpp_a7c52e82aa9e20dd3ba125f5c8256293c}{is\+Name\+Valid}} (string name)
+\item 
+bool \mbox{\hyperlink{utils_8cpp_a8b084326038997a54fc6b911dff45cae}{is\+Mark\+Valid}} (string mark)
+\item 
+bool \mbox{\hyperlink{utils_8cpp_abf0d9006cef6876aa9864656ac4c7d68}{is\+Choice\+Valid}} (string choice)
+\item 
+string \mbox{\hyperlink{utils_8cpp_a5897daf7bc77a6ff03f82dbec5917211}{get\+Random\+First\+Name}} ()
+\item 
+string \mbox{\hyperlink{utils_8cpp_ac384e3b1728367af729b9b893b2a2dbb}{get\+Random\+Last\+Name}} ()
+\item 
+int \mbox{\hyperlink{utils_8cpp_a78099aa01b23dec73e2bcc9b560ecd67}{get\+Random\+Mark}} ()
+\item 
+string \mbox{\hyperlink{utils_8cpp_a23cdb94ca0abdf863efeaa83ffae6677}{print\+Count}} (int count)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Kintamieji}
+\begin{DoxyCompactItemize}
+\item 
+std\+::random\+\_\+device \mbox{\hyperlink{utils_8cpp_a7071b0092ad8c5b57d6cc40c5f803df5}{rd}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Funkcijos Dokumentacija}
+\Hypertarget{utils_8cpp_af1258e4d18fbd126d914335119f6c4d0}\index{utils.cpp@{utils.cpp}!GetExamMark@{GetExamMark}}
+\index{GetExamMark@{GetExamMark}!utils.cpp@{utils.cpp}}
+\doxysubsubsection{\texorpdfstring{GetExamMark()}{GetExamMark()}}
+{\footnotesize\ttfamily \label{utils_8cpp_af1258e4d18fbd126d914335119f6c4d0} 
+int Get\+Exam\+Mark (\begin{DoxyParamCaption}\item[{char}]{menu\+Choice}{}\end{DoxyParamCaption})}
+
+Funkcijos kvietimo grafas\+:
+% FIG 1
+Here is the caller graph for this function\+:
+% FIG 2
+\Hypertarget{utils_8cpp_ac4465cfb146410e557acc4892afd9e7c}\index{utils.cpp@{utils.cpp}!getFileSize@{getFileSize}}
+\index{getFileSize@{getFileSize}!utils.cpp@{utils.cpp}}
+\doxysubsubsection{\texorpdfstring{getFileSize()}{getFileSize()}}
+{\footnotesize\ttfamily \label{utils_8cpp_ac4465cfb146410e557acc4892afd9e7c} 
+int get\+File\+Size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+% FIG 3
+\Hypertarget{utils_8cpp_a960939442b980737b48cf012b27440c5}\index{utils.cpp@{utils.cpp}!GetFirstName@{GetFirstName}}
+\index{GetFirstName@{GetFirstName}!utils.cpp@{utils.cpp}}
+\doxysubsubsection{\texorpdfstring{GetFirstName()}{GetFirstName()}}
+{\footnotesize\ttfamily \label{utils_8cpp_a960939442b980737b48cf012b27440c5} 
+string Get\+First\+Name (\begin{DoxyParamCaption}\item[{char}]{menu\+Choice}{}\end{DoxyParamCaption})}
+
+Funkcijos kvietimo grafas\+:
+% FIG 4
+Here is the caller graph for this function\+:
+% FIG 5
+\Hypertarget{utils_8cpp_a97d70f13f60f7bc1f41d8096865654b0}\index{utils.cpp@{utils.cpp}!getGroupType@{getGroupType}}
+\index{getGroupType@{getGroupType}!utils.cpp@{utils.cpp}}
+\doxysubsubsection{\texorpdfstring{getGroupType()}{getGroupType()}}
+{\footnotesize\ttfamily \label{utils_8cpp_a97d70f13f60f7bc1f41d8096865654b0} 
+int get\+Group\+Type (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+% FIG 6
+\Hypertarget{utils_8cpp_a757af56c8bf9b713f11d8a2426d71b17}\index{utils.cpp@{utils.cpp}!GetHomeworkMarks@{GetHomeworkMarks}}
+\index{GetHomeworkMarks@{GetHomeworkMarks}!utils.cpp@{utils.cpp}}
+\doxysubsubsection{\texorpdfstring{GetHomeworkMarks()}{GetHomeworkMarks()}}
+{\footnotesize\ttfamily \label{utils_8cpp_a757af56c8bf9b713f11d8a2426d71b17} 
+vector$<$ int $>$ Get\+Homework\+Marks (\begin{DoxyParamCaption}\item[{char}]{menu\+Choice}{}\end{DoxyParamCaption})}
+
+Funkcijos kvietimo grafas\+:
+% FIG 7
+Here is the caller graph for this function\+:
+% FIG 8
+\Hypertarget{utils_8cpp_a23d9c85ae9385c554870eb219b25e4d5}\index{utils.cpp@{utils.cpp}!GetLastName@{GetLastName}}
+\index{GetLastName@{GetLastName}!utils.cpp@{utils.cpp}}
+\doxysubsubsection{\texorpdfstring{GetLastName()}{GetLastName()}}
+{\footnotesize\ttfamily \label{utils_8cpp_a23d9c85ae9385c554870eb219b25e4d5} 
+string Get\+Last\+Name (\begin{DoxyParamCaption}\item[{char}]{menu\+Choice}{}\end{DoxyParamCaption})}
+
+Funkcijos kvietimo grafas\+:
+% FIG 9
+Here is the caller graph for this function\+:
+% FIG 10
+\Hypertarget{utils_8cpp_a209d2105e9ad36e42b5474ad80c9beba}\index{utils.cpp@{utils.cpp}!getMenuChoice@{getMenuChoice}}
+\index{getMenuChoice@{getMenuChoice}!utils.cpp@{utils.cpp}}
+\doxysubsubsection{\texorpdfstring{getMenuChoice()}{getMenuChoice()}}
+{\footnotesize\ttfamily \label{utils_8cpp_a209d2105e9ad36e42b5474ad80c9beba} 
+int get\+Menu\+Choice (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+% FIG 11
+\Hypertarget{utils_8cpp_ad9444437325ff96beb42d486679faa2f}\index{utils.cpp@{utils.cpp}!getPrintType@{getPrintType}}
+\index{getPrintType@{getPrintType}!utils.cpp@{utils.cpp}}
+\doxysubsubsection{\texorpdfstring{getPrintType()}{getPrintType()}}
+{\footnotesize\ttfamily \label{utils_8cpp_ad9444437325ff96beb42d486679faa2f} 
+int get\+Print\+Type (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+% FIG 12
+\Hypertarget{utils_8cpp_aab1650a1aa152074924cf4b8d6016269}\index{utils.cpp@{utils.cpp}!getProgramMenuChoice@{getProgramMenuChoice}}
+\index{getProgramMenuChoice@{getProgramMenuChoice}!utils.cpp@{utils.cpp}}
+\doxysubsubsection{\texorpdfstring{getProgramMenuChoice()}{getProgramMenuChoice()}}
+{\footnotesize\ttfamily \label{utils_8cpp_aab1650a1aa152074924cf4b8d6016269} 
+int get\+Program\+Menu\+Choice (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+% FIG 13
+\Hypertarget{utils_8cpp_a5897daf7bc77a6ff03f82dbec5917211}\index{utils.cpp@{utils.cpp}!getRandomFirstName@{getRandomFirstName}}
+\index{getRandomFirstName@{getRandomFirstName}!utils.cpp@{utils.cpp}}
+\doxysubsubsection{\texorpdfstring{getRandomFirstName()}{getRandomFirstName()}}
+{\footnotesize\ttfamily \label{utils_8cpp_a5897daf7bc77a6ff03f82dbec5917211} 
+string get\+Random\+First\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+% FIG 14
+\Hypertarget{utils_8cpp_ac384e3b1728367af729b9b893b2a2dbb}\index{utils.cpp@{utils.cpp}!getRandomLastName@{getRandomLastName}}
+\index{getRandomLastName@{getRandomLastName}!utils.cpp@{utils.cpp}}
+\doxysubsubsection{\texorpdfstring{getRandomLastName()}{getRandomLastName()}}
+{\footnotesize\ttfamily \label{utils_8cpp_ac384e3b1728367af729b9b893b2a2dbb} 
+string get\+Random\+Last\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+% FIG 15
+\Hypertarget{utils_8cpp_a78099aa01b23dec73e2bcc9b560ecd67}\index{utils.cpp@{utils.cpp}!getRandomMark@{getRandomMark}}
+\index{getRandomMark@{getRandomMark}!utils.cpp@{utils.cpp}}
+\doxysubsubsection{\texorpdfstring{getRandomMark()}{getRandomMark()}}
+{\footnotesize\ttfamily \label{utils_8cpp_a78099aa01b23dec73e2bcc9b560ecd67} 
+int get\+Random\+Mark (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Funkcijos kvietimo grafas\+:
+% FIG 16
+Here is the caller graph for this function\+:
+% FIG 17
+\Hypertarget{utils_8cpp_ae6f11bcd4eaff529149572cbaa1172d0}\index{utils.cpp@{utils.cpp}!getSortType@{getSortType}}
+\index{getSortType@{getSortType}!utils.cpp@{utils.cpp}}
+\doxysubsubsection{\texorpdfstring{getSortType()}{getSortType()}}
+{\footnotesize\ttfamily \label{utils_8cpp_ae6f11bcd4eaff529149572cbaa1172d0} 
+int get\+Sort\+Type (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+% FIG 18
+\Hypertarget{utils_8cpp_af205c6d96f2cf26db120c1dc989a9a08}\index{utils.cpp@{utils.cpp}!getTestMenuChoice@{getTestMenuChoice}}
+\index{getTestMenuChoice@{getTestMenuChoice}!utils.cpp@{utils.cpp}}
+\doxysubsubsection{\texorpdfstring{getTestMenuChoice()}{getTestMenuChoice()}}
+{\footnotesize\ttfamily \label{utils_8cpp_af205c6d96f2cf26db120c1dc989a9a08} 
+int get\+Test\+Menu\+Choice (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+% FIG 19
+\Hypertarget{utils_8cpp_a86a50f99ecdde09872190856798be41c}\index{utils.cpp@{utils.cpp}!getYesNo@{getYesNo}}
+\index{getYesNo@{getYesNo}!utils.cpp@{utils.cpp}}
+\doxysubsubsection{\texorpdfstring{getYesNo()}{getYesNo()}}
+{\footnotesize\ttfamily \label{utils_8cpp_a86a50f99ecdde09872190856798be41c} 
+string get\+Yes\+No (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Funkcijos kvietimo grafas\+:
+% FIG 20
+Here is the caller graph for this function\+:
+% FIG 21
+\Hypertarget{utils_8cpp_abf0d9006cef6876aa9864656ac4c7d68}\index{utils.cpp@{utils.cpp}!isChoiceValid@{isChoiceValid}}
+\index{isChoiceValid@{isChoiceValid}!utils.cpp@{utils.cpp}}
+\doxysubsubsection{\texorpdfstring{isChoiceValid()}{isChoiceValid()}}
+{\footnotesize\ttfamily \label{utils_8cpp_abf0d9006cef6876aa9864656ac4c7d68} 
+bool is\+Choice\+Valid (\begin{DoxyParamCaption}\item[{string}]{choice}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+% FIG 22
+\Hypertarget{utils_8cpp_a8b084326038997a54fc6b911dff45cae}\index{utils.cpp@{utils.cpp}!isMarkValid@{isMarkValid}}
+\index{isMarkValid@{isMarkValid}!utils.cpp@{utils.cpp}}
+\doxysubsubsection{\texorpdfstring{isMarkValid()}{isMarkValid()}}
+{\footnotesize\ttfamily \label{utils_8cpp_a8b084326038997a54fc6b911dff45cae} 
+bool is\+Mark\+Valid (\begin{DoxyParamCaption}\item[{string}]{mark}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+% FIG 23
+\Hypertarget{utils_8cpp_a7c52e82aa9e20dd3ba125f5c8256293c}\index{utils.cpp@{utils.cpp}!isNameValid@{isNameValid}}
+\index{isNameValid@{isNameValid}!utils.cpp@{utils.cpp}}
+\doxysubsubsection{\texorpdfstring{isNameValid()}{isNameValid()}}
+{\footnotesize\ttfamily \label{utils_8cpp_a7c52e82aa9e20dd3ba125f5c8256293c} 
+bool is\+Name\+Valid (\begin{DoxyParamCaption}\item[{string}]{name}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+% FIG 24
+\Hypertarget{utils_8cpp_ad8991efbf41263f691b2074023f4359a}\index{utils.cpp@{utils.cpp}!mt@{mt}}
+\index{mt@{mt}!utils.cpp@{utils.cpp}}
+\doxysubsubsection{\texorpdfstring{mt()}{mt()}}
+{\footnotesize\ttfamily \label{utils_8cpp_ad8991efbf41263f691b2074023f4359a} 
+std\+::mt19937 mt (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{utils_8cpp_a7071b0092ad8c5b57d6cc40c5f803df5}{rd}}()}]{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+% FIG 25
+\Hypertarget{utils_8cpp_a23cdb94ca0abdf863efeaa83ffae6677}\index{utils.cpp@{utils.cpp}!printCount@{printCount}}
+\index{printCount@{printCount}!utils.cpp@{utils.cpp}}
+\doxysubsubsection{\texorpdfstring{printCount()}{printCount()}}
+{\footnotesize\ttfamily \label{utils_8cpp_a23cdb94ca0abdf863efeaa83ffae6677} 
+string print\+Count (\begin{DoxyParamCaption}\item[{int}]{count}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+% FIG 26
+
+
+\doxysubsection{Kintamojo Dokumentacija}
+\Hypertarget{utils_8cpp_a7071b0092ad8c5b57d6cc40c5f803df5}\index{utils.cpp@{utils.cpp}!rd@{rd}}
+\index{rd@{rd}!utils.cpp@{utils.cpp}}
+\doxysubsubsection{\texorpdfstring{rd}{rd}}
+{\footnotesize\ttfamily \label{utils_8cpp_a7071b0092ad8c5b57d6cc40c5f803df5} 
+std\+::random\+\_\+device rd}
+

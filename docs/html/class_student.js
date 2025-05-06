@@ -1,0 +1,28 @@
+var class_student =
+[
+    [ "Student", "class_student.html#af9168cedbfa5565cf0b20c1a9d3f5c9d", null ],
+    [ "Student", "class_student.html#a63c032998418356143a76538b65acc02", null ],
+    [ "Student", "class_student.html#a05b37ffb050ddb039db63a8764d790cb", null ],
+    [ "Student", "class_student.html#a154f8e92f220eff931891d336ebed0be", null ],
+    [ "~Student", "class_student.html#a54a8ea060d6cd04222c3a2f89829f105", null ],
+    [ "average", "class_student.html#adf2aa14d1ad82059f3bece77ece507e6", null ],
+    [ "calculateFinalMarks", "class_student.html#ac70e606bdafb395855171b26ff2727b2", null ],
+    [ "getAvgFinal", "class_student.html#a722c0008d4cbff9e8e27d91a76cdf527", null ],
+    [ "getExamMark", "class_student.html#a1fd355b9a10854aec4f3fe23da695b9d", null ],
+    [ "getHomeworkMarks", "class_student.html#affbd7fe73a022eb70db0a1071b729786", null ],
+    [ "getMedianFinal", "class_student.html#aa8dc467117f73f6b6f0dfce115e3a369", null ],
+    [ "median", "class_student.html#acba95ae7bdd406b62ab42b296abaf8c5", null ],
+    [ "operator=", "class_student.html#ad05dd6148523a2a8b38128b60297b52a", null ],
+    [ "operator=", "class_student.html#a458365d8621d8e49e17ed809a272feeb", null ],
+    [ "print", "class_student.html#a07bb1cfc7e2aa216ea1f472b7e7289e8", null ],
+    [ "read", "class_student.html#a55ef28ccf00fd9d754a95d784ad8de21", null ],
+    [ "readFromFile", "class_student.html#a544708ac9d96da4ed0132fb2d3697964", null ],
+    [ "readInput", "class_student.html#aa805754cd6f9c57be68e4001483936a2", null ],
+    [ "readStudent", "class_student.html#a9c5cbd2b4ce6628b671a1dfd54faa0f6", null ],
+    [ "setExamMark", "class_student.html#a5cbdb6d7c8683ee6b9ced0454b22810f", null ],
+    [ "setMarks", "class_student.html#a393e0c0481850a2bc316894c252ec8b2", null ],
+    [ "avgFinal_", "class_student.html#a90810f860deec80bcdefd2d79a0ca2d0", null ],
+    [ "examMark_", "class_student.html#a85bccebd6358c4ae9b1696145d54cb80", null ],
+    [ "marks_", "class_student.html#a4c11872d1a860856667fa204b8c7cf77", null ],
+    [ "medianFinal_", "class_student.html#a76010a5863b884f603e5f6ece35dd031", null ]
+];

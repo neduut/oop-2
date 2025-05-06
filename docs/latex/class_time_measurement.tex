@@ -1,0 +1,99 @@
+\doxysection{Time\+Measurement Klasė}
+\hypertarget{class_time_measurement}{}\label{class_time_measurement}\index{TimeMeasurement@{TimeMeasurement}}
+
+
+{\ttfamily \#include $<$time\+Measurement.\+h$>$}
+
+\doxysubsubsection*{Vieši Metodai}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_time_measurement_a93ef3a16e622412da08204b8a7c90541}{Time\+Measurement}} (const std\+::string \&name)
+\item 
+void \mbox{\hyperlink{class_time_measurement_aa25d876890795c05839d0d4c72c4a207}{start}} ()
+\item 
+void \mbox{\hyperlink{class_time_measurement_ad6ee2d14e2ef15b2f256c69ee1a00743}{stop}} (std\+::ofstream \&run\+Time\+Results)
+\item 
+double \mbox{\hyperlink{class_time_measurement_a5c5224e612a6319c645f642f41839104}{get\+Time\+Difference}} ()
+\item 
+std\+::string \mbox{\hyperlink{class_time_measurement_a9501099e2f5d6b4ce76189a9306fcc89}{get\+Action\+Name}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Privatūs Atributai}
+\begin{DoxyCompactItemize}
+\item 
+std\+::chrono\+::high\+\_\+resolution\+\_\+clock\+::time\+\_\+point \mbox{\hyperlink{class_time_measurement_a92d2f83f37bb6a09098ce7ed28d27c8a}{start\+Time}}
+\item 
+std\+::chrono\+::high\+\_\+resolution\+\_\+clock\+::time\+\_\+point \mbox{\hyperlink{class_time_measurement_a551db3c383d41c92eaefbc1b6c416b5e}{end\+Time}}
+\item 
+std\+::string \mbox{\hyperlink{class_time_measurement_a75724c4c5ed66ecb3092c5f13ce9979d}{action\+Name}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Konstruktoriaus ir Destruktoriaus Dokumentacija}
+\Hypertarget{class_time_measurement_a93ef3a16e622412da08204b8a7c90541}\index{TimeMeasurement@{TimeMeasurement}!TimeMeasurement@{TimeMeasurement}}
+\index{TimeMeasurement@{TimeMeasurement}!TimeMeasurement@{TimeMeasurement}}
+\doxysubsubsection{\texorpdfstring{TimeMeasurement()}{TimeMeasurement()}}
+{\footnotesize\ttfamily \label{class_time_measurement_a93ef3a16e622412da08204b8a7c90541} 
+Time\+Measurement\+::\+Time\+Measurement (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Metodų Dokumentacija}
+\Hypertarget{class_time_measurement_a9501099e2f5d6b4ce76189a9306fcc89}\index{TimeMeasurement@{TimeMeasurement}!getActionName@{getActionName}}
+\index{getActionName@{getActionName}!TimeMeasurement@{TimeMeasurement}}
+\doxysubsubsection{\texorpdfstring{getActionName()}{getActionName()}}
+{\footnotesize\ttfamily \label{class_time_measurement_a9501099e2f5d6b4ce76189a9306fcc89} 
+std\+::string Time\+Measurement\+::get\+Action\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_time_measurement_a5c5224e612a6319c645f642f41839104}\index{TimeMeasurement@{TimeMeasurement}!getTimeDifference@{getTimeDifference}}
+\index{getTimeDifference@{getTimeDifference}!TimeMeasurement@{TimeMeasurement}}
+\doxysubsubsection{\texorpdfstring{getTimeDifference()}{getTimeDifference()}}
+{\footnotesize\ttfamily \label{class_time_measurement_a5c5224e612a6319c645f642f41839104} 
+double Time\+Measurement\+::get\+Time\+Difference (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+% FIG 0
+\Hypertarget{class_time_measurement_aa25d876890795c05839d0d4c72c4a207}\index{TimeMeasurement@{TimeMeasurement}!start@{start}}
+\index{start@{start}!TimeMeasurement@{TimeMeasurement}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily \label{class_time_measurement_aa25d876890795c05839d0d4c72c4a207} 
+void Time\+Measurement\+::start (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+% FIG 1
+\Hypertarget{class_time_measurement_ad6ee2d14e2ef15b2f256c69ee1a00743}\index{TimeMeasurement@{TimeMeasurement}!stop@{stop}}
+\index{stop@{stop}!TimeMeasurement@{TimeMeasurement}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily \label{class_time_measurement_ad6ee2d14e2ef15b2f256c69ee1a00743} 
+void Time\+Measurement\+::stop (\begin{DoxyParamCaption}\item[{std\+::ofstream \&}]{run\+Time\+Results}{}\end{DoxyParamCaption})}
+
+Funkcijos kvietimo grafas\+:
+% FIG 2
+Here is the caller graph for this function\+:
+% FIG 3
+
+
+\doxysubsection{Atributų Dokumentacija}
+\Hypertarget{class_time_measurement_a75724c4c5ed66ecb3092c5f13ce9979d}\index{TimeMeasurement@{TimeMeasurement}!actionName@{actionName}}
+\index{actionName@{actionName}!TimeMeasurement@{TimeMeasurement}}
+\doxysubsubsection{\texorpdfstring{actionName}{actionName}}
+{\footnotesize\ttfamily \label{class_time_measurement_a75724c4c5ed66ecb3092c5f13ce9979d} 
+std\+::string Time\+Measurement\+::action\+Name\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_time_measurement_a551db3c383d41c92eaefbc1b6c416b5e}\index{TimeMeasurement@{TimeMeasurement}!endTime@{endTime}}
+\index{endTime@{endTime}!TimeMeasurement@{TimeMeasurement}}
+\doxysubsubsection{\texorpdfstring{endTime}{endTime}}
+{\footnotesize\ttfamily \label{class_time_measurement_a551db3c383d41c92eaefbc1b6c416b5e} 
+std\+::chrono\+::high\+\_\+resolution\+\_\+clock\+::time\+\_\+point Time\+Measurement\+::end\+Time\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_time_measurement_a92d2f83f37bb6a09098ce7ed28d27c8a}\index{TimeMeasurement@{TimeMeasurement}!startTime@{startTime}}
+\index{startTime@{startTime}!TimeMeasurement@{TimeMeasurement}}
+\doxysubsubsection{\texorpdfstring{startTime}{startTime}}
+{\footnotesize\ttfamily \label{class_time_measurement_a92d2f83f37bb6a09098ce7ed28d27c8a} 
+std\+::chrono\+::high\+\_\+resolution\+\_\+clock\+::time\+\_\+point Time\+Measurement\+::start\+Time\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Dokumentacija šiai klasei sugeneruota iš šių failų\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{time_measurement_8h}{time\+Measurement.\+h}}\item 
+src/\mbox{\hyperlink{time_measurement_8cpp}{time\+Measurement.\+cpp}}\end{DoxyCompactItemize}

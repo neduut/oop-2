@@ -1,0 +1,185 @@
+\chapter{Aprašymas}
+\hypertarget{md__r_e_a_d_m_e}{}\label{md__r_e_a_d_m_e}\index{Aprašymas@{Aprašymas}}
+\label{md__r_e_a_d_m_e_autotoc_md0}%
+\Hypertarget{md__r_e_a_d_m_e_autotoc_md0}%
+
+
+Programa, skirta apdoroti studentų duomenis. Programos versijose analizuojamas bei tobulinamas programos našumas ir efektyvumas.\hypertarget{md__r_e_a_d_m_e_autotoc_md1}{}\doxysection{\texorpdfstring{Naudojimo instrukcijos}{Naudojimo instrukcijos}}\label{md__r_e_a_d_m_e_autotoc_md1}
+{\bfseries{Kad paleisti programą, turite atlikti šiuos veiksmus\+:}}
+
+
+\begin{DoxyEnumerate}
+\item Įeikite į norimos versijos katalogą
+\item Paleiskite {\ttfamily run.\+bat} failą
+
+{\ttfamily run.\+bat} failas atliks šiuos veiksmus\+:
+\begin{DoxyItemize}
+\item Sukurs build katalogą
+\item Paleis CMake, kad sugeneruotų {\ttfamily Makefile}
+\item Sukompiliuos projektą naudodamas make komandą
+\item Paleis sukompiliuotą programą terminale
+\end{DoxyItemize}
+\end{DoxyEnumerate}
+
+{\bfseries{Reikalavimai}}
+
+
+\begin{DoxyItemize}
+\item Operacinė sistema\+: Windows 10 x64-\/bit arba naujesnė versija
+\item Įdiegta CMake (3.\+25 arba naujesnė versija)
+\item Kompiliatorius\+: g++ (su C++11 arba naujesne versija)
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md2}{}\doxysubsection{\texorpdfstring{Duomenų įvestis}{Duomenų įvestis}}\label{md__r_e_a_d_m_e_autotoc_md2}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Tipas   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Aprašymas    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Tipas   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Aprašymas    }\\\cline{1-2}
+\endhead
+Rankinis   &Vartotojas suveda duomenis ranka tiesiai į konsolę    \\\cline{1-2}
+Automatinis   &Naudojamas testavimui su {\ttfamily istringstream}    \\\cline{1-2}
+Iš failo   &Skaitomi duomenys iš failo naudojant {\ttfamily ifstream} (v1.\+2 teste numatytas vienas dydis -\/ 3, kitur galima rinktis iš 5 dydžių)   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md3}{}\doxysubsection{\texorpdfstring{Duomenų išvestis}{Duomenų išvestis}}\label{md__r_e_a_d_m_e_autotoc_md3}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Tipas   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Aprašymas    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Tipas   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Aprašymas    }\\\cline{1-2}
+\endhead
+Į ekraną   &Duomenys atvaizduojami konsolėje per {\ttfamily cout \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<}}    \\\cline{1-2}
+Į failą   &Duomenys saugomi faile per {\ttfamily ostringstream}   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md4}{}\doxysection{\texorpdfstring{Versija 1.\+5}{Versija 1.\+5}}\label{md__r_e_a_d_m_e_autotoc_md4}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md5}{}\doxysection{\texorpdfstring{Bazinė ir išvestinė klasės}{Bazinė ir išvestinė klasės}}\label{md__r_e_a_d_m_e_autotoc_md5}
+Sukurta nauja bazinė klasė {\ttfamily \doxylink{class_zmogus}{Zmogus}}, klasė {\ttfamily \doxylink{class_student}{Student}} paversta į derived. Faile {\ttfamily functions} sukurtas naujas testas {\ttfamily test\+Zmogus\+Class()}, kuris patikrina, ar {\ttfamily \doxylink{class_zmogus}{Zmogus}} klasė yra abstrakti. Panaudotas testas iš v1.\+2 {\ttfamily \doxylink{functions_8h_a49ee3f6d9717457a62ff562e1048bc64}{test\+Rule\+Of\+Five()}}, kuris patikrina visus metodus.\hypertarget{md__r_e_a_d_m_e_autotoc_md6}{}\doxysubsection{\texorpdfstring{{\ttfamily Zmogus} bazinė klasė}{{\ttfamily Zmogus} bazinė klasė}}\label{md__r_e_a_d_m_e_autotoc_md6}
+{\bfseries{Protected atributai}}
+\begin{DoxyItemize}
+\item {\ttfamily first\+Name\+\_\+} -\/ studento vardas
+\item {\ttfamily last\+Name\+\_\+} -\/ studento pavardė
+\end{DoxyItemize}
+
+{\bfseries{Konstruktoriai}}
+\begin{DoxyItemize}
+\item {\ttfamily \doxylink{class_zmogus}{Zmogus()}} – default konstruktorius
+\item {\ttfamily \doxylink{class_zmogus}{Zmogus}(const std\+::string\& first\+Name, const std\+::string\& last\+Name)} – konstruktorius su parametrais
+\item {\ttfamily virtual \texorpdfstring{$\sim$}{\string~}\+Zmogus() = 0} – virtualus abstrakčios klasės destruktorius
+\end{DoxyItemize}
+
+{\bfseries{Virtualios funkcijos}}
+\begin{DoxyItemize}
+\item {\ttfamily virtual void read(std\+::istream\& is) = 0} – input\textquotesingle{}ui
+\item {\ttfamily virtual void print(std\+::ostream\& os) const = 0} – output\textquotesingle{}ui
+\end{DoxyItemize}
+
+{\bfseries{Getteriai ir setteriai}}
+\begin{DoxyItemize}
+\item {\ttfamily string get\+First\+Name() const} – grąžina vardą
+\item {\ttfamily string get\+Last\+Name() const} – grąžina pavardę
+\item {\ttfamily void set\+First\+Name(const std\+::string\& first\+Name)} – nustato vardą
+\item {\ttfamily void set\+Last\+Name(const std\+::string\& last\+Name)} – nustato pavardę
+\end{DoxyItemize}
+
+{\bfseries{Globalūs operatoriai}}
+\begin{DoxyItemize}
+\item {\ttfamily inline std\+::istream\& operator\texorpdfstring{$>$}{>}\texorpdfstring{$>$}{>}(std\+::istream\& is, \doxylink{class_zmogus}{Zmogus}\& zmogus)}
+\item {\ttfamily inline std\+::ostream\& operator\texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<}(std\+::ostream\& os, const \doxylink{class_zmogus}{Zmogus}\& zmogus)}
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md7}{}\doxysubsection{\texorpdfstring{{\ttfamily Student} išvestinė klasė}{{\ttfamily Student} išvestinė klasė}}\label{md__r_e_a_d_m_e_autotoc_md7}
+{\bfseries{Privatūs atributai}}
+\begin{DoxyItemize}
+\item {\ttfamily std\+::vector\texorpdfstring{$<$}{<}int\texorpdfstring{$>$}{>} marks\+\_\+} -\/ pažymiai
+\item {\ttfamily int exam\+Mark\+\_\+} -\/ egzamino pažymys
+\item {\ttfamily float avg\+Final\+\_\+;} -\/ galutinis pažymys pagal vidurkį
+\item {\ttfamily float median\+Final\+\_\+;} -\/ galutinis pažymys pagal medianą
+\end{DoxyItemize}
+
+{\bfseries{Privatūs metodai}}
+\begin{DoxyItemize}
+\item {\ttfamily float average(const std\+::vector\texorpdfstring{$<$}{<}int\texorpdfstring{$>$}{>}\& marks) const} -\/ apskaičiuoją galutinį pažymį pagal vidurkį
+\item {\ttfamily float median(const std\+::vector\texorpdfstring{$<$}{<}int\texorpdfstring{$>$}{>}\& marks) const} -\/ apskaičiuoją galutinį pažymį pagal medianą
+\end{DoxyItemize}
+
+{\bfseries{Konstruktoriai}}
+\begin{DoxyItemize}
+\item {\ttfamily \doxylink{class_student}{Student()}} – default konstruktorius
+\item {\ttfamily \doxylink{class_student}{Student}(std\+::istream\& is)} – konstruktorius su input stream\textquotesingle{}u
+\item {\ttfamily \doxylink{class_student_af9168cedbfa5565cf0b20c1a9d3f5c9d}{Student\+::\+Student}(const \doxylink{class_student}{Student}\& other)} – kopijavimo konstruktorius
+\item {\ttfamily \doxylink{class_student_af9168cedbfa5565cf0b20c1a9d3f5c9d}{Student\+::\+Student}(\doxylink{class_student}{Student}\&\& other) noexcept} -\/ perkėlimo konstruktorius
+\end{DoxyItemize}
+
+{\bfseries{Persidengimo operatoriai}}
+\begin{DoxyItemize}
+\item {\ttfamily \doxylink{class_student}{Student}\& \doxylink{class_student_ad05dd6148523a2a8b38128b60297b52a}{Student\+::operator=}(const \doxylink{class_student}{Student}\& other)} -\/ kopijavimo operatorius
+\item {\ttfamily \doxylink{class_student}{Student}\& \doxylink{class_student_ad05dd6148523a2a8b38128b60297b52a}{Student\+::operator=}(\doxylink{class_student}{Student}\&\& other) noexcept} -\/ perkėlimo operatorius
+\end{DoxyItemize}
+
+{\bfseries{Getteriai ir setteriai}}
+\begin{DoxyItemize}
+\item {\ttfamily const std\+::vector\texorpdfstring{$<$}{<}int\texorpdfstring{$>$}{>}\& get\+Homework\+Marks() const} -\/ grąžina pažymius
+\item {\ttfamily int get\+Exam\+Mark() const} – grąžina egzamino pažymį
+\item {\ttfamily float get\+Avg\+Final() const} – grąžina galutinį pažymį pagal vidurkį
+\item {\ttfamily float get\+Median\+Final() const} – grąžina galutinį pažymį pagal medianą
+\item {\ttfamily void set\+Marks(std\+::vector\texorpdfstring{$<$}{<}int\texorpdfstring{$>$}{>} marks)} – nustato pažymius
+\item {\ttfamily void set\+Exam\+Mark(int exam\+Mark)} -\/ nustato galutinį pažymį
+\end{DoxyItemize}
+
+{\bfseries{Įgyvendintos virtualios funkcijos}}
+\begin{DoxyItemize}
+\item {\ttfamily void \doxylink{class_student_a55ef28ccf00fd9d754a95d784ad8de21}{Student\+::read}(std\+::istream\& is)} – input\textquotesingle{}ui
+\item {\ttfamily void \doxylink{class_student_a07bb1cfc7e2aa216ea1f472b7e7289e8}{Student\+::print}(std\+::ostream\& os) const} – output\textquotesingle{}ui
+\end{DoxyItemize}
+
+{\bfseries{Kiti metodai}}
+\begin{DoxyItemize}
+\item {\ttfamily std\+::istream\& read\+Student(std\+::istream\& is)} -\/ input\textquotesingle{}ui
+\item {\ttfamily void calculate\+Final\+Marks();} -\/ iškviečia 2 galutinio pažymio skaičiavimo funkcijas (vid. ir med.)
+\item {\ttfamily static void read\+Input(std\+::vector\texorpdfstring{$<$}{<}\doxylink{class_student}{Student}\texorpdfstring{$>$}{>}\& students, char menu\+Choice);} -\/ skaito studento duomenis įvestus konsolėje
+\item {\ttfamily static void read\+From\+File(std\+::vector\texorpdfstring{$<$}{<}\doxylink{class_student}{Student}\texorpdfstring{$>$}{>}\& students, int file\+Size);} -\/ skaito studento duomenis iš failo
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md8}{}\doxysubsection{\texorpdfstring{Testavimas}{Testavimas}}\label{md__r_e_a_d_m_e_autotoc_md8}
+{\bfseries{1. Funkcija {\ttfamily test\+Zmogus\+Class()}}} Tikrina ar klasė yra abstrakti. Norint pratestuoti, reikia atkomentuoti šią funkciją.
+
+
+
+Kadangi {\ttfamily \doxylink{class_zmogus}{Zmogus} zmogus} nėra kompiliuojamas, klasė yra abstrakti.
+
+{\bfseries{2. Funkcija {\ttfamily \doxylink{functions_8h_a49ee3f6d9717457a62ff562e1048bc64}{test\+Rule\+Of\+Five()}}}} Tikrina\+:
+\begin{DoxyEnumerate}
+\item Default konstruktorius
+\item Kopijavimo konstruktorius
+\item Kopijavimo priskyrimo operatorius
+\item Perkėlimo konstruktorius
+\item Perkėlimo priskyrimo operatorius
+\item Įvesties operatoriai
+\begin{DoxyItemize}
+\item 6.\+1 Įvestį iš konsolės
+\item 6.\+2 Įvestį iš failo
+\end{DoxyItemize}
+\item Išvesties operatorių
+\item Nuskaitymą iš failo
+\item Išvedimą į failą
+\item Išvedimą į konsolę
+\item Destruktorių
+\end{DoxyEnumerate}\hypertarget{md__r_e_a_d_m_e_autotoc_md9}{}\doxysubsection{\texorpdfstring{Rule of five\+:}{Rule of five\+:}}\label{md__r_e_a_d_m_e_autotoc_md9}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md10}{}\doxysubsection{\texorpdfstring{Įvestis\+:}{Įvestis\+:}}\label{md__r_e_a_d_m_e_autotoc_md10}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md11}{}\doxysubsection{\texorpdfstring{Išvestis\+:}{Išvestis\+:}}\label{md__r_e_a_d_m_e_autotoc_md11}
+ \hypertarget{md__r_e_a_d_m_e_autotoc_md12}{}\doxysubsection{\texorpdfstring{Destruktorius\+:}{Destruktorius\+:}}\label{md__r_e_a_d_m_e_autotoc_md12}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md13}{}\doxysubsection{\texorpdfstring{Papildomi failai testavimui}{Papildomi failai testavimui}}\label{md__r_e_a_d_m_e_autotoc_md13}
+{\ttfamily testas1.\+txt} -\/ 6.\+2 testui {\ttfamily studentai3.\+txt} -\/ 8 testui {\ttfamily testas2.\+txt} -\/ 9 testui\hypertarget{md__r_e_a_d_m_e_autotoc_md14}{}\doxysection{\texorpdfstring{Programos versijos}{Programos versijos}}\label{md__r_e_a_d_m_e_autotoc_md14}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md15}{}\doxysubsection{\texorpdfstring{v.\+pradinė}{v.\+pradinė}}\label{md__r_e_a_d_m_e_autotoc_md15}
+C++ programa, skirta studentų pažymiams apskaičiuoti, naudojant vidurkio ir medianos metodus. Vartotojai įveda studentų vardus, namų darbų pažymius ir egzaminų rezultatus, o programa pateikia suformatuotus rezultatus. {\ttfamily Makefile} automatizuoja kompiliavimą, o {\ttfamily gitignore} pašalina nereikalingus failus iš „\+Git“ sekimo.\hypertarget{md__r_e_a_d_m_e_autotoc_md16}{}\doxysubsection{\texorpdfstring{v0.\+1}{v0.\+1}}\label{md__r_e_a_d_m_e_autotoc_md16}
+Optimizuoti failai ir pataisytos galutinio pažymio apskaičiavimo funkcijos. Įgyvendinti du skirtingi vykdomieji failai\+: vienas su vektorių masyvais, kitas – su dinaminiais C masyvais pažymiams. Pridėta {\ttfamily meniu} funkcija, leidžianti atsitiktinai generuoti pasirinktus duomenis.\hypertarget{md__r_e_a_d_m_e_autotoc_md17}{}\doxysubsection{\texorpdfstring{v0.\+2}{v0.\+2}}\label{md__r_e_a_d_m_e_autotoc_md17}
+Prie meniu pridėta failų skaitymo parinktis, rūšiavimo parinktys (pagal vardą, pavardę ir galutinį pažymį) ir parinktis pasirinkti, ar spausdinti rezultatą į monitorių, ar į failą. Taip pat pridėti {\ttfamily \doxylink{class_time_measurement}{Time\+Measurement}} failai, skirti sekti laiką ir apskaičiuoti vidutinius testavimo laikus.\hypertarget{md__r_e_a_d_m_e_autotoc_md18}{}\doxysubsection{\texorpdfstring{v0.\+3}{v0.\+3}}\label{md__r_e_a_d_m_e_autotoc_md18}
+Pridėtas išimčių tvarkymas funkcijoms {\ttfamily read\+From\+File}, {\ttfamily output} ir {\ttfamily sort\+Students}. Sukurti aplankai ir atnaujintas {\ttfamily makefile}.\hypertarget{md__r_e_a_d_m_e_autotoc_md19}{}\doxysubsection{\texorpdfstring{v0.\+4}{v0.\+4}}\label{md__r_e_a_d_m_e_autotoc_md19}
+Pridėta failų generavimo funkcija su pasirinktu dydžiu, studentų grupavimas į dvi grupes pagal pasirinktą galutinio pažymio tipą ir dvi laiko matavimo testavimo funkcijos. Pakeista {\ttfamily time\+Measurement} funkcija, kad testų rezultatai būtų spausdinami į failą, o ne į konsolę. Atnaujintas {\ttfamily README}, įtraukiant laiko matavimo testų rezultatus. Optimizuotos kelios funkcijos, siekiant geresnio našumo.\hypertarget{md__r_e_a_d_m_e_autotoc_md20}{}\doxysubsection{\texorpdfstring{v1.\+0prad}{v1.\+0prad}}\label{md__r_e_a_d_m_e_autotoc_md20}
+Pridėta nauja laiko testavimo funkcija ir versija su 3 skirtingais konteineriais\+: {\ttfamily vector}, {\ttfamily deque} ir {\ttfamily list}. Atliktas laiko tyrimas, o rezultatai pateikti faile {\ttfamily README}.\hypertarget{md__r_e_a_d_m_e_autotoc_md21}{}\doxysubsection{\texorpdfstring{v1.\+0}{v1.\+0}}\label{md__r_e_a_d_m_e_autotoc_md21}
+Pridėti testavimai su trimis skirtingomis strategijomis studentų rūšiavimo į grupes funkcijai. Optimizuotas geriausias rūšiavimas ({\ttfamily vector} konteinerio su pirma strategija). Atliktas spartos bei atminties naudojimo tyrimas, o rezultatai pateikti faile {\ttfamily README}. Pridėtas programos diegimo bei paleidimo {\ttfamily CMake} failas bei {\ttfamily README} aprašyta įdiegimo instrukcija.\hypertarget{md__r_e_a_d_m_e_autotoc_md22}{}\doxysubsection{\texorpdfstring{v1.\+1}{v1.\+1}}\label{md__r_e_a_d_m_e_autotoc_md22}
+{\ttfamily Vector} konteinerio versijoje duomenų struktūra pakeista iš {\ttfamily struct} į {\ttfamily class}. Atlikti programos spartos bei SSD naudojimo testai lyginant {\ttfamily struct} ir {\ttfamily class} su skirtingomis optimizavimo vėliavėlėmis\+: {\ttfamily O1}, {\ttfamily O2} ir {\ttfamily O3}. Tyrimo rezultatai aprašyti {\ttfamily README} faile.\hypertarget{md__r_e_a_d_m_e_autotoc_md23}{}\doxysubsection{\texorpdfstring{v1.\+2}{v1.\+2}}\label{md__r_e_a_d_m_e_autotoc_md23}
+Pašalinti {\ttfamily deque} bei {\ttfamily list} versijų katalogai. Pritaikyta Rule of Five ir persidengimo operatoriai. Atliktas testas patikrinantis {\ttfamily \doxylink{class_student}{Student}} klasės metodų veikimą.\hypertarget{md__r_e_a_d_m_e_autotoc_md24}{}\doxysubsection{\texorpdfstring{v1.\+5}{v1.\+5}}\label{md__r_e_a_d_m_e_autotoc_md24}
+Sukurta nauja bazinė klasė {\ttfamily \doxylink{class_zmogus}{Zmogus}}. {\ttfamily \doxylink{class_student}{Student}} klasė paversta į derived. Patikrinta, ar nauji metodai praeina testus iš versijos 1.\+2 
