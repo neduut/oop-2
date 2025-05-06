@@ -1,0 +1,9 @@
+<map id="GetHomeworkMarks" name="GetHomeworkMarks">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,147,57"/>
+<area shape="rect" id="Node000002" href="$utils_8cpp.html#a78099aa01b23dec73e2bcc9b560ecd67" title=" " alt="" coords="195,5,312,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="146,31,179,27,180,32,147,37"/>
+<area shape="rect" id="Node000004" href="$utils_8cpp.html#a8b084326038997a54fc6b911dff45cae" title=" " alt="" coords="209,56,298,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="147,51,194,58,193,64,146,57"/>
+<area shape="rect" id="Node000003" href="$utils_8cpp.html#ad8991efbf41263f691b2074023f4359a" title=" " alt="" coords="360,5,398,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="313,16,344,16,344,21,313,21"/>
+</map>

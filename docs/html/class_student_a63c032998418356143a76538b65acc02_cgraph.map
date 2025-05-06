@@ -1,0 +1,15 @@
+<map id="Student::Student" name="Student::Student">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,56,125,83"/>
+<area shape="rect" id="Node000002" href="$class_student.html#a55ef28ccf00fd9d754a95d784ad8de21" title=" " alt="" coords="185,31,284,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="125,58,169,51,170,56,125,63"/>
+<area shape="rect" id="Node000007" href="$class_zmogus.html#aa7a8ba4d3c4778f9b35d59eef3e72574" title=" " alt="" coords="173,81,296,108"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="125,76,158,81,157,86,125,81"/>
+<area shape="rect" id="Node000003" href="$class_student.html#a9c5cbd2b4ce6628b671a1dfd54faa0f6" title=" " alt="" coords="344,31,488,57"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="285,41,328,41,328,47,285,47"/>
+<area shape="rect" id="Node000004" href="$class_student.html#ac70e606bdafb395855171b26ff2727b2" title=" " alt="" coords="536,31,727,57"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="489,41,521,41,521,47,489,47"/>
+<area shape="rect" id="Node000005" href="$class_student.html#adf2aa14d1ad82059f3bece77ece507e6" title=" " alt="" coords="775,5,895,32"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="727,29,759,25,760,31,728,35"/>
+<area shape="rect" id="Node000006" href="$class_student.html#acba95ae7bdd406b62ab42b296abaf8c5" title=" " alt="" coords="777,56,893,83"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="728,53,761,58,761,63,727,59"/>
+</map>

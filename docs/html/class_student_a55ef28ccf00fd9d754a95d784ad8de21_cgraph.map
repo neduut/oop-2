@@ -1,0 +1,11 @@
+<map id="Student::read" name="Student::read">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,105,57"/>
+<area shape="rect" id="Node000002" href="$class_student.html#a9c5cbd2b4ce6628b671a1dfd54faa0f6" title=" " alt="" coords="153,31,297,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="105,41,137,41,137,47,105,47"/>
+<area shape="rect" id="Node000003" href="$class_student.html#ac70e606bdafb395855171b26ff2727b2" title=" " alt="" coords="345,31,535,57"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="298,41,329,41,329,47,298,47"/>
+<area shape="rect" id="Node000004" href="$class_student.html#adf2aa14d1ad82059f3bece77ece507e6" title=" " alt="" coords="583,5,704,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="536,29,568,25,568,31,536,35"/>
+<area shape="rect" id="Node000005" href="$class_student.html#acba95ae7bdd406b62ab42b296abaf8c5" title=" " alt="" coords="585,56,702,83"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="536,53,570,58,569,63,536,59"/>
+</map>

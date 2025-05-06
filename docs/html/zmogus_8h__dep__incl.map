@@ -1,0 +1,15 @@
+<map id="include/zmogus.h" name="include/zmogus.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="122,5,245,32"/>
+<area shape="rect" id="Node000002" href="$student_8h.html" title=" " alt="" coords="123,80,244,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="186,48,186,80,181,80,181,48"/>
+<area shape="rect" id="Node000003" href="$functions_8h.html" title=" " alt="" coords="68,155,198,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="168,121,144,156,139,153,164,118"/>
+<area shape="rect" id="Node000004" href="$functions_8cpp.html" title=" " alt="" coords="5,229,127,256"/>
+<area shape="poly" id="edge5_Node000002_Node000004" title=" " alt="" coords="111,115,81,132,58,156,51,174,52,193,62,228,57,230,46,194,46,173,53,153,78,128,109,110"/>
+<area shape="rect" id="Node000005" href="$main_8cpp.html" title=" " alt="" coords="168,229,265,256"/>
+<area shape="poly" id="edge6_Node000002_Node000005" title=" " alt="" coords="200,120,213,154,219,195,220,229,214,229,213,195,207,155,195,122"/>
+<area shape="rect" id="Node000006" href="$student_8cpp.html" title=" " alt="" coords="273,155,384,181"/>
+<area shape="poly" id="edge7_Node000002_Node000006" title=" " alt="" coords="223,111,304,152,302,156,221,116"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="113,195,79,231,76,227,109,191"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="161,190,204,227,200,231,157,194"/>
+</map>
