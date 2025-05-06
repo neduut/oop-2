@@ -13,6 +13,7 @@ private:
     float avgFinal_;
     float medianFinal_;
 
+    // private methods
     float average(const std::vector<int>& marks) const;
     float median(const std::vector<int>& marks) const;
 
@@ -20,6 +21,10 @@ public:
     // constructors 
     Student();
     Student(std::istream& is);
+    /*Student(const std::string& firstName, const std::string& lastName, const std::vector<int>& marks, int examMark)
+        : Zmogus(firstName, lastName), marks_(marks), examMark_(examMark) {
+        calculateFinalMarks();
+    }*/
 
     // rule of five
     Student(const Student& other); // copy constructor
@@ -28,23 +33,22 @@ public:
     Student& operator=(Student&& other) noexcept; // move assignment operator
     ~Student(); // destructor
 
-    // etters/setters
+    // getters
     const std::vector<int>& getHomeworkMarks() const { return marks_; }
     int getExamMark() const { return examMark_; }
     float getAvgFinal() const { return avgFinal_; }
     float getMedianFinal() const { return medianFinal_; }
-    void setMarks(std::vector<int> marks) { marks_ = std::move(marks); }
+    
+    // setters
+    void setMarks(std::vector<int> marks) { marks_ = marks; }
     void setExamMark(int examMark) { examMark_ = examMark; }
 
-    // implementations of virtual methods from Zmogus class
-    std::istream& read(std::istream& is) override;
-    std::ostream& print(std::ostream& os) const override;
+    // implementation of virtual functions
+    void print(std::ostream& os) const override;
+    void read(std::istream& is) override;
 
-    // operators
-    friend std::ostream& operator<<(std::ostream& os, const Student& student);
-    friend std::istream& operator>>(std::istream& is, Student& student);
-
-    // other methods
+    // methods
+    std::istream& readStudent(std::istream& is);
     void calculateFinalMarks();
     static void readInput(std::vector<Student>& students, char menuChoice);
     static void readFromFile(std::vector<Student>& students, int fileSize);

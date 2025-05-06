@@ -16,6 +16,10 @@
 #include <chrono>
 #include <random>
 #include <sstream>
+#include <cassert>
+#include <stdexcept>
+#include <exception>
+
 
 using std::cin;
 using std::cout;
@@ -36,5 +40,7 @@ using std::ostringstream;
 using std::istringstream;
 using std::ifstream;
 using std::ofstream;
+using std::istream;
+using std::ostream;
 using std::cerr;
 using std::to_string;

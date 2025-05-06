@@ -9,7 +9,7 @@ Student::Student()
     : Zmogus(), examMark_(0), avgFinal_(0.0), medianFinal_(0.0) {}
 
 // constructor with input stream
-Student::Student(std::istream& is) {
+Student::Student(std::istream& is) : Zmogus() {
     read(is);
 }
 
@@ -44,6 +44,8 @@ Student::Student(Student&& other) noexcept
         other.examMark_ = 0;
         other.avgFinal_ = 0.0;
         other.medianFinal_ = 0.0;
+        other.firstName_.clear();
+        other.lastName_.clear();
       }
 
 // move assignment operator
@@ -58,54 +60,51 @@ Student& Student::operator=(Student&& other) noexcept {
         other.examMark_ = 0;
         other.avgFinal_ = 0.0;
         other.medianFinal_ = 0.0;
+        other.firstName_.clear();  
+        other.lastName_.clear(); 
     }
     return *this;
 }
 
-// input assignment operator
-std::istream& operator>>(std::istream& is, Student& student) {
-    student.read(is);
-    return is;
+// implementation of virtual read function
+void Student::read(std::istream& is) {
+    readStudent(is);  
 }
 
-// output assignment operator
-std::ostream& operator<<(std::ostream& os, const Student& student) {
-    os << static_cast<const Zmogus&>(student); 
-    for (const auto& mark : student.getHomeworkMarks()) {
+std::istream& Student::readStudent(std::istream& is) {
+    is >> firstName_ >> lastName_;  
+
+    marks_.clear();
+    int mark;
+    while (is >> mark) {
+        marks_.push_back(mark);  
+    }
+
+    is.clear();  
+    if (!marks_.empty()) {
+        examMark_ = marks_.back();  
+        marks_.pop_back();  
+    } else {
+        examMark_ = 0;  
+    }
+
+    calculateFinalMarks();  
+    return is;  
+}
+
+// implementation of virtual print function
+void Student::print(std::ostream& os) const {
+    os << firstName_ << " " << lastName_ << " ND: ";
+    for (const auto& mark : marks_) {
         os << mark << " ";
     }
-    os << "Egz: " << student.getExamMark()
-       << " Avg: " << student.getAvgFinal()
-       << " Med: " << student.getMedianFinal();
-    return os;
+    os << " Egz: " << examMark_ << "  Avg. gal: " << avgFinal_ << "  Avg. Med: " << medianFinal_;
 }
 
 // destructor
 Student::~Student() {
     marks_.clear();
     ++dstCount;
-}
-
-std::istream& Student::read(std::istream& is) {
-    is >> firstName_ >> lastName_;
-    int mark;
-    marks_.clear();
-    while (is >> mark) {
-        marks_.push_back(mark);
-    }
-    examMark_ = marks_.back();
-    marks_.pop_back();
-    calculateFinalMarks();
-    return is;
-}
-
-std::ostream& Student::print(std::ostream& os) const {
-    os << firstName_ << " " << lastName_ << " ND: ";
-    for (const auto& mark : marks_) os << mark << " ";
-    os << "Egz: " << examMark_ 
-       << " Avg: " << avgFinal_ 
-       << " Med: " << medianFinal_;
-    return os;
 }
 
 void Student::readInput(std::vector<Student>& students, char menuChoice) {
@@ -149,7 +148,7 @@ void Student::readFromFile(std::vector<Student>& students, int fileSize) {
         while (std::getline(file, line)) {
             std::istringstream ss(line);
             if (ss) {
-                temp.read(ss);
+                temp.readStudent(ss);
                 temp.calculateFinalMarks();
                 students.push_back(temp);
 
@@ -157,7 +156,6 @@ void Student::readFromFile(std::vector<Student>& students, int fileSize) {
                 std::cerr << FILE_READ_ERROR << std::endl;
             }
         }
-
         file.close();
         students.shrink_to_fit();
         std::cout << FILE_READ_SUCCESS << std::endl;

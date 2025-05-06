@@ -309,7 +309,7 @@ void testRuleOfFive() {
     cout << "Rezultatas: " << s4 << "\n";
     assert(s4.getFirstName() == "testas");
     assert(s4.getExamMark() == 10);
-    assert(s1.getFirstName().empty()); // s1 turėtų būti "ištuštintas"
+    assert(s1.getFirstName().empty()); 
 
     // 5th test
     cout << "\n5 TESTAS: perkėlimo operatorius\n";
