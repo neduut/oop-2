@@ -21,15 +21,6 @@ Programos versijose analizuojamas bei tobulinamas programos našumas ir efektyvu
 - Operacinė sistema: Windows 10 x64-bit arba naujesnė versija
 - Įdiegta CMake (3.25 arba naujesnė versija)
 - Kompiliatorius: g++ (su C++11 arba naujesne versija)
-
-
-# Versija 1.5
-# Bazinė ir išvestinė klasės
-
-Sukurta nauja bazinė klasė `Zmogus`, klasė `Student` paversta į derived.
-Faile `functions` sukurtas naujas testas `testZmogusClass()`, kuris patikrina, ar `Zmogus` klasė yra abstrakti.
-Panaudotas testas iš v1.2 `testRuleOfFive()`, kuris patikrina visus metodus.
-
   
 ## Duomenų įvestis
 | Tipas        | Aprašymas                                                                 |
@@ -44,11 +35,19 @@ Panaudotas testas iš v1.2 `testRuleOfFive()`, kuris patikrina visus metodus.
 | Į ekraną  | Duomenys atvaizduojami konsolėje per `cout <<` |
 | Į failą   | Duomenys saugomi faile per `ostringstream` |
 
+
+# Versija 1.5
+# Bazinė ir derived klasės
+
+Sukurta nauja bazinė klasė `Zmogus`, klasė `Student` paversta į derived.
+Faile `functions` sukurtas naujas testas `testZmogusClass()`, kuris patikrina, ar `Zmogus` klasė yra abstrakti.
+Panaudotas testas iš v1.2 `testRuleOfFive()`, kuris patikrina visus metodus.
+
 ## `Zmogus` bazinė klasė
 
 **Protected atributai**
-- `firstName_` - studento vardas
--`lastName_ ` - studento pavardė
+*`firstName_` - studento vardas
+*`lastName_ ` - studento pavardė
 
 **Konstruktoriai**
 - `Zmogus()` – default konstruktorius
