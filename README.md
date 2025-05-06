@@ -46,76 +46,80 @@ Panaudotas testas iš v1.2 `testRuleOfFive()`, kuris patikrina visus metodus.
 
 ## `Zmogus` bazinė klasė
 
-Protected atributai
-`firstName_` - studento vardas
-`lastName_ ` - studento pavardė
+**Protected atributai**
+*`firstName_` - studento vardas
+*`lastName_ ` - studento pavardė
 
-Konstruktoriai
-`Zmogus()` – default konstruktorius
-`Zmogus(const std::string& firstName, const std::string& lastName)` – konstruktorius su parametrais
-`virtual ~Zmogus() = 0` – virtualus abstrakčios klasės destruktorius 
+**Konstruktoriai**
+*`Zmogus()` – default konstruktorius
+*`Zmogus(const std::string& firstName, const std::string& lastName)` – konstruktorius su parametrais
+*`virtual ~Zmogus() = 0` – virtualus abstrakčios klasės destruktorius 
 
-Virtualios funkcijos
-`virtual void read(std::istream& is) = 0` – input'ui
-`virtual void print(std::ostream& os) const = 0` – output'ui
+**Virtualios funkcijos**
+*`virtual void read(std::istream& is) = 0` – input'ui
+*`virtual void print(std::ostream& os) const = 0` – output'ui
 
-Getteriai ir setteriai
-`string getFirstName() const` – grąžina vardą
-`string getLastName() const` – grąžina pavardę
-`void setFirstName(const std::string& firstName)` – nustato vardą
-`void setLastName(const std::string& lastName)` – nustato pavardę
+**Getteriai ir setteriai**
+*`string getFirstName() const` – grąžina vardą
+*`string getLastName() const` – grąžina pavardę
+*`void setFirstName(const std::string& firstName)` – nustato vardą
+*`void setLastName(const std::string& lastName)` – nustato pavardę
 
-Globalūs operatoriai
-`inline std::istream& operator>>(std::istream& is, Zmogus& zmogus)`
-`inline std::ostream& operator<<(std::ostream& os, const Zmogus& zmogus)`
+**Globalūs operatoriai**
+*`inline std::istream& operator>>(std::istream& is, Zmogus& zmogus)`
+*`inline std::ostream& operator<<(std::ostream& os, const Zmogus& zmogus)`
 
 ## `Student` išvestinė klasė
 
-Privatūs atributai
-`std::vector<int> marks_` - pažymiai
-`int examMark_ ` - egzamino pažymys
-`float avgFinal_;` - galutinis pažymys pagal vidurkį
-`float medianFinal_;` - galutinis pažymys pagal medianą
+**Privatūs atributai**
+*`std::vector<int> marks_` - pažymiai
+*`int examMark_ ` - egzamino pažymys
+*`float avgFinal_;` - galutinis pažymys pagal vidurkį
+*`float medianFinal_;` - galutinis pažymys pagal medianą
 
-Privatūs metodai
-`float average(const std::vector<int>& marks) const` - apskaičiuoją galutinį pažymį pagal vidurkį
-`float median(const std::vector<int>& marks) const` - apskaičiuoją galutinį pažymį pagal medianą
+**Privatūs metodai**
+*`float average(const std::vector<int>& marks) const` - apskaičiuoją galutinį pažymį pagal vidurkį
+*`float median(const std::vector<int>& marks) const` - apskaičiuoją galutinį pažymį pagal medianą
 
-Konstruktoriai
-`Student()` – default konstruktorius
-`Student(std::istream& is)` – konstruktorius su input stream'u
-`Student::Student(const Student& other)` – kopijavimo konstruktorius
-`Student::Student(Student&& other) noexcept` - perkėlimo konstruktorius
+**Konstruktoriai**
+*`Student()` – default konstruktorius
+*`Student(std::istream& is)` – konstruktorius su input stream'u
+*`Student::Student(const Student& other)` – kopijavimo konstruktorius
+*`Student::Student(Student&& other) noexcept` - perkėlimo konstruktorius
 
-Persidengimo operatoriai
-`Student& Student::operator=(const Student& other)` - kopijavimo operatorius
-`Student& Student::operator=(Student&& other) noexcept` - perkėlimo operatorius
+**Persidengimo operatoriai**
+*`Student& Student::operator=(const Student& other)` - kopijavimo operatorius
+*`Student& Student::operator=(Student&& other) noexcept` - perkėlimo operatorius
 
-Getteriai ir setteriai
-`const std::vector<int>& getHomeworkMarks() const` - grąžina pažymius
-`int getExamMark() const` – grąžina egzamino pažymį
-`float getAvgFinal() const` – grąžina galutinį pažymį pagal vidurkį
-`float getMedianFinal() const` – grąžina galutinį pažymį pagal medianą
-`void setMarks(std::vector<int> marks)` – nustato pažymius
-`void setExamMark(int examMark)` - nustato galutinį pažymį
+**Getteriai ir setteriai**
+*`const std::vector<int>& getHomeworkMarks() const` - grąžina pažymius
+*`int getExamMark() const` – grąžina egzamino pažymį
+*`float getAvgFinal() const` – grąžina galutinį pažymį pagal vidurkį
+*`float getMedianFinal() const` – grąžina galutinį pažymį pagal medianą
+*`void setMarks(std::vector<int> marks)` – nustato pažymius
+*`void setExamMark(int examMark)` - nustato galutinį pažymį
 
-Įgyvendintos virtualios funkcijos
-`void Student::read(std::istream& is)` – input'ui
-`void Student::print(std::ostream& os) const` – output'ui
+**Įgyvendintos virtualios funkcijos**
+*`void Student::read(std::istream& is)` – input'ui
+*`void Student::print(std::ostream& os) const` – output'ui
 
-Kiti metodai
-`std::istream& readStudent(std::istream& is)` - input'ui
-`void calculateFinalMarks();` - iškviečia 2 galutinio pažymio skaičiavimo funkcijas (vid. ir med.)
-`static void readInput(std::vector<Student>& students, char menuChoice);` - skaito studento duomenis įvestus konsolėje
-`static void readFromFile(std::vector<Student>& students, int fileSize);` - skaito studento duomenis iš failo
+**Kiti metodai**
+*`std::istream& readStudent(std::istream& is)` - input'ui
+*`void calculateFinalMarks();` - iškviečia 2 galutinio pažymio skaičiavimo funkcijas (vid. ir med.)
+*`static void readInput(std::vector<Student>& students, char menuChoice);` - skaito studento duomenis įvestus konsolėje
+*`static void readFromFile(std::vector<Student>& students, int fileSize);` - skaito studento duomenis iš failo
 
-## testavimas
+## Testavimas
 
-Funkcija `testZmogusClass()` tikrina ar klasė yra abstrakti.
-Kadangi `Zmogus z` nėra kompiliuojamas, klasė yra abstrakti. 
+**1. Funkcija `testZmogusClass()`**
+Tikrina ar klasė yra abstrakti. Norint pratestuoti, reikia atkomentuoti šią funkciją.
 
-Funkcija `testRuleOfFive()` tikrina:
+![image](https://github.com/user-attachments/assets/2d6e6ae8-1465-44f5-ae12-73c9fcf4c4f0)
 
+Kadangi `Zmogus zmogus` nėra kompiliuojamas, klasė yra abstrakti. 
+
+**2. Funkcija `testRuleOfFive()`**
+Tikrina:
 1. Default konstruktorius
 2. Kopijavimo konstruktorius
 3. Kopijavimo priskyrimo operatorius
