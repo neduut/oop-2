@@ -37,7 +37,7 @@ Programos versijose analizuojamas bei tobulinamas programos našumas ir efektyvu
 
 
 # Versija 1.5
-# Bazinė ir derived klasės
+# Bazinė ir išvestinė klasės
 
 Sukurta nauja bazinė klasė `Zmogus`, klasė `Student` paversta į derived.
 Faile `functions` sukurtas naujas testas `testZmogusClass()`, kuris patikrina, ar `Zmogus` klasė yra abstrakti.
@@ -46,8 +46,8 @@ Panaudotas testas iš v1.2 `testRuleOfFive()`, kuris patikrina visus metodus.
 ## `Zmogus` bazinė klasė
 
 **Protected atributai**
-*`firstName_` - studento vardas
-*`lastName_ ` - studento pavardė
+- `firstName_` - studento vardas
+- `lastName_ ` - studento pavardė
 
 **Konstruktoriai**
 - `Zmogus()` – default konstruktorius
