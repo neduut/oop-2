@@ -10,6 +10,11 @@
 .vs/
 .vscode/
 
+
+build/
+_deps/
+*.d
+*.dSYM
 CMakeFiles/
 CMakeCache.txt
 Makefile
@@ -34,5 +39,5 @@ runTimeResults.txt
 kietiakuRezultatai.txt
 vargsiukuRezultatai.txt
 
-Doxyfile1.bak
 docs/latex/*.pdf
+Doxyfile1.bak

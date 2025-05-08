@@ -1,6 +1,6 @@
 cmake CMakeLists.txt
 cmake --install .
 cmake --build .
-cd Debug\
-Deque.exe
+cd main\
+main.exe
 pause

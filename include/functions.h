@@ -12,4 +12,4 @@ void printToFile(vector<Student>& students, const string& fileName);
 void fileGenTest(int size);
 void programTest(int size);
 void testRuleOfFive();
-//void testZmogausClass();
+//void testZmogausClass(); // norit testuoti Zmogaus klase, atkomentuokite sia funkcija

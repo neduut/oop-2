@@ -141,8 +141,22 @@ void Student::readFromFile(std::vector<Student>& students, int fileSize) {
             throw std::runtime_error(FILE_OPEN_ERROR);
         }
 
-        std::string line;
-        std::getline(file, line);
+        // if file is not found, generate it
+        /*if (!file) {
+            try {
+                generateFile(fileSize);  
+                std::ifstream file("files/studentai" + std::to_string(fileSize) + ".txt"); 
+                if (!file) {
+                    throw std::runtime_error(FILE_OPEN_ERROR);
+                }
+            } catch (const std::exception& e) {
+                std::cerr << "Klaida: " << e.what() << std::endl;
+                return 1;  
+            }
+        }*/
+
+        string line;
+        getline(file, line);
 
         Student temp;
         while (std::getline(file, line)) {

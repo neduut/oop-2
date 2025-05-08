@@ -2,9 +2,17 @@
 
 Programa, skirta apdoroti studentų duomenis.
 Programos versijose analizuojamas bei tobulinamas programos našumas, efektyvumas bei paruošimas vartotojuj.
+
 Yra sukurta programos dokumentacija - `dokumentacija.pdf`.
 
 # Naudojimo instrukcijos
+
+**Katalogai:**
+- `analysis` - programos veikimo analizės rezultatai, naudojami tam tikrose programos versijose
+- `docs` - doxygen failai
+- `files` - programoje vykdymo metu naudojami .txt failai (įtrauktas į `.gitignore` ir atsiras tik paleidus programą)
+- `include` - antraščių `.h` failai
+- `src` - `.cpp` failai
 
 **Kad paleisti programą, turite atlikti šiuos veiksmus:**
 
@@ -41,6 +49,7 @@ Yra sukurta programos dokumentacija - `dokumentacija.pdf`.
 # Programos versijos
 
 Kiekviena versija išsamiai aprašyta jos `README.md` faile.
+Programos v1.0 versijos yra atskiroje `opp` repozitorijoje.
 
 ## v.pradinė
 C++ programa, skirta studentų pažymiams apskaičiuoti, naudojant vidurkio ir medianos metodus. Vartotojai įveda studentų vardus, namų darbų pažymius ir egzaminų rezultatus, o programa pateikia suformatuotus rezultatus. `Makefile` automatizuoja kompiliavimą, o `gitignore` pašalina nereikalingus failus iš „Git“ sekimo.
@@ -71,6 +80,7 @@ Pašalinti `deque` bei `list` versijų katalogai. Pritaikyta Rule of Five ir per
 
 ## v1.5
 Sukurta nauja bazinė klasė `Zmogus`. `Student` klasė paversta į derived. Patikrinta, ar nauji metodai praeina testus iš versijos 1.2
+Kad įsitikint, jog klasė `Zmogus` yra abstrakti, reikia atkomentuoti funkciją `void testZmogausClass()` failuose `functions.cpp` bei `functions.h`.
 
 ## v2.0
 Sukurta klasę aprašanti dokumentacija, HTML ir TEX formatais, su sukompiliuotu PDF failu.

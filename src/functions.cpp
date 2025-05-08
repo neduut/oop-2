@@ -307,6 +307,7 @@ void testRuleOfFive() {
     cout << "\n4 TESTAS: perkėlimo konstruktorius\n";
     Student s4(std::move(s1));
     cout << "Rezultatas: " << s4 << "\n";
+    cout << "s1: " << s1 << "\n"; // should be empty
     assert(s4.getFirstName() == "testas");
     assert(s4.getExamMark() == 10);
     assert(s1.getFirstName().empty()); 
@@ -367,15 +368,15 @@ void testRuleOfFive() {
     // 10th test
     cout << "\n8 TESTAS: studentų nuskaitymas iš failo (readFromFile)\n";
     std::ofstream testFile2("files/studentai3.txt");
-    testFile2 << "antraste" << std::endl;
-    testFile2 << "Jonas Jonaitis 10 9 8 7 9 6" << std::endl;
-    testFile2 << "Vejas Vejukas 10 9 8 7 6 6" << std::endl;
-    testFile2 << "Petras Petrauskas 8 9 7 10 9 5" << std::endl;
+    testFile2 << "antraste" << endl;
+    testFile2 << "Jonas Jonaitis 10 9 8 7 9 6" << endl;
+    testFile2 << "Vejas Vejukas 10 9 8 7 6 6" << endl;
+    testFile2 << "Petras Petrauskas 8 9 7 10 9 5" << endl;
     testFile2.close();
 
     std::vector<Student> tempStudents;
     Student::readFromFile(tempStudents, 3);
-    std::cout << "Gauta studentu: " << tempStudents.size() << std::endl;
+    cout << "Gauta studentu: " << tempStudents.size() << endl;
     assert(tempStudents.size() == 3);
     assert(tempStudents[0].getFirstName() == "Jonas");
     assert(tempStudents[1].getLastName() == "Vejukas");
@@ -395,7 +396,7 @@ void testRuleOfFive() {
 
     // 12th test
     cout << "\n10 TESTAS: studentų išvedimas į konsolę\n";
-    for (const auto& s : tempStudents) std::cout << s << std::endl;
+    for (const auto& s : tempStudents) cout << s << endl;
 
     // 13th test
     cout << "\n11 TESTAS: destruktorius\n"; 
@@ -406,3 +407,4 @@ void testRuleOfFive() {
 /*void testZmogausClass() {  
     Zmogus zmogus; 
 }*/
+
