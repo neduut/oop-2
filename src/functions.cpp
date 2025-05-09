@@ -332,14 +332,13 @@ void testRuleOfFive() {
     assert(s6.getExamMark() == 10);
 
     // 7th test
-    cout << "\n6.1 TESTAS: įvesties operatorius (input iš konsolės)\n";
-    vector<Student> s7;
-    Student::readInput(s7, 1); 
-    cout << "Rezultatas: ";
-    for (const auto& student : s7) {
-        cout << student.getFirstName() << " " << student.getLastName() << " " << student.getAvgFinal() << " " << student.getMedianFinal() << endl;
-    }
-    assert(!s7[0].getFirstName().empty());
+    std::cout << "\n[TEST 6.1] Ivesties operatorius (input iš konsolės)\n";
+    std::istringstream iss("Labas Labukas 10 10 9 10 8 7");
+    Student s7;
+    iss >> s7;
+    s6.calculateFinalMarks();
+    std::cout << "Rezultatas: " << s7 << std::endl;
+    assert(s7.getFirstName() == "Labas");
 
     // 8th test 
     cout << "\n6.2 TESTAS: įvestis iš failo\n";
