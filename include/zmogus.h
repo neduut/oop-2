@@ -14,6 +14,33 @@ public:
 
     virtual ~Zmogus() = default; // virtual destructor
 
+    // copy constructor
+    inline Zmogus(const Zmogus& other)
+    : firstName_(other.firstName_), lastName_(other.lastName_) {}
+
+    // copy assignment
+    inline Zmogus& operator=(const Zmogus& other) {
+        if (this != &other) {
+            firstName_ = other.firstName_;
+            lastName_ = other.lastName_;
+        }
+        return *this;
+    }
+
+    // move constructor
+    inline Zmogus(Zmogus&& other) noexcept
+    : firstName_(std::move(other.firstName_)),
+      lastName_(std::move(other.lastName_)) {}
+
+    // move assignment operator
+    inline Zmogus& operator=(Zmogus&& other) noexcept {
+        if (this != &other) {
+            firstName_ = std::move(other.firstName_);
+            lastName_ = std::move(other.lastName_);
+        }
+        return *this;
+    }
+
     // abstract class interface
     virtual void read(std::istream& is) = 0;
     virtual void print(std::ostream& os) const = 0;

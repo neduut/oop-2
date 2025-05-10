@@ -323,9 +323,9 @@ void testRuleOfFive() {
 
     // 6th test 
     cout << "\n6 TESTAS: įvesties operatorius (į istringstream)\n";
-    istringstream iss1("testas testukas 1 2 3 4 5 10\n");
+    istringstream iss("testas testukas 1 2 3 4 5 10\n");
     Student s6;
-    iss1 >> s6;
+    iss >> s6;
     s6.calculateFinalMarks();
     cout << "Rezultatas: " << s6 << endl;
     assert(s6.getFirstName() == "testas");
@@ -333,10 +333,10 @@ void testRuleOfFive() {
 
     // 7th test
     std::cout << "\n[TEST 6.1] Ivesties operatorius (input iš konsolės)\n";
-    std::istringstream iss("Labas Labukas 10 10 9 10 8 7");
+    std::istringstream iss1("Labas Labukas 10 10 9 10 8 7");
     Student s7;
-    iss >> s7;
-    s6.calculateFinalMarks();
+    iss1 >> s7;
+    s7.calculateFinalMarks();
     std::cout << "Rezultatas: " << s7 << std::endl;
     assert(s7.getFirstName() == "Labas");
 

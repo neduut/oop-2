@@ -44,8 +44,6 @@ Student::Student(Student&& other) noexcept
         other.examMark_ = 0;
         other.avgFinal_ = 0.0;
         other.medianFinal_ = 0.0;
-        other.firstName_.clear();
-        other.lastName_.clear();
       }
 
 // move assignment operator
@@ -60,8 +58,6 @@ Student& Student::operator=(Student&& other) noexcept {
         other.examMark_ = 0;
         other.avgFinal_ = 0.0;
         other.medianFinal_ = 0.0;
-        other.firstName_.clear();  
-        other.lastName_.clear(); 
     }
     return *this;
 }
@@ -172,7 +168,7 @@ void Student::readFromFile(std::vector<Student>& students, int fileSize) {
         }
         file.close();
         students.shrink_to_fit();
-        std::cout << FILE_READ_SUCCESS << std::endl;
+        //std::cout << FILE_READ_SUCCESS << std::endl;
 
     } catch (const std::exception& e) {
         std::cerr << e.what() << std::endl;
