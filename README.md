@@ -83,4 +83,4 @@ Sukurta nauja bazinė klasė `Zmogus`. `Student` klasė paversta į derived. Pat
 Kad įsitikint, jog klasė `Zmogus` yra abstrakti, reikia atkomentuoti funkciją `void testZmogausClass()` failuose `functions.cpp` bei `functions.h`.
 
 ## v2.0
-Sukurta klasę aprašanti dokumentacija, HTML ir TEX formatais, su sukompiliuotu PDF failu.
+Sukurta klasę aprašanti dokumentacija, HTML ir TEX formatais, su sukompiliuotu PDF failu. Atlikti catch2 testai faile `src`/`catchTest.cpp`.
