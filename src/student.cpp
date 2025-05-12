@@ -44,6 +44,8 @@ Student::Student(Student&& other) noexcept
         other.examMark_ = 0;
         other.avgFinal_ = 0.0;
         other.medianFinal_ = 0.0;
+        other.firstName_.clear();
+        other.lastName_.clear();
       }
 
 // move assignment operator
@@ -58,6 +60,8 @@ Student& Student::operator=(Student&& other) noexcept {
         other.examMark_ = 0;
         other.avgFinal_ = 0.0;
         other.medianFinal_ = 0.0;
+        other.firstName_.clear();  
+        other.lastName_.clear(); 
     }
     return *this;
 }
@@ -132,27 +136,13 @@ void Student::readFromFile(std::vector<Student>& students, int fileSize) {
     try {
         students.reserve(fileSize);
 
-        std::ifstream file("files/studentai" + std::to_string(fileSize) + ".txt");
+        std::ifstream file("../files/studentai" + std::to_string(fileSize) + ".txt");
         if (!file) {
             throw std::runtime_error(FILE_OPEN_ERROR);
         }
 
-        // if file is not found, generate it
-        /*if (!file) {
-            try {
-                generateFile(fileSize);  
-                std::ifstream file("files/studentai" + std::to_string(fileSize) + ".txt"); 
-                if (!file) {
-                    throw std::runtime_error(FILE_OPEN_ERROR);
-                }
-            } catch (const std::exception& e) {
-                std::cerr << "Klaida: " << e.what() << std::endl;
-                return 1;  
-            }
-        }*/
-
-        string line;
-        getline(file, line);
+        std::string line;
+        std::getline(file, line);
 
         Student temp;
         while (std::getline(file, line)) {
@@ -168,7 +158,7 @@ void Student::readFromFile(std::vector<Student>& students, int fileSize) {
         }
         file.close();
         students.shrink_to_fit();
-        //std::cout << FILE_READ_SUCCESS << std::endl;
+        std::cout << FILE_READ_SUCCESS << std::endl;
 
     } catch (const std::exception& e) {
         std::cerr << e.what() << std::endl;
@@ -221,4 +211,3 @@ void sortStudents(std::vector<Student>& students, char sortType) {
         });
     }
 }
-

@@ -332,7 +332,7 @@ void testRuleOfFive() {
     assert(s6.getExamMark() == 10);
 
     // 7th test
-    std::cout << "\n[TEST 6.1] Ivesties operatorius (input iš konsolės)\n";
+    std::cout << "\n6.1 TESTAS: Ivesties operatorius (input iš konsolės)\n";
     std::istringstream iss1("Labas Labukas 10 10 9 10 8 7");
     Student s7;
     iss1 >> s7;
@@ -342,11 +342,11 @@ void testRuleOfFive() {
 
     // 8th test 
     cout << "\n6.2 TESTAS: įvestis iš failo\n";
-    ofstream testFile1("files/testas1.txt");
+    ofstream testFile1("../files/testas1.txt");
     testFile1 << "Antanas Antanaitis 9 8 7 6 5 9" << endl;
     testFile1.close();
 
-    ifstream fr("files/testas1.txt");
+    ifstream fr("../files/testas1.txt");
     Student s8;
     fr >> s8;
     fr.close();
@@ -366,7 +366,7 @@ void testRuleOfFive() {
 
     // 10th test
     cout << "\n8 TESTAS: studentų nuskaitymas iš failo (readFromFile)\n";
-    std::ofstream testFile2("files/studentai3.txt");
+    std::ofstream testFile2("../files/studentai3.txt");
     testFile2 << "antraste" << endl;
     testFile2 << "Jonas Jonaitis 10 9 8 7 9 6" << endl;
     testFile2 << "Vejas Vejukas 10 9 8 7 6 6" << endl;
@@ -382,7 +382,7 @@ void testRuleOfFive() {
 
     // 11th test
     cout << "\n9 TESTAS: išvedimas į failą\n";
-    ofstream testFile3("files/testas2.txt");
+    ofstream testFile3("../files/testas2.txt");
     if (!testFile3) {
         cerr << FILE_OPEN_ERROR << endl;
     } else {

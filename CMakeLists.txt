@@ -43,6 +43,6 @@ target_link_libraries(tests PRIVATE
 
 # Papildomi linkerio flag'ai Windows
 if(WIN32)
-    set_target_properties(tests PROPERTIES LINK_FLAGS "-mconsole")
     set_target_properties(Objektinis PROPERTIES LINK_FLAGS "-mconsole")
+    set_target_properties(tests PROPERTIES LINK_FLAGS "-mconsole")
 endif()
