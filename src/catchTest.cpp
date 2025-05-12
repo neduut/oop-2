@@ -11,8 +11,8 @@
 TEST_CASE("Student klasės testai") {
     SetConsoleOutputCP(65001);
 
-    // 1 TESTAS: Default konstruktorius
-    SECTION("1: Default konstruktorius") {
+    // 1st test
+    SECTION("1 TESTAS: Default konstruktorius") {
         Student s;
         s.setFirstName("testas");
         s.setLastName("testukas");
