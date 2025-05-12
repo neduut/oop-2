@@ -84,3 +84,5 @@ Kad įsitikint, jog klasė `Zmogus` yra abstrakti, reikia atkomentuoti funkciją
 
 ## v2.0
 Sukurta klasę aprašanti dokumentacija, HTML ir TEX formatais, su sukompiliuotu PDF failu. Atlikti catch2 testai faile `src`/`catchTest.cpp`.
+![Screenshot 2025-05-12 170611](https://github.com/user-attachments/assets/dcee5f63-1fb2-429b-95a2-f24a1fe4e3b7)
+
