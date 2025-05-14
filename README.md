@@ -47,6 +47,7 @@ Yra sukurta programos dokumentacija - `dokumentacija.pdf`.
 
 ## UNIT testavimas
 Testavimui buvo naudojami Catch2 testai. Buvo tikrinami `student` klasės metodai bei kelios papildomos programos funkcijos. Testai aprašyti `src`/`catchTest.cpp` faile. 
+
 ![image](https://github.com/user-attachments/assets/9edb8208-6a62-471f-94b1-9ff886cc267e)
 
 
